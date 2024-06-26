@@ -3,25 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodylines</title>
+    <title>Leonardo Matteucci</title>
     <style>
         body {
-            margin: 5vh;
-            font-family: 'Roboto';
+            margin: 0; /* Rimuove il margine predefinito del body */
+            padding: 5vh;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
             background-color: #000000;
             color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            justify-content: left;
-            min-height: 50vh;
         }
-    </style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Spazio tra il logo e il resto del contenuto */
+        }
+        .logo img {
+            width: 65px; /* Imposta la larghezza desiderata per il logo */
+            height: auto; /* Altezza automatica in base alla larghezza */
+            margin-top: 0; /* Rimuove il margine superiore dell'immagine */
+        }
+        p {  
+            margin-bottom: -0.75em;
+            line-height: 1.5em;
+        }
+        .large-margin {
+            margin-bottom: 2em;
+        }
+        .italic {
+            font-family: 'Roboto', sans-serif;
+            font-style: italic;
+        }
+        .link {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: underline;
+            color: #ffffff;
+        }
+        img {
+            margin-top: 20px; /* Spazio tra l'immagine e il contenuto successivo */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style> 
+</head>
 <body>
+    <header>
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../logo-favicon.png" alt="logo">
+            </a>
+        </div>
+    </header>
     <p>Bodylines (2023) [7.30]</p>
-    <p>for violin, piccolo and electronics</p>
-    <p>Home studio recording: 25 April 2024, Perugia</p>
-    <p>A transformed body needs a new representation: what remains are its movements in its lines, not really musical material, but gesture, movement. The breath underneath.<p>
-    <a href="https://soundcloud.com/leonardomatteucci">Soundcloud</a>
-    <a href="https://www.youtube.com/channel/UCWxt22ZvT57KRL6MHgdqp0g">Youtube</a>
+    <p class="italic large-margin">for violin, piccolo and electronics</p>
+    <p class="italic large-margin">A transformed body needs a new representation: what persists are the lines in its movements; there is no musical semantics, but rather the need to move, the breath beneath.</p>
+    <a href="https://soundcloud.com/leonardomatteucci/internal-live-recording/" class="link">Soundcloud</a>
+    <img src="internal.png" alt="internal" width="600" height="900">
+</body>
 </html>

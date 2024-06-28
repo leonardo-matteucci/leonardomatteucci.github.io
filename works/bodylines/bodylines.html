@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bodylines - Leonardo Matteucci</title>
     <link rel="icon" href="../../logo-favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0; /* Rimuove il margine predefinito del body */
+            margin: 0;
             padding: 5vh;
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
@@ -18,14 +19,29 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px; /* Spazio tra il logo e il resto del contenuto */
+            padding: 1em;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000000;
+            z-index: 1000;
+        }
+        main {
+            margin-top: 100px;
         }
         .logo img {
-            width: 65px; /* Imposta la larghezza desiderata per il logo */
-            height: auto; /* Altezza automatica in base alla larghezza */
-            margin-top: 0; /* Rimuove il margine superiore dell'immagine */
+            width: 70px;
+            height: auto;
+            margin-left: -18px;
         }
-        p {  
+        h1 {
+            font-weight: 400;
+            font-size: 1.4em;
+            margin-bottom: -0.25em;
+        }
+        p {
+            font-weight: 300;
+            font-size: 1em;
             margin-bottom: -0.75em;
             line-height: 1.5em;
         }
@@ -33,24 +49,24 @@
             margin-bottom: 2em;
         }
         .italic {
-            font-family: 'Roboto', sans-serif;
             font-style: italic;
         }
         .link {
-            font-family: 'Roboto', sans-serif;
             text-decoration: underline;
             color: #ffffff;
+            transition: color 0.3s;
         }
         .link:hover {
-            color: #cccccc; /* Cambia colore al passaggio del mouse */
+            color: #cccccc;
         }
         img {
-            margin-top: 20px; /* Spazio tra l'immagine e il contenuto successivo */
+            margin-top: 20px;
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-    </style> 
+    </style>
+</head>
 </head>
 <body>
     <header>
@@ -60,10 +76,13 @@
             </a>
         </div>
     </header>
+    <main>
     <p>Bodylines (2023) [7.30]</p>
     <p class="italic large-margin">for violin, piccolo and electronics</p>
     <p class="italic large-margin">A transformed body needs a new representation: what persists are the lines in its movements; there is no musical semantics, only the need to move, to breathe within it.</p>
-    <a href="https://soundcloud.com/leonardomatteucci/bodylines-home-studio-recording/" class="link">Soundcloud</a>
-    <img src="bodylines-score_Page_05.png" width="600" height="900">
+    <p>
+        <a href="https://www.leonardomatteucci.com/works/bodylines/bodylines-score_Page_05.png" class="link" style="margin-right: 10px;">Preview</a>
+        <a href="https://soundcloud.com/leonardomatteucci/bodylines-home-studio-recording/" class="link">Soundcloud</a>
+    </p>   
 </body>
 </html>

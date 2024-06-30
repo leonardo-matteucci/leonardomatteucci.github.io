@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+
+# Specifica il percorso della favicon
+Allow: /logo-favicon.ico
+
+Sitemap: https://www.leonardomatteucci.com/sitemap.xml

@@ -3,6 +3,8 @@ body {
     padding: 5vh;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    background-color: #ffffff;
+    color: #000000;
     background-color: #111111;
     color: #f5f5f5;
     line-height: 1.6;
@@ -15,9 +17,12 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
     background-color: #111111;
     border-bottom: 1px solid #333333;
     z-index: 1000;
+    letter-spacing: 0.03em;
 }
 main {
     margin-top: 90px;
@@ -30,6 +35,15 @@ main {
     width: 60px;
     height: auto;
     margin-left: -15px;
+}
+nav a {
+    margin-left: 1.5em;
+    font-weight: 400;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+nav a:first-child {
+    margin-left: 0;
 }
 h1 {
     font-weight: 400;
@@ -52,6 +66,7 @@ p {
     font-style: italic;
 }
 .link {
+    color: #000000;
     color: #ffd700;
     text-decoration: none;
 }
@@ -66,4 +81,18 @@ img {
 }
 section {
     margin-bottom: 3em;
+}
+.works-list {
+    list-style-type: none;
+    padding: 0;
+}
+.works-list li {
+    margin-bottom: 1.2em;
+    padding-left: 1.2em;
+    position: relative;
+}
+.works-list li::before {
+    content: "\2014"; /* em dash */
+    position: absolute;
+    left: 0;
 }

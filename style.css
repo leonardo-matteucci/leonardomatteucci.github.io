@@ -18,6 +18,7 @@ header {
     background-color: #ffffff;
     border-bottom: 1px solid #dddddd;
     z-index: 1000;
+    letter-spacing: 0.03em;
 }
 main {
     margin-top: 90px;
@@ -32,7 +33,10 @@ main {
     margin-left: -15px;
 }
 nav a {
-    margin-left: 1em;
+    margin-left: 1.5em;
+    font-weight: 400;
+    font-size: 0.95em;
+    text-transform: uppercase;
 }
 nav a:first-child {
     margin-left: 0;
@@ -78,5 +82,12 @@ section {
     padding: 0;
 }
 .works-list li {
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
+    padding-left: 1.2em;
+    position: relative;
+}
+.works-list li::before {
+    content: "\2014"; /* em dash */
+    position: absolute;
+    left: 0;
 }

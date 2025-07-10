@@ -3,8 +3,9 @@ body {
     padding: 5vh;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #111111;
+    color: #f5f5f5;
+    line-height: 1.6;
 }
 header {
     display: flex;
@@ -14,11 +15,16 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #000000;
+    background-color: #111111;
+    border-bottom: 1px solid #333333;
     z-index: 1000;
 }
 main {
     margin-top: 90px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
 }
 .logo img {
     width: 60px;
@@ -27,14 +33,14 @@ main {
 }
 h1 {
     font-weight: 400;
-    font-size: 1.4em;
-    margin-bottom: 0.5em;
+    font-size: 1.6em;
+    margin-bottom: 0.75em;
 }
 p {
     font-weight: 300;
     font-size: 1em;
-    margin-bottom: -0.75em;
-    line-height: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.6em;
 }
 .large-margin {
     margin-bottom: 2.5em;
@@ -46,7 +52,7 @@ p {
     font-style: italic;
 }
 .link {
-    color: #ffffff;
+    color: #ffd700;
     text-decoration: none;
 }
 .link:hover {
@@ -57,4 +63,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+section {
+    margin-bottom: 3em;
 }

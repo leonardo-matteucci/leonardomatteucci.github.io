@@ -46,6 +46,11 @@ h1 {
     font-size: 1.6em;
     margin-bottom: 0.75em;
 }
+h2 {
+    font-weight: 400;
+    font-size: 1.4em;
+    margin-bottom: 0.75em;
+}
 p {
     font-weight: 300;
     font-size: 1em;
@@ -95,4 +100,61 @@ section {
     font-style: italic;
     color: #cccccc;
     margin-top: 0.2em;
+}
+
+.hero h1 {
+    font-size: 2em;
+}
+
+.news-container {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 200px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding: 1em;
+    border-right: 1px solid #555555;
+    background-color: #000000;
+}
+
+.news-container h2 {
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    margin-bottom: 1em;
+}
+
+.news-list a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.news-list a:hover {
+    text-decoration: underline;
+}
+
+body.home main {
+    margin-left: 220px;
+}
+
+@media (max-width: 800px) {
+    .news-container {
+        position: static;
+        width: auto;
+        max-height: none;
+        border-right: none;
+        margin-bottom: 2em;
+    }
+    body.home main {
+        margin-left: 0;
+    }
 }

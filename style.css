@@ -102,6 +102,7 @@ section {
 .works-title {
     display: block;
     font-weight: 400;
+    margin-bottom: 0;
 }
 .works-details {
     display: block;

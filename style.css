@@ -76,7 +76,7 @@ header .container {
 }
 .footer-icons {
     display: flex;
-    gap: 0.5em;
+    gap: 0.7em;
     margin: 0;
 }
 .footer-icons img {
@@ -180,13 +180,19 @@ img {
 }
 section {
     margin-bottom: 3em;
+    border-right: 1px solid #555555;
+    padding-right: 1em;
 }
 
 body.about .about-lines {
-    border-left: 1px solid #555555;
     border-right: 1px solid #555555;
     padding: 0 1em;
     margin-top: 1em;
+}
+
+.about-text {
+    border-left: 3px solid #555555;
+    padding-left: 1em;
 }
 .works-list {
     list-style-type: none;
@@ -228,8 +234,12 @@ body.about .about-lines {
 
 .event-details {
     display: block;
-    color: #555555;
     margin-top: 0.2em;
+}
+
+.separator {
+    color: #555555;
+    padding: 0 0.3em;
 }
 
 .events-separator {

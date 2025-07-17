@@ -9,6 +9,8 @@ body {
     background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
 }
 header {
     display: flex;
@@ -41,9 +43,10 @@ main {
 }
 .tagline {
     margin-left: 0.75em;
-    font-size: 0.9em;
-    color: #cccccc;
-    font-style: italic;
+    font-size: 1em;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 400;
 }
 nav a {
     margin-left: 1.5em;
@@ -70,6 +73,7 @@ p {
     font-size: 1em;
     margin-bottom: 1em;
     line-height: 1.6em;
+    text-align: justify;
 }
 .large-margin {
     margin-bottom: 2.5em;
@@ -150,22 +154,7 @@ section {
     font-size: 2em;
 }
 
-.button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    text-decoration: none;
-}
-.button:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
 
-.button-thin {
-    padding: 0.25em 0.5em;
-    font-size: 0.9em;
-}
 
 
 @media (max-width: 600px) {

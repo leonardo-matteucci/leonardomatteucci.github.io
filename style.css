@@ -57,7 +57,7 @@ main {
 }
 nav a {
     margin-left: 1.5em;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 0.95em;
     text-transform: uppercase;
     color: #ffffff;
@@ -93,7 +93,7 @@ p {
 }
 a, .link {
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 400;
     text-decoration: none;
 }
 a:hover, .link:hover, nav a:hover {

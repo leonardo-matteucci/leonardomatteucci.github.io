@@ -144,6 +144,18 @@ section {
     font-size: 2em;
 }
 
+.button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 
 @media (max-width: 600px) {
     header {

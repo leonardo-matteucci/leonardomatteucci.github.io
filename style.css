@@ -134,6 +134,12 @@ section {
     margin-top: 0.2em;
 }
 
+.events-separator {
+    border: 0;
+    border-top: 1px solid #555555;
+    margin: 2em 0;
+}
+
 .hero h1 {
     font-size: 2em;
 }

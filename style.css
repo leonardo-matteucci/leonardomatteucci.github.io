@@ -156,6 +156,11 @@ section {
     color: #000000;
 }
 
+.button-thin {
+    padding: 0.25em 0.5em;
+    font-size: 0.9em;
+}
+
 
 @media (max-width: 600px) {
     header {

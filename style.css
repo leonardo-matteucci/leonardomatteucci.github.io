@@ -59,10 +59,10 @@ main {
 }
 nav a {
     margin-left: 1.5em;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 0.95em;
     text-transform: uppercase;
-    color: #555555;
+    color: #ffffff;
 }
 nav a:first-child {
     margin-left: 0;
@@ -93,14 +93,12 @@ p {
 .italic {
     font-style: italic;
 }
-a {
-    color: #555555;
-}
-.link {
-    color: #555555;
+a, .link {
+    color: #ffffff;
+    font-weight: bold;
     text-decoration: none;
 }
-.link:hover {
+a:hover, .link:hover, nav a:hover {
     text-decoration: underline;
 }
 img {
@@ -108,6 +106,17 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.social-icons {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0;
 }
 section {
     margin-bottom: 3em;

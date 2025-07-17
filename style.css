@@ -10,8 +10,6 @@ body {
     color: #ffffff;
     line-height: 1.6;
     border-top: 1px solid #555555;
-    border-left: 1px solid #555555;
-    border-right: 1px solid #555555;
 }
 header {
     display: flex;
@@ -101,6 +99,14 @@ a, .link {
 a:hover, .link:hover, nav a:hover {
     text-decoration: underline;
 }
+header nav a {
+    color: #555555;
+}
+
+header nav a.active {
+    color: #ffffff;
+}
+
 img {
     margin-top: 10px;
     display: block;
@@ -120,6 +126,13 @@ img {
 }
 section {
     margin-bottom: 3em;
+}
+
+body.about .about-lines {
+    border-left: 1px solid #555555;
+    border-right: 1px solid #555555;
+    padding: 0 1em;
+    margin-top: 1em;
 }
 .works-list {
     list-style-type: none;
@@ -178,7 +191,7 @@ section {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 1500px) {
     .menu-icon {
         display: block;
         cursor: pointer;

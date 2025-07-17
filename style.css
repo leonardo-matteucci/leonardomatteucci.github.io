@@ -43,6 +43,7 @@ header .container {
     height: 18px;
     position: relative;
     cursor: pointer;
+    margin-left: auto;
 }
 .menu-icon span {
     position: absolute;
@@ -71,17 +72,12 @@ header .container {
     display: flex;
     align-items: center;
 }
-.header-icons {
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
+.footer-icons {
     display: flex;
-    flex-direction: column;
     gap: 0.5em;
     margin: 0;
-    z-index: 1000;
 }
-.header-icons img {
+.footer-icons img {
     width: 24px;
     height: 24px;
 }
@@ -265,6 +261,10 @@ body.about .about-lines {
 }
 
 footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
     text-align: center;
     padding: 2em 2vw;
     font-size: 0.8em;

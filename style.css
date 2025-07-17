@@ -72,10 +72,14 @@ header .container {
     align-items: center;
 }
 .header-icons {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 0.5em;
-    margin-left: 1em;
+    margin: 0;
+    z-index: 1000;
 }
 .header-icons img {
     width: 24px;

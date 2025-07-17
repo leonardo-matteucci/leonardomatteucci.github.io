@@ -39,6 +39,12 @@ main {
     width: 60px;
     height: auto;
 }
+.tagline {
+    margin-left: 0.75em;
+    font-size: 0.9em;
+    color: #cccccc;
+    font-style: italic;
+}
 nav a {
     margin-left: 1.5em;
     font-weight: 400;
@@ -156,6 +162,11 @@ section {
     color: #000000;
 }
 
+.button-thin {
+    padding: 0.25em 0.5em;
+    font-size: 0.9em;
+}
+
 
 @media (max-width: 600px) {
     header {
@@ -168,4 +179,15 @@ section {
     nav a {
         margin: 0 1em 0.5em 0;
     }
+}
+
+footer {
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.8em;
+    color: #888888;
+}
+
+footer p {
+    margin: 0;
 }

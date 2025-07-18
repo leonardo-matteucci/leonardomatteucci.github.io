@@ -116,7 +116,7 @@ nav a:first-child {
 h1 {
     font-weight: 400;
     font-size: 1.6em;
-    margin-bottom: 0.75em;
+    margin: 0.75em 0;
 }
 h2 {
     font-weight: 400;

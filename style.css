@@ -291,7 +291,7 @@ body.about .about-lines {
     margin: 0;
 }
 
-.events-list li {
+.events-list > li {
     margin-bottom: 1.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;

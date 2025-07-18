@@ -287,6 +287,18 @@ body.about .about-lines {
     border-left: 3px solid #555555;
 }
 
+/* Nested list for program details within events */
+.events-sublist {
+    list-style-type: none;
+    padding-left: 1em;
+    margin: 0.2em 0 0 0;
+    border-left: 3px solid #555555;
+}
+
+.events-sublist li {
+    margin-bottom: 0.2em;
+}
+
 .event-date {
     display: block;
     font-weight: 300;

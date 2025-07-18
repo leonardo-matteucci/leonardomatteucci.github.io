@@ -302,20 +302,3 @@ footer p {
     margin: 0;
 }
 
-/* Light/Dark theme toggle */
-#theme-toggle {
-    background: none;
-    border: none;
-    color: inherit;
-    margin-left: 1em;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-body.light-mode {
-    filter: invert(1) hue-rotate(180deg);
-}
-
-body.light-mode img {
-    filter: invert(1) hue-rotate(180deg);
-}

@@ -206,6 +206,16 @@ img {
     height: 24px;
     margin: 0;
 }
+.supporter-logos {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    margin: 2em 0;
+}
+.supporter-logos img {
+    height: 40px;
+    width: auto;
+}
 section {
     margin-bottom: 3em;
     border-right: 1px solid #555555;

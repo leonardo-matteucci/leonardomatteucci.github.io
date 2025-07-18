@@ -231,8 +231,8 @@ body.about .about-lines {
 }
 .works-details {
     display: block;
-    font-style: italic;
-    color: #555555;
+    font-style: normal;
+    color: #ffffff;
     margin-top: 0.2em;
 }
 
@@ -266,6 +266,12 @@ body.about .about-lines {
 }
 
 .events-separator {
+    border: 0;
+    border-top: 1px solid #555555;
+    margin: 2em 0;
+}
+
+.works-separator {
     border: 0;
     border-top: 1px solid #555555;
     margin: 2em 0;

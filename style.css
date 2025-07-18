@@ -32,7 +32,7 @@ header {
 header .container {
     display: flex;
     align-items: center;
-    padding: 1em 2vw;
+    padding: 2em 2vw;
     letter-spacing: 0.05em;
     position: relative;
 }

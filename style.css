@@ -200,16 +200,20 @@ section {
 }
 
 body.about .about-lines {
-    margin-top: 1em;
+    margin-top: 0;
 }
 
 .about-text {
     border-left: 3px solid #555555;
     padding-left: 1em;
 }
+.about-text p:first-child {
+    margin-top: 0;
+}
 .works-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 .works-list li {
     margin-bottom: 1.5em;
@@ -231,6 +235,7 @@ body.about .about-lines {
 .events-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .events-list li {

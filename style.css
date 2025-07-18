@@ -303,6 +303,7 @@ body.about .about-lines {
     display: block;
     font-weight: 300;
     margin: 0.2em 0 0 0;
+    color: #bbbbbb;
 }
 
 .event-details {
@@ -312,7 +313,7 @@ body.about .about-lines {
 }
 
 .separator {
-    color: #555555;
+    color: #ffffff;
     padding: 0 0.3em;
 }
 

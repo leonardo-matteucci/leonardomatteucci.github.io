@@ -2,6 +2,6 @@ User-agent: *
 Disallow:
 
 # Specify path to favicon
-Allow: /logo-favicon.svg
+Allow: /logos/lm-logo-favicon.svg
 
 Sitemap: https://www.leonardomatteucci.com/sitemap.xml

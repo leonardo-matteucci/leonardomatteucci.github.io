@@ -182,6 +182,12 @@ img {
     margin: 0 0 0 0.3em;
     display: inline-block;
 }
+.music-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 .align-right {
     text-align: right;

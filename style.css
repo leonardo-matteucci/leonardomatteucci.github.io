@@ -310,7 +310,7 @@ footer {
 footer .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1em;
     padding: 2em 2vw;
     font-size: 0.8em;

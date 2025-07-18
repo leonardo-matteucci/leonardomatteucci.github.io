@@ -306,16 +306,6 @@ body.about .about-lines {
 
 .events-sublist li {
     margin-bottom: 0.2em;
-    display: inline;
-    margin-right: 1em;
-}
-
-.events-sublist li:last-child {
-    margin-right: 0;
-}
-
-.events-sublist .event-details {
-    color: #bbbbbb;
 }
 
 .event-date {

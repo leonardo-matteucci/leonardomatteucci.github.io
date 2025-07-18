@@ -196,8 +196,6 @@ section {
 }
 
 body.about .about-lines {
-    border-right: 1px solid #555555;
-    padding: 0 1em;
     margin-top: 1em;
 }
 

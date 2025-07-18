@@ -254,7 +254,8 @@ body.about .about-lines {
     list-style-type: none;
     padding-left: 1em;
     margin: 0.2em 0 0 0;
-    border-left: 3px double #555555;
+    border-left: 3px solid #555555;
+    box-shadow: -6px 0 0 #555555;
 }
 
 .gear-list li {

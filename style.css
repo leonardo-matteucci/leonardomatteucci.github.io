@@ -236,6 +236,19 @@ body.about .about-lines {
     margin-top: 0.2em;
 }
 
+/* List used for the instrumentation of each work */
+.instrumentation-list {
+    list-style-type: none;
+    padding-left: 1em;
+    margin-top: 0;
+    margin-bottom: 2.5em;
+    border-left: 3px solid #555555;
+}
+
+.instrumentation-list li {
+    margin-bottom: 0.2em;
+}
+
 .events-list {
     list-style-type: none;
     padding: 0;

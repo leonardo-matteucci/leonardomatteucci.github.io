@@ -249,6 +249,21 @@ body.about .about-lines {
     margin-bottom: 0.2em;
 }
 
+/* Additional list for electronics gear within works pages */
+.gear-list {
+    list-style-type: none;
+    padding-left: 1em;
+    margin: 0.2em 0 0 0;
+}
+
+.gear-list li {
+    margin-bottom: 0.2em;
+}
+
+.soundcloud-player {
+    margin: 1em 0;
+}
+
 .events-list {
     list-style-type: none;
     padding: 0;

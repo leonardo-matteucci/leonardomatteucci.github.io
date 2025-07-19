@@ -320,6 +320,9 @@ body.about .about-lines {
     font-weight: 300;
     margin-top: 0;
 }
+.event-details-indent {
+    padding-left: 1em;
+}
 
 .separator {
     color: #ffffff;

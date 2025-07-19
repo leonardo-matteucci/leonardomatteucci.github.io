@@ -309,14 +309,14 @@ body.about .about-lines {
 /* Nested list for program details within events */
 .events-sublist {
     list-style-type: none;
-    margin: 0.2em 0 0 0;
+    margin: 0;
     padding-left: 1em;
     border-left: 3px solid #555555;
 }
 
 .events-sublist li {
-    margin-bottom: 1.5em;
-    padding-left: 1em;
+    margin-bottom: 0.2em;
+    padding-left: 0;
 }
 
 .event-date {

@@ -275,6 +275,12 @@ body.about .about-lines {
     color: #bbbbbb;
     margin-top: 0.2em;
 }
+.works-details a {
+    color: #bbbbbb;
+}
+.works-details a:hover {
+    color: #bbbbbb;
+}
 
 /* List used for the instrumentation of each work */
 .instrumentation-list {

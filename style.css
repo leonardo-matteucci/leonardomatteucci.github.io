@@ -142,6 +142,9 @@ p {
 .no-italic {
     font-style: normal;
 }
+.regular {
+    font-weight: 400;
+}
 a, .link {
     color: #ffffff;
     font-weight: 400;

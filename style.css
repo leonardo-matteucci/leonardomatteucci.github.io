@@ -145,6 +145,9 @@ p {
 .regular {
     font-weight: 400;
 }
+.gray {
+    color: #bbbbbb;
+}
 a, .link {
     color: #ffffff;
     font-weight: 400;

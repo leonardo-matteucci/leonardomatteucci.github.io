@@ -98,8 +98,8 @@ main {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.4em;
-    letter-spacing: 0.1em;
+    font-size: 1.3em;
+    letter-spacing: 0.15em;
     color: #ffffff;
     font-style: normal;
     font-weight: 300;

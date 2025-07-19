@@ -198,6 +198,9 @@ img {
 .align-right {
     text-align: right;
 }
+.align-center {
+    text-align: center;
+}
 .social-icons {
     display: flex;
     gap: 1em;

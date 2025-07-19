@@ -145,6 +145,9 @@ p {
 .regular {
     font-weight: 400;
 }
+.gray {
+    color: #bbbbbb;
+}
 a, .link {
     color: #ffffff;
     font-weight: 400;
@@ -297,7 +300,7 @@ body.about .about-lines {
     margin: 0;
 }
 
-.events-list li {
+.events-list > li {
     margin-bottom: 1.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
@@ -306,13 +309,14 @@ body.about .about-lines {
 /* Nested list for program details within events */
 .events-sublist {
     list-style-type: none;
-    padding-left: 1em;
+    padding-left: 0;
     margin: 0.2em 0 0 0;
-    border-left: 3px solid #555555;
 }
 
 .events-sublist li {
     margin-bottom: 1.5em;
+    padding-left: 1em;
+    border-left: 3px solid #555555;
 }
 
 .event-date {

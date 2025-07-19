@@ -275,6 +275,9 @@ body.about .about-lines {
     color: #bbbbbb;
     margin-top: 0.2em;
 }
+.works-details.italic {
+    font-style: italic;
+}
 .works-details a {
     color: #bbbbbb;
 }

@@ -305,6 +305,7 @@ body.about .about-lines {
     list-style-type: none;
     padding-left: 1em;
     margin: 0.2em 0 0 0;
+    border-left: 3px solid #555555;
 }
 
 .events-sublist li {

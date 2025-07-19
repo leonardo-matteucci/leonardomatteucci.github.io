@@ -312,6 +312,7 @@ body.about .about-lines {
     margin: 0;
     padding-left: 1em;
     border-left: 3px solid #555555;
+    margin-top: 0.2em;
 }
 
 .events-sublist li {

@@ -363,6 +363,11 @@ body.about .about-lines {
     padding: 0 0.3em;
 }
 
+/* Separator inside event date should match the surrounding text color */
+.event-date .separator {
+    color: inherit;
+}
+
 .events-separator {
     border: 0;
     border-top: 1px solid #555555;

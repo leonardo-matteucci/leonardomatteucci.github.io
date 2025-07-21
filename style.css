@@ -160,6 +160,9 @@ a, .link {
 a:hover, .link:hover {
     text-decoration: underline;
 }
+header nav a:hover {
+    text-decoration: none;
+}
 header nav {
     margin-left: auto;
     display: flex;
@@ -455,13 +458,14 @@ body.about .about-lines {
         width: auto;
         margin-top: 0.5em;
         overflow: hidden;
+        gap: 0.5em;
         max-height: 0;
         opacity: 0;
         transform: translateY(-10px);
         transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
     }
     .menu-toggle:checked + .menu-icon + nav {
-        max-height: 200px;
+        max-height: 350px;
         opacity: 1;
         transform: translateY(0);
     }

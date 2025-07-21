@@ -454,9 +454,9 @@ body.about .about-lines {
         flex-direction: column;
         align-items: flex-end;
         width: auto;
-        margin-top: 0.5em;
+        margin-top: 0.25em;
         overflow: hidden;
-        gap: 0.5em;
+        gap: 0.1em;
         max-height: 0;
         opacity: 0;
         transform: translateY(-10px);
@@ -469,7 +469,7 @@ body.about .about-lines {
     }
     nav a {
         margin: 0;
-        padding: 0.5em 0;
+        padding: 0.15em 0;
         letter-spacing: 0.15em;
     }
 }

@@ -1,5 +1,5 @@
 html {
-    scroll-padding-top: 110px;
+    scroll-padding-top: 118px;
 }
 
 body {
@@ -32,7 +32,7 @@ header {
 header .container {
     display: flex;
     align-items: center;
-    padding: 1em 2vw;
+    padding: 1.25em 2vw;
     letter-spacing: 0.05em;
     position: relative;
 }
@@ -84,7 +84,7 @@ header .container {
     height: 24px;
 }
 main {
-    margin-top: 110px;
+    margin-top: 118px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -454,9 +454,9 @@ body.about .about-lines {
         flex-direction: column;
         align-items: flex-end;
         width: auto;
-        margin-top: 0.25em;
+        margin-top: 0.5em;
         overflow: hidden;
-        gap: 0.1em;
+        gap: 0.5em;
         max-height: 0;
         opacity: 0;
         transform: translateY(-10px);
@@ -469,7 +469,7 @@ body.about .about-lines {
     }
     nav a {
         margin: 0;
-        padding: 0.15em 0;
+        padding: 0.5em 0;
         letter-spacing: 0.15em;
     }
 }

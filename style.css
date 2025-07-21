@@ -387,6 +387,9 @@ body.about .about-lines {
     border: 0;
     border-top: 1px solid #555555;
     margin: 0.5em 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .intermission-text {

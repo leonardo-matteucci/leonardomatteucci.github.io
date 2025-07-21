@@ -108,15 +108,12 @@ main {
     text-decoration: none;
 }
 nav a {
-    margin-left: 1.5em;
+    margin-left: 0;
     font-weight: 400;
     font-size: 0.95em;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #ffffff;
-}
-nav a:first-child {
-    margin-left: 0;
 }
 h1 {
     font-weight: 300;
@@ -167,7 +164,7 @@ header nav a:hover {
 header nav {
     margin-left: auto;
     display: flex;
-    gap: 1.5em;
+    gap: 1em;
     align-items: center;
 }
 header nav a {

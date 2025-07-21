@@ -382,6 +382,17 @@ body.about .about-lines {
     margin-right: auto;
 }
 
+/* Reduced margin separators used around the intermission marker */
+.works-separator-small {
+    border: 0;
+    border-top: 1px solid #555555;
+    margin: 0.5em 0;
+}
+
+.intermission-text {
+    margin: 0.5em 0;
+}
+
 .hero h1 {
     font-size: 2em;
 }

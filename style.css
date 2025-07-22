@@ -600,6 +600,7 @@ body.about .about-lines {
         overflow: hidden;
         gap: 0.25em;
         padding: 0.8em;
+        border: 1px solid #555555;
         max-height: 0;
         opacity: 0;
         transform: translateY(-10px) scale(0.95);

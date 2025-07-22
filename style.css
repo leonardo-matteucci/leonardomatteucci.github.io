@@ -152,9 +152,12 @@ p {
     font-style: normal;
 }
 
-/* Reduce spacing between original Italian text and its translation */
-p.italic + p.no-italic {
-    margin-top: -0.5em;
+/* Zero out space between aligned translation lines */
+.translation-ita {
+    margin-bottom: 0;
+}
+.translation-eng {
+    margin-top: 0;
 }
 .regular {
     font-weight: 400;

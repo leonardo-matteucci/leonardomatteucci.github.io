@@ -186,8 +186,8 @@ header nav {
     margin-left: auto;
     display: flex;
     gap: 1em;
-    align-items: center;
-    flex-direction: row-reverse;
+    align-items: flex-end;
+    flex-direction: column;
 }
 header nav a {
     position: relative;

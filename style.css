@@ -344,6 +344,11 @@ body.about .about-lines {
     color: #bbbbbb;
 }
 
+/* Separator inside works details should match the surrounding text color */
+.works-details .separator {
+    color: inherit;
+}
+
 /* List used for the instrumentation of each work */
 .instrumentation-list {
     list-style-type: none;

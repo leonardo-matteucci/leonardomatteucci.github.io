@@ -581,10 +581,10 @@ footer p {
 
 /* Page transition animations */
 body.fade-in {
-    animation: fadeIn 0.3s ease forwards;
+    animation: fadeIn 0.15s ease forwards;
 }
 body.fade-out {
-    animation: fadeOut 0.3s ease forwards;
+    animation: fadeOut 0.15s ease forwards;
 }
 @keyframes fadeIn {
     from { opacity: 0; }

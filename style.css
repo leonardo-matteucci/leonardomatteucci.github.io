@@ -1,5 +1,10 @@
+:root {
+    --header-height: 118px;
+    --footer-height: 120px;
+}
+
 html {
-    scroll-padding-top: 118px;
+    scroll-padding-top: var(--header-height);
 }
 
 body {
@@ -10,7 +15,7 @@ body {
     color: #ffffff;
     line-height: 1.6;
     border-top: 1px solid #555555;
-    padding-bottom: 120px;
+    padding-bottom: var(--footer-height);
 }
 
 .container {
@@ -84,7 +89,7 @@ header .container {
     height: 24px;
 }
 main {
-    margin-top: 118px;
+    margin-top: var(--header-height);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -445,7 +450,7 @@ body.about .about-lines {
 
 .hero img {
     width: 100%;
-    height: calc(100vh - 118px - 120px);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     max-height: none;
     object-fit: cover;
     margin-top: 0;

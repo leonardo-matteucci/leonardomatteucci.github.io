@@ -278,6 +278,9 @@ section {
 main > section:last-of-type {
     margin-bottom: 0;
 }
+main > section:last-of-type > :last-child {
+    margin-bottom: 0;
+}
 
 .hero {
     margin: 0;
@@ -317,6 +320,9 @@ body.about .about-lines {
     margin-bottom: 1.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
+}
+.works-list li:last-child {
+    margin-bottom: 0;
 }
 .works-title {
     display: block;
@@ -380,6 +386,9 @@ body.about .about-lines {
     padding-left: 1em;
     border-left: 3px solid #555555;
 }
+.events-list > li:last-child {
+    margin-bottom: 0;
+}
 
 /* Nested list for program details within events */
 .events-sublist {
@@ -423,11 +432,17 @@ body.about .about-lines {
     border-top: 1px solid #555555;
     margin: 2em 0;
 }
+.events-separator:last-child {
+    margin-bottom: 0;
+}
 
 .works-separator {
     border: 0;
     border-top: 1px solid #555555;
     margin: 1em 0;
+}
+.works-separator:last-child {
+    margin-bottom: 0;
 }
 
 /* Half-length separator used on specific project pages */
@@ -439,6 +454,9 @@ body.about .about-lines {
     margin-left: 0;
     margin-right: auto;
 }
+.works-separator-half:last-child {
+    margin-bottom: 0;
+}
 
 /* Reduced margin separators used around the intermission marker */
 .works-separator-small {
@@ -448,6 +466,9 @@ body.about .about-lines {
     width: 50%;
     margin-left: auto;
     margin-right: 0;
+}
+.works-separator-small:last-child {
+    margin-bottom: 0;
 }
 
 .intermission-text {

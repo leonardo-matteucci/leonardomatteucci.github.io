@@ -334,7 +334,7 @@ body.about .about-lines {
     list-style-type: none;
     padding-left: 1em;
     margin-top: 0;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em; /* match paragraph spacing */
     border-left: 3px solid #555555;
 }
 

@@ -154,10 +154,16 @@ p {
 
 /* Zero out space between aligned translation lines */
 .translation-ita {
+    margin-top: 0;
     margin-bottom: 0;
 }
 .translation-eng {
     margin-top: 0;
+    margin-bottom: 1em;
+    color: #bbbbbb;
+}
+.translation-eng.final {
+    margin-bottom: 0;
 }
 .regular {
     font-weight: 400;

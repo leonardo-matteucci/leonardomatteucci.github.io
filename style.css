@@ -237,6 +237,9 @@ img {
     display: inline-block;
     /* Align musical accidentals with the surrounding text */
     vertical-align: -0.15em;
+    /* Tighten spacing between accidentals and adjacent text */
+    margin-left: -0.1em;
+    margin-right: -0.1em;
 }
 
 .align-right {

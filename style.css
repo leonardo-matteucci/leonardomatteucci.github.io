@@ -604,8 +604,8 @@ body.about .about-lines {
         opacity: 0;
         transform: translateY(-10px) scale(0.95);
         transform-origin: top right;
-        transition: max-height 0.3s ease, opacity 0.3s ease,
-                    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: max-height 0.15s ease, opacity 0.15s ease,
+                    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .menu-toggle:checked + .menu-icon + nav {
         max-height: 350px;

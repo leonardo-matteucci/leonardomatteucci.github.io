@@ -203,6 +203,12 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+.placeholder-image {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
 .logo img,
 .footer-icons img {
     margin-top: 0;

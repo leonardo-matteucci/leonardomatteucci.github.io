@@ -275,6 +275,9 @@ section {
     border-right: 1px solid #555555;
     padding-right: 1em;
 }
+main > section:last-of-type {
+    margin-bottom: 0;
+}
 
 .hero {
     margin: 0;

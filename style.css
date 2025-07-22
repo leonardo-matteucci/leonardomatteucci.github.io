@@ -151,6 +151,11 @@ p {
 .no-italic {
     font-style: normal;
 }
+
+/* Reduce spacing between original Italian text and its translation */
+p.italic + p.no-italic {
+    margin-top: -0.5em;
+}
 .regular {
     font-weight: 400;
 }

@@ -185,7 +185,7 @@ header nav a:hover {
 header nav {
     margin-left: auto;
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
     align-items: flex-end;
     flex-direction: column;
 }

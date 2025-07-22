@@ -389,6 +389,15 @@ body.about .about-lines {
     margin-bottom: 0.2em;
 }
 
+/* Variant with tighter spacing for specific lists */
+.gear-list-tight {
+    margin-top: 0;
+}
+
+.gear-list-tight li {
+    margin-bottom: 0;
+}
+
 .soundcloud-player {
     margin: 1em 0;
 }

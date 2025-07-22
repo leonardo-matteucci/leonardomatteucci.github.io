@@ -602,13 +602,15 @@ body.about .about-lines {
         padding: 0.8em;
         max-height: 0;
         opacity: 0;
-        transform: translateY(-10px);
-        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(-10px) scale(0.95);
+        transform-origin: top right;
+        transition: max-height 0.3s ease, opacity 0.3s ease,
+                    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .menu-toggle:checked + .menu-icon + nav {
         max-height: 350px;
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
     nav a {
         margin: 0;

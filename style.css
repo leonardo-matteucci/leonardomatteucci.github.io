@@ -88,6 +88,10 @@ header .container {
 .footer-icons img {
     width: 24px;
     height: 24px;
+    transition: transform 0.3s ease;
+}
+.footer-icons a:hover img {
+    transform: translateY(-2px);
 }
 main {
     margin-top: var(--header-height);
@@ -100,6 +104,10 @@ main {
 .logo img {
     width: 60px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+.logo a:hover img {
+    transform: translateY(-2px);
 }
 .tagline {
     position: absolute;
@@ -193,7 +201,7 @@ header nav a {
     position: relative;
     color: #ffffff;
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 header nav a::after {
     content: "";
@@ -212,6 +220,7 @@ header nav a::after {
 header nav a:hover,
 header nav a.active {
     opacity: 1;
+    transform: translateY(-2px);
 }
 
 header nav a:hover::after,
@@ -273,6 +282,10 @@ img {
     width: 24px;
     height: 24px;
     margin: 0;
+    transition: transform 0.3s ease;
+}
+.social-icons a:hover img {
+    transform: translateY(-2px);
 }
 .supporter-logos {
     display: flex;
@@ -283,6 +296,10 @@ img {
 .supporter-logos img {
     height: 40px;
     width: auto;
+    transition: transform 0.3s ease;
+}
+.supporter-logos a:hover img {
+    transform: translateY(-2px);
 }
 section {
     margin-bottom: 3em;
@@ -334,6 +351,11 @@ body.about .about-lines {
     margin-bottom: 1.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.works-list li:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 .works-list li:last-child {
     margin-bottom: 0;
@@ -415,9 +437,14 @@ body.about .about-lines {
     margin-bottom: 1.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .events-list > li:last-child {
     margin-bottom: 0;
+}
+.events-list > li:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Nested list for program details within events */
@@ -507,6 +534,9 @@ body.about .about-lines {
 
 .hero h1 {
     font-size: 2em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroTitle 0.6s ease forwards;
 }
 
 .hero img {
@@ -516,6 +546,9 @@ body.about .about-lines {
     object-fit: cover;
     margin-top: 0;
     margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroImage 0.6s ease forwards;
 }
 
 
@@ -593,4 +626,12 @@ body.fade-out {
 @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
+}
+
+@keyframes heroImage {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroTitle {
+    to { opacity: 1; transform: translateY(0); }
 }

@@ -51,6 +51,21 @@ header .container {
     cursor: pointer;
     margin-left: auto;
 }
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+.menu-icon:hover::before {
+    background-color: rgba(255, 255, 255, 0.08);
+}
 .menu-icon span {
     position: absolute;
     left: 0;
@@ -354,7 +369,7 @@ body.about .about-lines {
     border-left: 3px solid #555555;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.works-list li:hover {
+.works-list li:hover:has(a) {
     transform: translateX(5px);
     background-color: rgba(255, 255, 255, 0.08);
 }
@@ -443,7 +458,7 @@ body.about .about-lines {
 .events-list > li:last-child {
     margin-bottom: 0;
 }
-.events-list > li:hover {
+.events-list > li:hover:has(a) {
     transform: translateX(5px);
     background-color: rgba(255, 255, 255, 0.08);
 }

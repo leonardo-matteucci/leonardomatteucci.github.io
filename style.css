@@ -119,10 +119,15 @@ main {
 .logo img {
     width: 60px;
     height: auto;
-    transition: transform 0.3s ease;
 }
+
+/* The logo should remain completely stationary */
+/*
+ * Remove hover animation for the main logo so it remains
+ * fully stationary regardless of user interaction.
+ */
 .logo a:hover img {
-    transform: translateY(-2px);
+    transform: none;
 }
 .tagline {
     position: absolute;

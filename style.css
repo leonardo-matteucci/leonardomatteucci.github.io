@@ -282,6 +282,11 @@ img {
     margin-right: -0.2em;
 }
 
+/* Slightly lower sharp accidentals compared to baseline */
+.music-icon[alt="sharp"] {
+    vertical-align: -0.15em;
+}
+
 .align-right {
     text-align: right;
 }

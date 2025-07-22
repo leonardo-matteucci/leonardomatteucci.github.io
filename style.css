@@ -372,7 +372,7 @@ body.about .about-lines {
     border-left: 3px solid #555555;
 }
 
-.instrumentation-list li {
+.instrumentation-list > li {
     margin-bottom: 0.2em;
 }
 
@@ -396,6 +396,7 @@ body.about .about-lines {
 
 .gear-list-tight li {
     margin-bottom: 0;
+    line-height: 1.3;
 }
 
 .soundcloud-player {

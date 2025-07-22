@@ -257,10 +257,11 @@ img {
 }
 .music-icon {
     width: 1em;
-    height: 1em;
+    height: 0.8em;
     display: inline-block;
     /* Align musical accidentals with the surrounding text */
     vertical-align: -0.15em;
+    line-height: 0;
     /* Tighten spacing between accidentals and adjacent text */
     margin-left: -0.2em;
     margin-right: -0.2em;

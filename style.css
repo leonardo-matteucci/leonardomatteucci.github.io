@@ -448,6 +448,8 @@ body.about .about-lines {
     height: calc(100vh - 118px - 120px);
     max-height: none;
     object-fit: cover;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 

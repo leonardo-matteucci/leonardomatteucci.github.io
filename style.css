@@ -393,6 +393,7 @@ body.about .about-lines {
 /* Variant with tighter spacing for specific lists */
 .gear-list-tight {
     margin-top: 0.2em;
+    margin-bottom: 0.5em;
 }
 
 .gear-list-tight li {

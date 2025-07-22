@@ -88,6 +88,10 @@ header .container {
 .footer-icons img {
     width: 24px;
     height: 24px;
+    transition: transform 0.3s ease;
+}
+.footer-icons a:hover img {
+    transform: translateY(-2px);
 }
 main {
     margin-top: var(--header-height);
@@ -100,6 +104,10 @@ main {
 .logo img {
     width: 60px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+.logo a:hover img {
+    transform: translateY(-2px);
 }
 .tagline {
     position: absolute;
@@ -275,6 +283,10 @@ img {
     width: 24px;
     height: 24px;
     margin: 0;
+    transition: transform 0.3s ease;
+}
+.social-icons a:hover img {
+    transform: translateY(-2px);
 }
 .supporter-logos {
     display: flex;
@@ -285,6 +297,10 @@ img {
 .supporter-logos img {
     height: 40px;
     width: auto;
+    transition: transform 0.3s ease;
+}
+.supporter-logos a:hover img {
+    transform: translateY(-2px);
 }
 section {
     margin-bottom: 3em;
@@ -340,7 +356,7 @@ body.about .about-lines {
 }
 .works-list li:hover {
     transform: translateX(5px);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 .works-list li:last-child {
     margin-bottom: 0;
@@ -429,7 +445,7 @@ body.about .about-lines {
 }
 .events-list > li:hover {
     transform: translateX(5px);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Nested list for program details within events */

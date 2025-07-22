@@ -264,6 +264,12 @@ section {
     padding-right: 1em;
 }
 
+.hero {
+    margin: 0;
+    border-right: none;
+    padding-right: 0;
+}
+
 body.about .about-lines {
     margin-top: 0;
 }
@@ -439,9 +445,9 @@ body.about .about-lines {
 
 .hero img {
     width: 100%;
-    height: auto;
-    max-height: 100vh;
-    object-fit: contain;
+    height: calc(100vh - 118px - 120px);
+    max-height: none;
+    object-fit: cover;
 }
 
 

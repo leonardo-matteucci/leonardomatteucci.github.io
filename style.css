@@ -64,7 +64,8 @@ header .container {
     transition: background-color 0.3s ease;
 }
 .menu-icon:hover::before {
-    background-color: rgba(255, 255, 255, 0.08);
+    /* Slightly brighter hover background */
+    background-color: rgba(255, 255, 255, 0.12);
 }
 .menu-icon span {
     position: absolute;
@@ -381,7 +382,8 @@ body.about .about-lines {
 }
 .works-list li:hover:has(a) {
     transform: translateX(5px);
-    background-color: rgba(255, 255, 255, 0.08);
+    /* Slightly brighter hover background */
+    background-color: rgba(255, 255, 255, 0.12);
 }
 .works-list li:last-child {
     margin-bottom: 0;
@@ -470,7 +472,8 @@ body.about .about-lines {
 }
 .events-list > li:hover:has(a) {
     transform: translateX(5px);
-    background-color: rgba(255, 255, 255, 0.08);
+    /* Slightly brighter hover background */
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
 /* Nested list for program details within events */

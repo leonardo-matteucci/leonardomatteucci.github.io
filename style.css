@@ -718,6 +718,7 @@ body.fade-out {
     a,
     .link {
         text-decoration: underline;
+        text-decoration-color: #555555;
     }
     header nav a::after {
         display: none;

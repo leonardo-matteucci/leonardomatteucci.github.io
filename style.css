@@ -98,7 +98,7 @@ header .container {
 }
 .footer-icons {
     display: flex;
-    gap: 1.3em;
+    gap: 1.1em;
     margin: 0;
 }
 .footer-icons img {

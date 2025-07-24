@@ -411,8 +411,24 @@ body.about .about-lines {
 }
 .works-title {
     display: block;
-    font-weight: 400;
-    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 1.3em;
+    margin: 1em 0 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    position: relative;
+}
+
+.works-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    border-bottom: 1px solid #555555;
 }
 .works-details {
     display: block;

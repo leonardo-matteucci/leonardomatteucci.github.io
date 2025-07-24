@@ -159,6 +159,7 @@ h1 {
     letter-spacing: 0.15em;
     border-bottom: 1px solid #555555;
     padding-bottom: 0.5em;
+    text-align: center;
 }
 h2 {
     font-weight: 300;

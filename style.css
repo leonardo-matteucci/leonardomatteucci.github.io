@@ -720,6 +720,10 @@ body.fade-out {
         text-decoration: underline;
         text-decoration-color: #555555;
     }
+    .tagline,
+    header nav a {
+        text-decoration: none;
+    }
     header nav a::after {
         display: none;
     }

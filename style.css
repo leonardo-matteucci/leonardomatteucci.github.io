@@ -719,6 +719,8 @@ body.fade-out {
     .link {
         text-decoration: underline;
         text-decoration-color: #555555;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2em;
     }
     .tagline,
     header nav a {

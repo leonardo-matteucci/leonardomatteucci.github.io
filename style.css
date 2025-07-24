@@ -409,6 +409,19 @@ body.about .about-lines {
 .works-list li:last-child {
     margin-bottom: 0;
 }
+
+/* Titles for entries in the Works and Projects index pages */
+.list-title {
+    display: block;
+    font-weight: 300;
+    font-size: 1.1em;
+    margin: 0.5em 0 0.3em;
+    text-transform: none;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+/* Hero‑style title used on individual work and project pages */
 .works-title {
     display: block;
     font-weight: 300;

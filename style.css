@@ -721,6 +721,9 @@ body.fade-out {
     header .container {
         padding: 0.6em 2vw;
     }
+    .logo img {
+        width: 50px;
+    }
     .tagline {
         font-size: 1em;
     }

@@ -414,11 +414,7 @@ body.about .about-lines {
 .list-title {
     display: block;
     font-weight: 300;
-    font-size: 1.1em;
-    margin: 0.5em 0 0.3em;
-    text-transform: none;
-    letter-spacing: normal;
-    text-align: left;
+    margin-top: 0;
 }
 
 /* Hero‑style title used on individual work and project pages */

@@ -157,9 +157,18 @@ h1 {
     margin: 1em 0 0.75em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    border-bottom: 1px solid #555555;
     padding-bottom: 0.5em;
     text-align: center;
+    position: relative;
+}
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    border-bottom: 1px solid #555555;
 }
 h2 {
     font-weight: 300;

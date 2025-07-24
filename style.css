@@ -524,7 +524,7 @@ body.about .about-lines {
 .events-separator {
     border: 0;
     border-top: 1px solid #555555;
-    margin: 2em 0 1em;
+    margin: 1em 0;
 }
 .events-separator:last-child {
     margin-bottom: 0;

@@ -715,4 +715,11 @@ body.fade-out {
     main {
         margin-top: var(--header-height);
     }
+    a,
+    .link {
+        text-decoration: underline;
+    }
+    header nav a::after {
+        display: none;
+    }
 }

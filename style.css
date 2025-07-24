@@ -719,6 +719,10 @@ body.fade-out {
     .link {
         text-decoration: underline;
     }
+    .tagline,
+    header nav a {
+        text-decoration: none;
+    }
     header nav a::after {
         display: none;
     }

@@ -565,6 +565,13 @@ body.about .about-lines {
     margin-bottom: 0;
 }
 
+/* Ensure consistent spacing when a separator is followed by a heading */
+hr[class*="separator"] + h1,
+hr[class*="separator"] + h2,
+hr[class*="separator"] + h3 {
+    margin-top: 0;
+}
+
 .intermission-text {
     margin: 0.5em 0;
 }

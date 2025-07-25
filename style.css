@@ -410,7 +410,7 @@ body.about .about-lines {
     margin: 0;
 }
 .about-text p:not(.works-details):not(:first-child) {
-    margin-top: 0.2em;
+    margin-top: 0.5em;
 }
 .about-text p.large-margin {
     margin-bottom: 2.5em;

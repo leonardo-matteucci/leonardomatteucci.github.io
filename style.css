@@ -2,6 +2,8 @@
     --header-height: 100px;
     --footer-height: 120px;
     --separator-width: 50%;
+    --spacing-large: 0.75em;
+    --spacing-small: 0.5em;
 }
 
 html {
@@ -138,7 +140,12 @@ body:not(.home) main {
        first heading on non-home pages. Without this padding the heading's
        top margin collapses with the main element, eliminating the intended
        space. */
-    padding-top: 0.75em;
+    padding-top: var(--spacing-large);
+}
+
+body.home main {
+    /* Match the spacing below the header for pages with hero sections */
+    padding-top: var(--spacing-large);
 }
 .logo img {
     width: 60px;
@@ -180,7 +187,7 @@ nav a {
 h1 {
     font-weight: 300;
     font-size: 1.3em;
-    margin: 0.75em 0 0.5em;
+    margin: var(--spacing-large) 0 var(--spacing-small);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -641,7 +648,7 @@ body.about .about-lines {
 .events-separator {
     border: 0;
     border-top: 1px solid #555555;
-    margin: 1em 0;
+    margin: var(--spacing-large) 0;
 }
 .events-separator:last-child {
     margin-bottom: 0;
@@ -650,7 +657,7 @@ body.about .about-lines {
 .works-separator {
     border: 0;
     border-top: 1px solid #555555;
-    margin: 1em 0;
+    margin: var(--spacing-large) 0;
 }
 .works-separator:last-child {
     margin-bottom: 0;
@@ -660,10 +667,8 @@ body.about .about-lines {
 .works-separator-half {
     border: 0;
     border-top: 1px solid #555555;
-    margin: 2em 0;
+    margin: var(--spacing-small) auto;
     width: 50%;
-    margin-left: 0;
-    margin-right: auto;
 }
 .works-separator-half:last-child {
     margin-bottom: 0;
@@ -673,7 +678,7 @@ body.about .about-lines {
 .works-separator-small {
     border: 0;
     border-top: 1px solid #555555;
-    margin: 0.5em 0;
+    margin: var(--spacing-small) 0;
     width: 50%;
     margin-left: auto;
     margin-right: 0;
@@ -700,6 +705,8 @@ hr[class*="separator"] + h3 {
     animation: heroTitle 0.6s ease forwards;
     border-bottom: none;
     padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: var(--spacing-large);
 }
 
 .hero img {

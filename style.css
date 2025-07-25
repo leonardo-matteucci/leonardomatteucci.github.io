@@ -258,7 +258,7 @@ header nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #000000;
-    padding: 1em 4vw;
+    padding: 0.75em 4vw 0.5em;
 }
 
 header nav::before,

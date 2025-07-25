@@ -647,6 +647,10 @@ main > section:first-of-type > .works-title:first-child {
     margin-top: 0;
 }
 
+.premiere {
+    color: #bbbbbb;
+}
+
 .separator {
     color: #ffffff;
     padding: 0 0.3em;

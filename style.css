@@ -149,7 +149,7 @@ main {
 nav a {
     margin-left: 0;
     font-weight: 300;
-    font-size: 1.3em;
+    font-size: 1em;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #ffffff;
@@ -671,7 +671,7 @@ hr[class*="separator"] + h3 {
     nav a {
         margin: 0;
         padding: 0.3em 0;
-        font-size: 1.3em;
+        font-size: 1em;
         letter-spacing: 0.15em;
     }
 }
@@ -742,7 +742,7 @@ body.fade-out {
         font-size: 1em;
     }
     header nav a {
-        font-size: 1.3em;
+        font-size: 1em;
         letter-spacing: 0.15em;
         padding: 0.2em 0;
     }

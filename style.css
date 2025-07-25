@@ -35,10 +35,6 @@ header {
 }
 
 header::after {
-    display: none;
-}
-
-header .container::after {
     content: "";
     position: absolute;
     bottom: 0;

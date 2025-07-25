@@ -150,7 +150,7 @@ main {
 nav a {
     margin-left: 0;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1.15em;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #ffffff;
@@ -471,6 +471,13 @@ body.about .about-lines {
 /* Separator inside works details should match the surrounding text color */
 .works-details .separator {
     color: inherit;
+}
+
+/* Duration text under work titles */
+.duration {
+    color: #ffffff;
+    font-size: 1.3em;
+    letter-spacing: 0.15em;
 }
 
 /* List used for the instrumentation of each work */

@@ -243,6 +243,7 @@ header nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #000000;
+    border-top: 1px solid #555555;
     border-bottom: 1px solid #555555;
     padding: 1em 4vw;
 }

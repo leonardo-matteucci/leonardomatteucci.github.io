@@ -107,6 +107,34 @@ header .container {
 }
 #menu-toggle:checked + .menu-icon + nav {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu-toggle:checked + .menu-icon + nav a {
+    margin: var(--spacing-large) 0 var(--spacing-small);
+    padding-bottom: 0.5em;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+    position: relative;
+    opacity: 1;
+    transform: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--separator-width);
+    height: 0;
+    border-bottom: 1px solid #555555;
+    background: none;
+    opacity: 1;
 }
 .logo {
     display: flex;

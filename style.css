@@ -650,6 +650,15 @@ main > section:first-of-type > .works-title:first-child {
 .premiere {
     color: #bbbbbb;
 }
+/* Ensure premiere links match the surrounding gray */
+.premiere a,
+.premiere .link {
+    color: #bbbbbb;
+}
+.premiere a:hover,
+.premiere .link:hover {
+    color: #bbbbbb;
+}
 
 .separator {
     color: #ffffff;

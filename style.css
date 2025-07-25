@@ -728,6 +728,25 @@ body.fade-out {
     .tagline {
         font-size: 1em;
     }
+    .menu-icon {
+        display: block;
+    }
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        flex-direction: column;
+        gap: 0.5em;
+        background-color: #000000;
+        border-bottom: 1px solid #555555;
+        padding: 1em 4vw;
+    }
+    #menu-toggle:checked + .menu-icon + nav {
+        display: flex;
+    }
     header nav a {
         font-size: 1.2em;
         letter-spacing: 0.15em;

@@ -353,17 +353,18 @@ img {
 
 /* Generic back button for detail pages */
 .back-link {
-    display: flex;
-    align-items: center;
-    margin-right: 1em;
+    position: absolute;
+    top: 0.9em;
+    left: 2vw;
+    margin: 0;
     padding: 0.5em;
     line-height: 0;
     text-decoration: none;
 }
 
 .back-link img {
-    width: 60px;
-    height: 60px;
+    width: 24px;
+    height: 24px;
 }
 section {
     margin-bottom: 3em;
@@ -790,8 +791,7 @@ body.fade-out {
     header nav a::after {
         display: none;
     }
-    .back-link img {
-        width: 50px;
-        height: 50px;
+    .back-link {
+        left: 4vw;
     }
 }

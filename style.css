@@ -134,7 +134,7 @@ main {
 }
 
 body:not(.home) main {
-    padding-top: 0.5em;
+    padding-top: 0;
 }
 .logo img {
     width: 60px;
@@ -789,7 +789,7 @@ body.fade-out {
         padding: 0 4vw calc(var(--footer-height) + 1em);
     }
     body:not(.home) main {
-        padding-top: 0.5em;
+        padding-top: 0;
     }
     footer .container {
         padding: 2em 4vw;

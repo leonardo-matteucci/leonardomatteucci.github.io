@@ -2,7 +2,7 @@
     --header-height: 100px;
     --footer-height: 120px;
     --separator-width: 50%;
-    --spacing-large: 0.75em;
+    --spacing-large: 1em;
     --spacing-small: 0.5em;
 }
 
@@ -214,7 +214,7 @@ h1::after {
 h2 {
     font-weight: 300;
     font-size: 1.4em;
-    margin-bottom: 0.75em;
+    margin-bottom: 1em;
 }
 p {
     font-weight: 300;
@@ -277,7 +277,7 @@ header nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #000000;
-    padding: 0.75em 4vw 0.5em;
+    padding: 1em 4vw 0.5em;
 }
 
 header nav::before,
@@ -500,7 +500,7 @@ body.about .about-lines {
     display: block;
     font-weight: 300;
     font-size: 1.3em;
-    margin: 0.75em 0 0.5em;
+    margin: 1em 0 0.5em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -810,7 +810,7 @@ body.fade-out {
     body:not(.home) main {
         /* Prevent margin collapse from removing the space above the first
            heading on small screens. */
-        padding-top: 0.75em;
+        padding-top: 1em;
     }
     footer .container {
         padding: 2em 4vw;

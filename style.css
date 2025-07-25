@@ -1,6 +1,6 @@
 :root {
-    --header-height: 100px;
-    --footer-height: 120px;
+    --header-height: 70px;
+    --footer-height: 80px;
     --separator-width: 50%;
     --spacing-large: 1em;
     --spacing-small: 0.5em;
@@ -49,7 +49,7 @@ header::after {
 header .container {
     display: flex;
     align-items: center;
-    padding: 1.25em 2vw;
+    padding: 1em 2vw;
     letter-spacing: 0.05em;
     position: relative;
 }
@@ -58,8 +58,8 @@ header .container {
 }
 .menu-icon {
     display: block;
-    width: 24px;
-    height: 18px;
+    width: 20px;
+    height: 15px;
     position: relative;
     cursor: pointer;
     margin-left: auto;
@@ -69,8 +69,8 @@ header .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 46px;
-    height: 46px;
+    width: 36px;
+    height: 36px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background-color: transparent;
@@ -92,8 +92,8 @@ header .container {
                 opacity 0.2s ease;
 }
 .menu-icon span:nth-child(1) { top: 0; }
-.menu-icon span:nth-child(2) { top: 8px; }
-.menu-icon span:nth-child(3) { top: 16px; }
+.menu-icon span:nth-child(2) { top: 7px; }
+.menu-icon span:nth-child(3) { top: 14px; }
 
 .menu-toggle:checked + .menu-icon span:nth-child(1),
 .menu-toggle:checked + .menu-icon span:nth-child(2),
@@ -148,7 +148,7 @@ body.home main {
     padding-top: var(--spacing-large);
 }
 .logo img {
-    width: 60px;
+    width: 50px;
     height: auto;
 }
 
@@ -164,7 +164,7 @@ body.home main {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.3em;
+    font-size: 1em;
     letter-spacing: 0.15em;
     color: #ffffff;
     font-style: normal;
@@ -751,7 +751,7 @@ footer .container {
     align-items: center;
     justify-content: space-between;
     gap: 1em;
-    padding: 2em 2vw;
+    padding: 1em 2vw;
     font-size: 0.8em;
     color: #555555;
 }
@@ -787,10 +787,10 @@ body.fade-out {
 
 @media (max-width: 600px) {
     :root {
-        --header-height: 70px;
+        --header-height: 60px;
     }
     header .container {
-        padding: 0.6em 4vw;
+        padding: 0.5em 4vw;
     }
     .container {
         padding-left: 4vw;
@@ -817,7 +817,7 @@ body.fade-out {
         padding-top: 1em;
     }
     footer .container {
-        padding: 2em 4vw;
+        padding: 1em 4vw;
     }
     a,
     .link {

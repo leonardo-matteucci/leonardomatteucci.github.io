@@ -132,6 +132,10 @@ main {
     padding: 0 2vw calc(var(--footer-height) + 1em);
     position: relative;
 }
+
+body:not(.home) main {
+    padding-top: 0.5em;
+}
 .logo img {
     width: 60px;
     height: auto;
@@ -172,7 +176,7 @@ nav a {
 h1 {
     font-weight: 300;
     font-size: 1.3em;
-    margin: 0.5em 0 0.75em;
+    margin: 0 0 0.5em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -477,7 +481,7 @@ body.about .about-lines {
     display: block;
     font-weight: 300;
     font-size: 1.3em;
-    margin: 0.5em 0 0.5em;
+    margin: 0 0 0.5em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -774,6 +778,9 @@ body.fade-out {
     main {
         margin-top: var(--header-height);
         padding: 0 4vw calc(var(--footer-height) + 1em);
+    }
+    body:not(.home) main {
+        padding-top: 0.5em;
     }
     footer .container {
         padding: 2em 4vw;

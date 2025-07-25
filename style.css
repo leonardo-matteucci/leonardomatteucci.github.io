@@ -164,7 +164,7 @@ main {
 nav a {
     margin-left: 0;
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 1.3em;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #ffffff;
@@ -767,7 +767,7 @@ body.fade-out {
         font-size: 1em;
     }
     header nav a {
-        font-size: 1.2em;
+        font-size: 1.3em;
         letter-spacing: 0.15em;
         padding: 0.2em 0;
     }

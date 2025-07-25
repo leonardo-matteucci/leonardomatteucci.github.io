@@ -194,6 +194,14 @@ h1 {
     text-align: center;
     position: relative;
 }
+/*
+ * Prevent double spacing at the top of the page by
+ * removing the margin above the first heading when it
+ * immediately follows the opening section in main.
+ */
+main > section:first-of-type > h1:first-child {
+    margin-top: 0;
+}
 h1::after {
     content: "";
     position: absolute;

@@ -450,7 +450,7 @@ body.about .about-lines {
     display: block;
     font-weight: 300;
     font-size: 1.3em;
-    margin: 1em 0 0.75em;
+    margin: 1em 0 0.5em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -471,7 +471,7 @@ body.about .about-lines {
     display: block;
     font-style: normal;
     color: #bbbbbb;
-    margin-top: 0.2em;
+    margin-top: 0;
 }
 .works-details.italic {
     font-style: italic;

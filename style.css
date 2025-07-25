@@ -513,6 +513,12 @@ body.about .about-lines {
 .works-details a:hover {
     color: #bbbbbb;
 }
+.works-details .link {
+    color: #bbbbbb;
+}
+.works-details .link:hover {
+    color: #bbbbbb;
+}
 
 /* Separator inside works details should match the surrounding text color */
 .works-details .separator {

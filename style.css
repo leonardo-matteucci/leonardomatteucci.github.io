@@ -1,6 +1,7 @@
 :root {
     --header-height: 118px;
     --footer-height: 120px;
+    --separator-width: 50%;
 }
 
 html {
@@ -29,8 +30,18 @@ header {
     left: 0;
     right: 0;
     background-color: #000000;
-    border-bottom: 1px solid #555555;
+    border-bottom: none;
     z-index: 1000;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--separator-width);
+    border-bottom: 1px solid #555555;
 }
 
 header .container {
@@ -174,7 +185,7 @@ h1::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: var(--separator-width);
     border-bottom: 1px solid #555555;
 }
 h2 {
@@ -243,9 +254,25 @@ header nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #000000;
-    border-top: 1px solid #555555;
-    border-bottom: 1px solid #555555;
     padding: 1em 4vw;
+}
+
+header nav::before,
+header nav::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--separator-width);
+    border-bottom: 1px solid #555555;
+}
+
+header nav::before {
+    top: 0;
+}
+
+header nav::after {
+    bottom: 0;
 }
 header nav a {
     position: relative;

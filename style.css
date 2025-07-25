@@ -280,22 +280,13 @@ header nav {
     padding: var(--spacing-large) 4vw var(--spacing-small);
 }
 
-header nav::before,
 header nav::after {
     content: "";
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: var(--separator-width);
-    border-bottom: 1px solid #555555;
-}
-
-header nav::before {
-    top: 0;
-}
-
-header nav::after {
+    left: 0;
+    right: 0;
     bottom: 0;
+    border-bottom: 1px solid #555555;
 }
 header nav a {
     position: relative;

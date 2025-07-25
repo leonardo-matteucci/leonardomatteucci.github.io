@@ -504,6 +504,9 @@ body.about .about-lines {
     color: #bbbbbb;
     margin-top: 0;
 }
+.reach-touch .about-text .works-details {
+    margin-top: 0.5em;
+}
 .works-details.italic {
     font-style: italic;
 }

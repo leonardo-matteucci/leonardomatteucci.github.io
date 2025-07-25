@@ -134,7 +134,11 @@ main {
 }
 
 body:not(.home) main {
-    padding-top: 0;
+    /* Ensure a consistent gap between the header's bottom line and the
+       first heading on non-home pages. Without this padding the heading's
+       top margin collapses with the main element, eliminating the intended
+       space. */
+    padding-top: 0.75em;
 }
 .logo img {
     width: 60px;
@@ -789,7 +793,9 @@ body.fade-out {
         padding: 0 4vw calc(var(--footer-height) + 1em);
     }
     body:not(.home) main {
-        padding-top: 0;
+        /* Prevent margin collapse from removing the space above the first
+           heading on small screens. */
+        padding-top: 0.75em;
     }
     footer .container {
         padding: 2em 4vw;

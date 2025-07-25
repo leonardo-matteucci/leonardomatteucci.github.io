@@ -355,7 +355,7 @@ img {
 .back-link {
     position: absolute;
     top: 0.9em;
-    left: 0;
+    left: 2vw;
     margin: 0;
     padding: 0.5em;
     line-height: 0;
@@ -790,5 +790,8 @@ body.fade-out {
     }
     header nav a::after {
         display: none;
+    }
+    .back-link {
+        left: 4vw;
     }
 }

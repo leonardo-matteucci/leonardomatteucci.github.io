@@ -655,7 +655,7 @@ body.about .about-lines {
     margin: 0;
 }
 .works-list li {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -787,7 +787,7 @@ main > section:first-of-type > .works-title:first-child {
 }
 
 .events-list > li {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
     transition: transform 0.3s ease, background-color 0.3s ease;

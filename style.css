@@ -648,7 +648,12 @@ body.about .about-lines {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .reach-touch .about-text:has(+ hr[class*="works-separator"]) {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+.reach-touch hr[class*="works-separator"] {
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
 .reach-touch .about-text:last-child {
     margin-bottom: 0;

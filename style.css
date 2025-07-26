@@ -702,7 +702,7 @@ main > section:first-of-type > .works-title:first-child {
     margin: 0.2em 0 0 0;
 }
 .reach-touch .about-text .works-details {
-    margin-top: 0.5em;
+    margin-top: 0.2em;
 }
 .works-details.italic {
     font-style: italic;

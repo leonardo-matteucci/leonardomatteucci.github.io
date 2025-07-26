@@ -2,7 +2,7 @@
     --header-height: 100px;
     --footer-height: 120px;
     --separator-width: 50%;
-    --spacing-large: 1em;
+    --spacing-large: 0.5em;
     --spacing-small: 0.5em;
 }
 
@@ -140,12 +140,12 @@ body:not(.home) main {
        first heading on non-home pages. Without this padding the heading's
        top margin collapses with the main element, eliminating the intended
        space. */
-    padding-top: var(--spacing-large);
+    padding-top: var(--spacing-small);
 }
 
 body.home main {
     /* Match the spacing below the header for pages with hero sections */
-    padding-top: var(--spacing-large);
+    padding-top: var(--spacing-small);
 }
 .logo img {
     width: 60px;
@@ -187,7 +187,7 @@ nav a {
 h1 {
     font-weight: 300;
     font-size: 1.3em;
-    margin: var(--spacing-large) 0 var(--spacing-small);
+    margin: var(--spacing-small) 0 var(--spacing-small);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -214,20 +214,20 @@ h1::after {
 h2 {
     font-weight: 300;
     font-size: 1.4em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 p {
     font-weight: 300;
     font-size: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     line-height: 1.6em;
     text-align: justify;
 }
 .large-margin {
-    margin-bottom: 2.5em;
+    margin-bottom: 0.5em;
 }
 .mid-margin {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 .italic {
     font-style: italic;
@@ -243,7 +243,7 @@ p {
 }
 .translation-eng {
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     color: #bbbbbb;
 }
 .translation-eng.final {
@@ -340,7 +340,7 @@ img {
 .placeholder-image {
     width: 100%;
     height: auto;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-left: 0;
     margin-right: 0;
 }
@@ -386,7 +386,7 @@ img {
     display: flex;
     gap: 1em;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 .social-icons img {
     width: 24px;
@@ -401,7 +401,7 @@ img {
     display: flex;
     gap: 1.5em;
     justify-content: center;
-    margin: 2em 0;
+    margin: 0.5em 0;
 }
 .supporter-logos img {
     height: 40px;
@@ -463,10 +463,10 @@ body.about .about-lines {
     margin-top: 0.5em;
 }
 .about-text p.large-margin {
-    margin-bottom: 2.5em;
+    margin-bottom: 0.5em;
 }
 .about-text p.mid-margin {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 .reach-touch .about-text {
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -482,7 +482,7 @@ body.about .about-lines {
     margin: 0;
 }
 .works-list li {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -508,7 +508,7 @@ body.about .about-lines {
     display: block;
     font-weight: 300;
     font-size: 1.3em;
-    margin: var(--spacing-large) 0 var(--spacing-small);
+    margin: var(--spacing-small) 0 var(--spacing-small);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -571,7 +571,7 @@ main > section:first-of-type > .works-title:first-child {
     list-style-type: none;
     padding-left: 1em;
     margin-top: 0;
-    margin-bottom: 1em; /* match paragraph spacing */
+    margin-bottom: 0.5em; /* match paragraph spacing */
     border-left: 3px solid #555555;
 }
 
@@ -604,7 +604,7 @@ main > section:first-of-type > .works-title:first-child {
 }
 
 .soundcloud-player {
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
 
 .events-list {
@@ -614,7 +614,7 @@ main > section:first-of-type > .works-title:first-child {
 }
 
 .events-list > li {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
     padding-left: 1em;
     border-left: 3px solid #555555;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -681,7 +681,7 @@ main > section:first-of-type > .works-title:first-child {
 .events-separator {
     border: 0;
     border-top: 1px solid #555555;
-    margin: var(--spacing-large) 0;
+    margin: var(--spacing-small) 0;
 }
 .events-separator:last-child {
     margin-bottom: 0;
@@ -690,7 +690,7 @@ main > section:first-of-type > .works-title:first-child {
 .works-separator {
     border: 0;
     border-top: 1px solid #555555;
-    margin: var(--spacing-large) 0;
+    margin: var(--spacing-small) 0;
 }
 .works-separator:last-child {
     margin-bottom: 0;
@@ -739,7 +739,7 @@ hr[class*="separator"] + h3 {
     border-bottom: none;
     padding-bottom: 0;
     margin-top: 0;
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--spacing-small);
 }
 
 .hero img {

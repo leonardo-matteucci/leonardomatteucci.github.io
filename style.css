@@ -2,7 +2,7 @@
     --header-height: 100px;
     --footer-height: 100px;
     --separator-width: 50%;
-    --spacing-large: 1em;
+    --spacing-large: 0.75em;
     --spacing-small: 0.5em;
 }
 
@@ -179,7 +179,7 @@ h1 {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin: 0 0 var(--spacing-small);
-    padding: 1em 0 var(--spacing-small);
+    padding: var(--spacing-large) 0 var(--spacing-small);
     text-align: center;
     position: relative;
 }
@@ -306,7 +306,7 @@ main {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 2vw calc(var(--footer-height) + 1em);
+    padding: 0 2vw calc(var(--footer-height) + var(--spacing-large));
     position: relative;
 }
 
@@ -340,8 +340,8 @@ body.home main {
     text-align: center;
     max-width: 100%;
     white-space: normal;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
 }
 .tagline:hover {
     text-decoration: none;
@@ -353,7 +353,7 @@ nav a {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 1em 0 var(--spacing-small);
+    padding: var(--spacing-large) 0 var(--spacing-small);
 }
 h1 {
     margin-left: 0;
@@ -362,7 +362,7 @@ h1 {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin: 0 0 var(--spacing-small);
-    padding: 1em 0 var(--spacing-small);
+    padding: var(--spacing-large) 0 var(--spacing-small);
     text-align: center;
     position: relative;
 }
@@ -860,8 +860,8 @@ main > section:first-of-type > .works-title:first-child {
 .events-separator {
     border: 0;
     border-top: 1px solid #555555;
-    margin: 1em 0 0;
     margin: var(--spacing-large) 0 0;
+    margin-bottom: 0.5em;
 }
 .events-separator:last-child {
     margin-bottom: 0;

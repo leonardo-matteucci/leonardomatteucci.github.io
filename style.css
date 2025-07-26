@@ -474,7 +474,11 @@ body.about .about-lines {
     margin-bottom: 0.5em;
 }
 .reach-touch .about-text {
+    margin-bottom: var(--spacing-large);
     transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.reach-touch .about-text:last-child {
+    margin-bottom: 0;
 }
 .reach-touch .about-text:hover:has(a) {
     transform: translateX(5px);

@@ -453,7 +453,9 @@ header nav::after {
     left: 50%;
     transform: translateX(-50%);
     width: 89%;
-    border-bottom: 1px solid #555555;
+    height: 50.5px;          /* or however much space you want between lines */
+    border-top: 20px solid #ff0000;
+    border-bottom: 1px solid #555;
 }
 header nav a {
     position: relative;
@@ -633,6 +635,9 @@ body.about .about-lines {
 }
 .reach-touch .about-text:has(+ hr[class*="works-separator"]) {
     margin-bottom: var(--spacing-large);
+}
+.reach-touch hr[class*="works-separator"] + p.regular {
+    margin-top: var(--spacing-large);
 }
 .reach-touch .about-text:last-child {
     margin-bottom: 0;

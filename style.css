@@ -317,7 +317,7 @@ body.home main {
 .logo img {
     width: 54px;
     height: auto;
-    margin-bottom: 0;
+    margin-bottom: -0.25em;
 }
 
 /* The logo should remain completely stationary */
@@ -452,7 +452,7 @@ header nav::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: var(--separator-width);
+    width: 89%;
     border-bottom: 1px solid #555555;
 }
 header nav a {
@@ -598,7 +598,7 @@ section::after {
     content: "";
     position: absolute;
     right: 0;
-    top: 1em;      /* adjust starting offset */
+    top: 0em;      /* adjust starting offset */
     bottom: 0em;   /* adjust ending offset */
     width: 1px;
     background: #555555;

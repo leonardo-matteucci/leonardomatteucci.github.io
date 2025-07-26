@@ -651,16 +651,16 @@ main > section:first-of-type > .works-title:first-child {
 }
 
 .premiere {
-    color: #bbbbbb;
+    color: #ffffff;
 }
-/* Ensure premiere links match the surrounding gray */
+/* Ensure premiere links remain white */
 .premiere a,
 .premiere .link {
-    color: #bbbbbb;
+    color: #ffffff;
 }
 .premiere a:hover,
 .premiere .link:hover {
-    color: #bbbbbb;
+    color: #ffffff;
 }
 
 .separator {

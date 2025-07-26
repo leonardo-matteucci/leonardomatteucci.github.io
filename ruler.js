@@ -11,10 +11,20 @@ window.addEventListener('DOMContentLoaded', () => {
   overlay.appendChild(line);
   document.body.appendChild(overlay);
 
+  const savedPos = localStorage.getItem('rulerPosition');
+  if (savedPos !== null) {
+    line.style.top = `${savedPos}px`;
+  }
+
+  if (localStorage.getItem('rulerActive') === '1') {
+    document.body.classList.add('ruler-active');
+  }
+
   let isDragging = false;
 
   const moveLine = (y) => {
     line.style.top = `${y}px`;
+    localStorage.setItem('rulerPosition', y);
   };
 
   line.addEventListener('mousedown', (e) => {
@@ -51,5 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('click', () => {
     document.body.classList.toggle('ruler-active');
+    const active = document.body.classList.contains('ruler-active');
+    localStorage.setItem('rulerActive', active ? '1' : '0');
   });
 });

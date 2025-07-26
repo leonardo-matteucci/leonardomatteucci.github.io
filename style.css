@@ -4,7 +4,6 @@
     --separator-width: 50%;
     --spacing-large: 1em;
     --spacing-small: 0.5em;
-    --header-spacing: 1.25em;
 }
 
 html {
@@ -50,7 +49,7 @@ header::after {
 header .container {
     display: flex;
     align-items: center;
-    padding: var(--header-spacing) 2vw;
+    padding: 1.15em;
     letter-spacing: 0.05em;
     position: relative;
 }
@@ -235,7 +234,7 @@ header::after {
 header .container {
     display: flex;
     align-items: center;
-    padding: var(--header-spacing) 2vw;
+    padding: 1.25em 2vw;
     letter-spacing: 0.05em;
     position: relative;
 }
@@ -323,7 +322,7 @@ main {
 
 body.home main {
     /* Match the spacing below the header for pages with hero sections */
-    padding-top: var(--header-spacing);
+    padding-top: var(--spacing-small);
 }
 .logo img {
     width: 60px;
@@ -380,7 +379,7 @@ h1 {
  * immediately follows the opening section in main.
  */
 main > section:first-of-type > h1:first-child {
-    margin-top: var(--header-spacing);
+    margin-top: 0;
 }
 h1::after {
     content: "";
@@ -691,7 +690,7 @@ body.about .about-lines {
 }
 
 main > section:first-of-type > .works-title:first-child {
-    margin-top: var(--header-spacing);
+    margin-top: 0;
 }
 
 .works-title::after {
@@ -985,10 +984,9 @@ body.fade-out {
 @media (max-width: 600px) {
     :root {
         --header-height: 70px;
-        --header-spacing: 0.6em;
     }
     header .container {
-        padding: var(--header-spacing) 4vw;
+        padding: 0.6em 4vw;
     }
     .container {
         padding-left: 4vw;

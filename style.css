@@ -1064,6 +1064,17 @@ body.fade-out {
     cursor: ns-resize;
 }
 
+.vertical-ruler-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: auto;
+    cursor: ew-resize;
+}
+
 .ruler-toggle {
     position: fixed;
     bottom: 1em;

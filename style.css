@@ -426,6 +426,7 @@ a, .link {
     color: #ffffff;
     font-weight: 400;
     text-decoration: none;
+    cursor: pointer;
 }
 a:hover, .link:hover {
     text-decoration: underline;

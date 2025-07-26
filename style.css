@@ -595,7 +595,11 @@ img {
 
 section {
     position: relative;
-    padding-right: 0em;
+    padding-right: 1em;
+}
+
+section > h1 {
+    margin-right: -1em;
 }
 
 section::after {

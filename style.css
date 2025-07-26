@@ -455,6 +455,7 @@ header nav::after {
     transform: translateX(-50%);
     width: 100%;
     height: 50px;
+    pointer-events: none;
     border-top: 20px solid #000000;
     border-bottom: 1px solid #555;
 }

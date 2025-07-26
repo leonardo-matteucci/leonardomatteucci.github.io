@@ -1049,6 +1049,21 @@ body.fade-out {
     header nav a::after {
         display: none;
     }
+    section::after {
+        display: none;
+    }
+    .about-text,
+    .works-list li {
+        padding-left: 0.5em;
+        border-left-width: 2px;
+    }
+    .hero img {
+        height: auto;
+        max-height: 60vh;
+    }
+    body {
+        cursor: auto;
+    }
 }
 
 /* Baseline ruler overlay for development */

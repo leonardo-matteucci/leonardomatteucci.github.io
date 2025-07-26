@@ -54,7 +54,10 @@ header .container {
     position: relative;
 }
 .menu-toggle {
-    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 .menu-icon {
     display: block;
@@ -222,7 +225,10 @@ header .container {
     position: relative;
 }
 .menu-toggle {
-    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 .menu-icon {
     display: block;

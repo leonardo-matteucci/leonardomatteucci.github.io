@@ -653,7 +653,7 @@ body.about .about-lines {
 
 .reach-touch hr[class*="works-separator"] {
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: var(--spacing-large);
 }
 .reach-touch .about-text:last-child {
     margin-bottom: 0;

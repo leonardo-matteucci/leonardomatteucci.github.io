@@ -269,7 +269,11 @@ header nav a:hover {
 header nav {
     display: none;
     position: absolute;
-    top: 100%;
+    /*
+     * Offset the menu by the 1px border drawn via `header::after` so the
+     * bottom separator aligns perfectly with section headings.
+     */
+    top: calc(100% + 1px);
     left: 0;
     right: 0;
     margin-left: 0;

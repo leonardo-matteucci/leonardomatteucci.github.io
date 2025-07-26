@@ -634,11 +634,6 @@ body.about .about-lines {
 .reach-touch .about-text:has(+ hr[class*="works-separator"]) {
     margin-bottom: var(--spacing-large);
 }
-
-.reach-touch hr[class*="works-separator"] {
-    margin-top: 0;
-    margin-bottom: var(--spacing-large);
-}
 .reach-touch .about-text:last-child {
     margin-bottom: 0;
 }

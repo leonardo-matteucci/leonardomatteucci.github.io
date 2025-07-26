@@ -902,6 +902,7 @@ hr[class*="separator"] + h3 {
 
 .intermission-text {
     margin: 0.5em 0;
+    letter-spacing: 0.15em;
 }
 
 .hero h1 {

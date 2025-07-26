@@ -420,7 +420,8 @@ img {
 .back-link {
     position: absolute;
     top: 0.9em;
-    left: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
     padding: 0.5em;
     line-height: 0;
@@ -428,8 +429,8 @@ img {
 }
 
 .back-link img {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
 }
 section {
     margin-bottom: 3em;
@@ -859,6 +860,7 @@ body.fade-out {
         display: none;
     }
     .back-link {
-        left: 4vw;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

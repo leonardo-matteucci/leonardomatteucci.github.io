@@ -880,6 +880,11 @@ main > section:first-of-type > .works-title:first-child {
     margin-bottom: 0;
 }
 
+/* Remove extra top space before program notes */
+.works-separator + p.italic {
+    margin-top: 0;
+}
+
 /* Half-length separator used on specific project pages */
 .works-separator-half {
     border: 0;

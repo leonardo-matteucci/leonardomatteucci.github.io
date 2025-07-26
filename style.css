@@ -61,7 +61,7 @@ header .container {
     width: 24px;
     height: 18px;
     position: relative;
-    cursor: url('logos/custom-cursor.svg') 8 8, pointer;
+    cursor: url('logos/custom-cursor.svg?v=1') 8 8, pointer;
     margin-left: auto;
 }
 .menu-icon::before {
@@ -236,7 +236,7 @@ header .container {
     width: 24px;
     height: 18px;
     position: relative;
-    cursor: url('logos/custom-cursor.svg') 8 8, pointer;
+    cursor: url('logos/custom-cursor.svg?v=1') 8 8, pointer;
     margin-left: auto;
 }
 .menu-icon::before {
@@ -426,7 +426,7 @@ a, .link {
     color: #ffffff;
     font-weight: 400;
     text-decoration: none;
-    cursor: url('logos/custom-cursor.svg') 8 8, pointer;
+    cursor: url('logos/custom-cursor.svg?v=1') 8 8, pointer;
 }
 a:hover, .link:hover {
     text-decoration: underline;
@@ -1104,5 +1104,5 @@ body.fade-out {
 
 /* Custom gray cross cursor */
 body {
-    cursor: url('logos/custom-cursor.svg') 8 8, crosshair;
+    cursor: url('logos/custom-cursor.svg?v=1') 8 8, crosshair;
 }

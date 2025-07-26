@@ -573,22 +573,6 @@ img {
     transform: translateY(-2px);
 }
 
-/* Generic back button for detail pages */
-.back-link {
-    position: absolute;
-    top: 0em;
-    left: 2em;
-    transform: none;
-    margin: 0;
-    padding: 0.5em;
-    line-height: 0;
-    text-decoration: none;
-}
-
-.back-link img {
-    width: 36px;
-    height: 36px;
-}
 section {
     position: relative;
     padding-right: 1em;
@@ -1042,10 +1026,6 @@ body.fade-out {
     }
     header nav a::after {
         display: none;
-    }
-    .back-link {
-        left: 4vw;
-        transform: none;
     }
 }
 

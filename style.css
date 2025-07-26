@@ -739,6 +739,12 @@ main > section:first-of-type > .works-title:first-child {
     letter-spacing: 0.15em;
 }
 
+/* Premiere line spacing within works pages */
+.works-premiere {
+    display: block;
+    margin: 0.7em 0 0 0;
+}
+
 /* List used for the instrumentation of each work */
 .instrumentation-list {
     list-style-type: none;

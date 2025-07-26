@@ -701,7 +701,7 @@ main > section:first-of-type > .works-title:first-child {
 .works-separator-half {
     border: 0;
     border-top: 1px solid #555555;
-    margin: var(--spacing-small) auto;
+    margin: var(--spacing-small) 0;
     width: 50%;
 }
 .works-separator-half:last-child {

@@ -647,6 +647,9 @@ body.about .about-lines {
     margin-bottom: 1.5em; /* match spacing of works list */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
+.reach-touch .about-text:has(+ hr[class*="works-separator"]) {
+    margin-bottom: 1em;
+}
 .reach-touch .about-text:last-child {
     margin-bottom: 0;
 }

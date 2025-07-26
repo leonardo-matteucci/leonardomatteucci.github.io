@@ -786,7 +786,7 @@ main > section:first-of-type > .works-title:first-child {
 }
 
 .soundcloud-player {
-    margin: 0.5em 0;
+    margin: var(--spacing-small) 0;
 }
 
 .events-list {
@@ -907,6 +907,11 @@ main > section:first-of-type > .works-title:first-child {
 }
 .works-separator-small:last-child {
     margin-bottom: 0;
+}
+
+/* Match spacing above and below the reduced separators */
+hr.works-separator-small + .works-details {
+    margin-top: var(--spacing-small);
 }
 
 /* Ensure consistent spacing when a separator is followed by a heading */

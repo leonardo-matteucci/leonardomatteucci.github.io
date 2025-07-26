@@ -49,7 +49,7 @@ header::after {
 header .container {
     display: flex;
     align-items: center;
-    padding: 1.15em;
+    padding: 1em;
     letter-spacing: 0.05em;
     position: relative;
 }
@@ -183,7 +183,7 @@ h1 {
     text-align: center;
     position: relative;
 }
-h1:::root {
+h1:root {
     --header-height: 100px;
     --footer-height: 100px;
     --separator-width: 50%;
@@ -219,16 +219,6 @@ header {
     background-color: #000000;
     border-bottom: none;
     z-index: 1000;
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: var(--separator-width);
-    border-bottom: 1px solid #555555;
 }
 
 header .container {
@@ -325,8 +315,9 @@ body.home main {
     padding-top: var(--spacing-small);
 }
 .logo img {
-    width: 60px;
+    width: 54px;
     height: auto;
+    margin-bottom: 0;
 }
 
 /* The logo should remain completely stationary */
@@ -349,6 +340,8 @@ body.home main {
     text-align: center;
     max-width: 100%;
     white-space: normal;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 .tagline:hover {
     text-decoration: none;
@@ -443,7 +436,7 @@ header nav a:hover {
 header nav {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 101px;
     left: 0;
     right: 0;
     margin-left: 0;
@@ -456,11 +449,11 @@ header nav {
 header nav::after {
     content: "";
     position: absolute;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
     border-bottom: 1px solid #555555;
-    bottom: -1px;
-    width: 100%; /* Use full width for the menu's bottom separator */
 }
 header nav a {
     position: relative;
@@ -583,8 +576,8 @@ img {
 /* Generic back button for detail pages */
 .back-link {
     position: absolute;
-    top: 0.9em;
-    left: 2vw;
+    top: 0em;
+    left: 2em;
     transform: none;
     margin: 0;
     padding: 0.5em;
@@ -597,9 +590,22 @@ img {
     height: 36px;
 }
 section {
-    margin-bottom: 3em;
-    border-right: 1px solid #555555;
+    position: relative;
     padding-right: 1em;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 1em;      /* adjust starting offset */
+    bottom: 0em;   /* adjust ending offset */
+    width: 1px;
+    background: #555555;
+}
+
+.hero::after {
+    display: none; /* keep the hero section without the line */
 }
 main > section:last-of-type {
     margin-bottom: 0;

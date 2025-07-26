@@ -1044,14 +1044,18 @@ body.fade-out {
     right: 0;
     bottom: 0;
     z-index: 9998;
-    background-image: repeating-linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.3) 0,
-        rgba(255, 255, 255, 0.3) 1px,
-        transparent 1px,
-        transparent 1.6em
-    );
     display: none;
+}
+
+.baseline-ruler-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: auto;
+    cursor: ns-resize;
 }
 
 .ruler-toggle {

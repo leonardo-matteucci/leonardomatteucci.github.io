@@ -187,7 +187,7 @@ nav a {
 h1 {
     font-weight: 300;
     font-size: 1.3em;
-    margin: var(--spacing-small) 0 var(--spacing-small);
+    margin: var(--spacing-large) 0 var(--spacing-small);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;
@@ -513,7 +513,7 @@ body.about .about-lines {
     display: block;
     font-weight: 300;
     font-size: 1.3em;
-    margin: var(--spacing-small) 0 var(--spacing-small);
+    margin: var(--spacing-large) 0 var(--spacing-small);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     padding-bottom: 0.5em;

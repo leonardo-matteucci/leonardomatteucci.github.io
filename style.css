@@ -273,7 +273,7 @@ header nav {
      * Offset the menu by the 1px border drawn via `header::after` so the
      * bottom separator aligns perfectly with section headings.
      */
-    top: calc(100% + 1px);
+    top: calc(100% + 2px);
     left: 0;
     right: 0;
     margin-left: 0;

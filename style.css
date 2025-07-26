@@ -1076,6 +1076,10 @@ body.fade-out {
 
 
 @media only screen and (max-width: 600px) {
+    header {
+        left: 1em;
+        right: 1em;
+    }
     header::after {
         content: "";
         position: absolute;

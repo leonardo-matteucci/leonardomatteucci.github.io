@@ -40,9 +40,9 @@ header::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 50.6%;
     transform: translateX(-50%);
-    width: var(--separator-width);
+    width: 50%;
     border-bottom: 1px solid #555555;
 }
 
@@ -437,8 +437,8 @@ header nav {
     display: none;
     position: absolute;
     top: 101px;
-    left: 0;
-    right: 0;
+    left: 0em;
+    right: 2.5em;
     margin-left: 0;
     flex-direction: row;
     justify-content: space-evenly;
@@ -450,11 +450,11 @@ header nav::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 49.4%;
     transform: translateX(-50%);
-    width: 89%;
-    height: 50.5px;          /* or however much space you want between lines */
-    border-top: 20px solid #ff0000;
+    width: 100%;
+    height: 50px;
+    border-top: 20px solid #000000;
     border-bottom: 1px solid #555;
 }
 header nav a {

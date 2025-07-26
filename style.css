@@ -183,13 +183,6 @@ h1 {
     text-align: center;
     position: relative;
 }
-h1:root {
-    --header-height: 100px;
-    --footer-height: 100px;
-    --separator-width: 50%;
-    --spacing-large: 1em;
-    --spacing-small: 0.5em;
-}
 
 html {
     scroll-padding-top: var(--header-height);
@@ -437,7 +430,7 @@ header nav a:hover {
 header nav {
     display: none;
     position: absolute;
-    top: 101px;
+    top: calc(var(--header-height) + 1px);
     left: 0em;
     right: 2.5em;
     margin-left: 0;

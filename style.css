@@ -533,7 +533,7 @@ main > section:first-of-type > .works-title:first-child {
     display: block;
     font-style: normal;
     color: #bbbbbb;
-    margin-top: 0;
+    margin: 0.2em 0 0 0;
 }
 .reach-touch .about-text .works-details {
     margin-top: 0.5em;

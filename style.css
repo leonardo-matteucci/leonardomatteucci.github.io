@@ -601,6 +601,9 @@ main > section:last-of-type {
 main > section:last-of-type > :last-child {
     margin-bottom: 0;
 }
+main > section:last-of-type > :last-child:not(:first-child) {
+    margin-top: var(--spacing-large);
+}
 
 .hero {
     margin: 0;

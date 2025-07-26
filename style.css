@@ -1,6 +1,191 @@
 :root {
     --header-height: 100px;
-    --footer-height: 120px;
+    --footer-height: 100px;
+    --separator-width: 50%;
+    --spacing-large: 1em;
+    --spacing-small: 0.5em;
+}
+
+html {
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    border-top: 1px solid #555555;
+}
+
+.container {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2vw;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    border-bottom: none;
+    z-index: 1000;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--separator-width);
+    border-bottom: 1px solid #555555;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    padding: 1.15em;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+.menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: block;
+    width: 24px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+}
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+.menu-icon:hover::before {
+    /* Slightly brighter hover background */
+    background-color: rgba(255, 255, 255, 0.12);
+}
+.menu-icon span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                top 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.2s ease;
+}
+.menu-icon span:nth-child(1) { top: 0; }
+.menu-icon span:nth-child(2) { top: 8px; }
+.menu-icon span:nth-child(3) { top: 16px; }
+
+.menu-toggle:checked + .menu-icon span:nth-child(1),
+.menu-toggle:checked + .menu-icon span:nth-child(2),
+.menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: none;
+    opacity: 1;
+}
+
+.menu-toggle:checked + .menu-icon::before {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+#menu-toggle:checked + .menu-icon + nav {
+    display: flex;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.footer-icons {
+    display: flex;
+    gap: 1em;
+    margin: 0;
+}
+.footer-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+.footer-icons a:hover img {
+    transform: translateY(-2px);
+}
+main {
+    margin-top: var(--header-height);
+    margin-bottom: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2vw calc(var(--footer-height) + 1em);
+    position: relative;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* The logo should remain completely stationary */
+/*
+ * Remove hover animation for the main logo so it remains
+ * fully stationary regardless of user interaction.
+ */
+.logo a:hover img {
+    transform: none;
+}
+.tagline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3em;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    max-width: 100%;
+    white-space: normal;
+}
+.tagline:hover {
+    text-decoration: none;
+}
+nav a {
+    margin-left: 0;
+    font-weight: 300;
+    font-size: 1.3em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 1em 0 var(--spacing-small);
+}
+h1 {
+    margin-left: 0;
+    font-weight: 300;
+    font-size: 1.3em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0 0 var(--spacing-small);
+    padding: 1em 0 var(--spacing-small);
+    text-align: center;
+    position: relative;
+}
+h1:::root {
+    --header-height: 100px;
+    --footer-height: 100px;
     --separator-width: 50%;
     --spacing-large: 1em;
     --spacing-small: 0.5em;
@@ -135,14 +320,6 @@ main {
     position: relative;
 }
 
-body:not(.home) main {
-    /* Ensure a consistent gap between the header's bottom line and the
-       first heading on non-home pages. Without this padding the heading's
-       top margin collapses with the main element, eliminating the intended
-       space. */
-    padding-top: var(--spacing-small);
-}
-
 body.home main {
     /* Match the spacing below the header for pages with hero sections */
     padding-top: var(--spacing-small);
@@ -183,14 +360,16 @@ nav a {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #ffffff;
+    padding: 1em 0 var(--spacing-small);
 }
 h1 {
+    margin-left: 0;
     font-weight: 300;
     font-size: 1.3em;
-    margin: 0 0 var(--spacing-small);
-    text-transform: uppercase;
     letter-spacing: 0.15em;
-    padding: 0.75em 0 var(--spacing-small);
+    text-transform: uppercase;
+    margin: 0 0 var(--spacing-small);
+    padding: 1em 0 var(--spacing-small);
     text-align: center;
     position: relative;
 }
@@ -210,11 +389,6 @@ h1::after {
     transform: translateX(-50%);
     width: var(--separator-width);
     border-bottom: 1px solid #555555;
-}
-h2 {
-    font-weight: 300;
-    font-size: 1.4em;
-    margin-bottom: 0.5em;
 }
 p {
     font-weight: 300;
@@ -269,11 +443,7 @@ header nav a:hover {
 header nav {
     display: none;
     position: absolute;
-    /*
-     * Offset the menu by the 1px border drawn via `header::after` so the
-     * bottom separator aligns perfectly with section headings.
-     */
-    top: calc(100% + 2px);
+    top: 100%;
     left: 0;
     right: 0;
     margin-left: 0;
@@ -281,13 +451,7 @@ header nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #000000;
-    /*
-     * Align the menu directly beneath the header's bottom line with
-     * precisely spaced padding above and below the menu items.
-     */
-    padding: 1em 4vw 0.5em;
 }
-
 
 header nav::after {
     content: "";
@@ -295,7 +459,7 @@ header nav::after {
     left: 50%;
     transform: translateX(-50%);
     border-bottom: 1px solid #555555;
-    bottom: 0;
+    bottom: -1px;
     width: 100%; /* Use full width for the menu's bottom separator */
 }
 header nav a {
@@ -314,7 +478,7 @@ header nav a::after {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -0.25px;
+    bottom: 10px;
     width: 100%;
     height: 2px;
     background: #ffffff;
@@ -327,7 +491,7 @@ header nav a::after {
 header nav a:hover,
 header nav a.active {
     opacity: 1;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 header nav a:hover::after,
@@ -520,7 +684,7 @@ body.about .about-lines {
     margin: 0 0 var(--spacing-small);
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    padding: 0.75em 0 var(--spacing-small);
+    padding: 1em 0 var(--spacing-small);
     text-align: center;
     position: relative;
 }

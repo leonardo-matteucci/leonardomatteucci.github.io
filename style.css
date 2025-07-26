@@ -284,24 +284,15 @@ header nav {
     padding: 1em 4vw 0.5em;
 }
 
-header nav::before,
+
 header nav::after {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: var(--separator-width);
     border-bottom: 1px solid #555555;
-}
-
-header nav::before {
-    top: 0;
-}
-
-header nav::after {
     bottom: 0;
-    /* Use full width for the menu's bottom separator */
-    width: 100%;
+    width: 100%; /* Use full width for the menu's bottom separator */
 }
 header nav a {
     position: relative;

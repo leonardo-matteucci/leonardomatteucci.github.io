@@ -684,13 +684,13 @@ body.about .about-lines {
 
 /* Hero‑style title used on individual work and project pages */
 .works-title {
-    display: block;
+    margin-left: 0;
     font-weight: 300;
     font-size: 1.3em;
-    margin: 0 0 var(--spacing-small);
-    text-transform: uppercase;
     letter-spacing: 0.15em;
-    padding: 1em 0 var(--spacing-small);
+    text-transform: uppercase;
+    margin: 0 0 var(--spacing-small);
+    padding: var(--spacing-large) 0 var(--spacing-small);
     text-align: center;
     position: relative;
 }

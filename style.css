@@ -495,14 +495,20 @@ header nav a.active::after {
         left: 0;
         right: 0;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         padding: 0 1em;
     }
 
     header nav a {
         display: block;
-        padding: 0.75em 0;
+        padding: var(--spacing-large) 0;
+        margin-bottom: var(--spacing-large);
         width: 100%;
+        text-align: center;
+    }
+
+    header nav a:last-child {
+        margin-bottom: 0;
     }
 }
 

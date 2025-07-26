@@ -686,6 +686,7 @@ main > section:first-of-type > .works-title:first-child {
 .events-separator {
     border: 0;
     border-top: 1px solid #555555;
+    margin: 1em 0;
     margin: var(--spacing-large) 0;
 }
 .events-separator:last-child {
@@ -695,6 +696,7 @@ main > section:first-of-type > .works-title:first-child {
 .works-separator {
     border: 0;
     border-top: 1px solid #555555;
+    margin: 1em 0;
     margin: var(--spacing-large) 0;
 }
 .works-separator:last-child {

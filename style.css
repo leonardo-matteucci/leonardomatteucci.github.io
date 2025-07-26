@@ -1080,3 +1080,8 @@ body.fade-out {
 .ruler-active .baseline-ruler-overlay {
     display: block;
 }
+
+/* Custom gray cross cursor */
+body {
+    cursor: url('logos/custom-cursor.svg') 8 8, crosshair;
+}

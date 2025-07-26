@@ -1104,5 +1104,10 @@ body.fade-out {
         border-right: 1em solid #000000;
         border-left: 1em solid #000000;
     }
+
+    /* Reduce hero title size so it fits on one line */
+    .hero h1 {
+        font-size: 1.5em;
+    }
 }
 

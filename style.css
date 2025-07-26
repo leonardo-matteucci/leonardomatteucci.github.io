@@ -644,7 +644,7 @@ body.about .about-lines {
     margin-bottom: 0.5em;
 }
 .reach-touch .about-text {
-    margin-bottom: var(--spacing-large);
+    margin-bottom: 1.5em; /* match spacing of works list */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .reach-touch .about-text:last-child {

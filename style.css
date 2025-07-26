@@ -468,6 +468,14 @@ body.about .about-lines {
 .about-text p.mid-margin {
     margin-bottom: 1.5em;
 }
+.reach-touch .about-text {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.reach-touch .about-text:hover:has(a) {
+    transform: translateX(5px);
+    /* Slightly brighter hover background */
+    background-color: rgba(255, 255, 255, 0.12);
+}
 .works-list {
     list-style-type: none;
     padding: 0;

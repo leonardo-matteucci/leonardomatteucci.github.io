@@ -281,7 +281,7 @@ header nav {
      * Align the menu directly beneath the header's bottom line with
      * precisely spaced padding above and below the menu items.
      */
-    padding: 0.75em 4vw 0.5em;
+    padding: 1em 4vw 0.5em;
 }
 
 header nav::before,

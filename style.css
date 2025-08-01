@@ -712,6 +712,39 @@ body.about .about-lines {
     margin-bottom: 0;
 }
 
+/* Press kit list styled like works list */
+.press-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.press-list li {
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    border-left: 3px solid #555555;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.press-list li:last-child {
+    margin-bottom: 0;
+}
+
+.press-list li:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.press-item > summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.press-item > summary::-webkit-details-marker {
+    display: none;
+}
+
 /* Titles for entries in the Works and Projects index pages */
 .list-title {
     display: block;
@@ -1140,5 +1173,16 @@ body.fade-out {
 .portrait-grid img {
     width: 100%;
     height: auto;
+    display: block;
+}
+.portrait-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.portrait-grid figcaption,
+.portrait-grid a {
+    font-size: 0.9em;
+    margin-top: 0.3em;
     display: block;
 }

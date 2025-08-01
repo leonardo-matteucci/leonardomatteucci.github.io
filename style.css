@@ -553,6 +553,26 @@ img {
     font-size: 0.8em;
     color: #bbbbbb;
 }
+
+.image-overlay {
+    position: relative;
+    display: inline-block;
+}
+
+.image-overlay img {
+    display: block;
+}
+
+.image-overlay .photo-credit {
+    position: absolute;
+    bottom: 0.3em;
+    right: 0.3em;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0.2em 0.4em;
+    background: rgba(0, 0, 0, 0.6);
+}
 .logo img,
 .footer-icons img {
     margin-top: 0;

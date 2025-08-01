@@ -40,9 +40,9 @@ header::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50.6%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 52%;
+    width: 100%;
     border-bottom: 1px solid #555555;
 }
 
@@ -131,7 +131,7 @@ header .container {
 main {
     margin-top: var(--header-height);
     margin-bottom: 0;
-    max-width: 700px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 2vw calc(var(--footer-height) + 1em);
@@ -202,7 +202,7 @@ body {
 }
 
 .container {
-    max-width: 700px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 2vw;

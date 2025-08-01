@@ -525,11 +525,12 @@ img {
     margin-right: auto;
 }
 .placeholder-image {
-    width: 100%;
+    width: 40%;
+    max-width: 400px;
     height: auto;
     margin-top: 1em;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logo img,
 .footer-icons img {
@@ -964,9 +965,9 @@ hr[class*="separator"] + h3 {
 }
 
 .hero img {
-    width: 100%;
-    height: calc(100vh - var(--header-height) - var(--footer-height));
-    max-height: none;
+    width: 40%;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
     margin-top: 0;
     margin-bottom: 0;

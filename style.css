@@ -140,20 +140,19 @@ main {
 .logo img {
     width: 60px;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
-/* The logo should remain completely stationary */
-/*
- * Remove hover animation for the main logo so it remains
- * fully stationary regardless of user interaction.
- */
+/* Subtle hover animation for the logo */
+
 .logo a:hover img {
-    transform: none;
+    transform: scale(1.05);
 }
 .tagline {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    transition: transform 0.3s ease;
     font-size: 1.3em;
     letter-spacing: 0.15em;
     color: #ffffff;
@@ -165,6 +164,7 @@ main {
 }
 .tagline:hover {
     text-decoration: none;
+    transform: translateX(-50%) scale(1.05);
 }
 nav a {
     margin-left: 0;
@@ -313,24 +313,23 @@ body.home main {
     /* Match the spacing below the header for pages with hero sections */
     padding-top: var(--spacing-large);
 }
+
 .logo img {
     width: 54px;
     height: auto;
     margin-bottom: -0.25em;
+    transition: transform 0.3s ease;
 }
 
-/* The logo should remain completely stationary */
-/*
- * Remove hover animation for the main logo so it remains
- * fully stationary regardless of user interaction.
- */
+/* Subtle hover animation for the logo */
 .logo a:hover img {
-    transform: none;
+    transform: scale(1.05);
 }
 .tagline {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    transition: transform 0.3s ease;
     font-size: 1.3em;
     letter-spacing: 0.15em;
     color: #ffffff;
@@ -344,6 +343,7 @@ body.home main {
 }
 .tagline:hover {
     text-decoration: none;
+    transform: translateX(-50%) scale(1.05);
 }
 nav a {
     margin-left: 0;

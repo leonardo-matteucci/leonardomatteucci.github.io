@@ -545,6 +545,14 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+.photo-credit {
+    width: 40%;
+    max-width: 700px;
+    margin: 0.5em auto 0;
+    text-align: right;
+    font-size: 0.8em;
+    color: #bbbbbb;
+}
 .logo img,
 .footer-icons img {
     margin-top: 0;

@@ -1214,3 +1214,23 @@ body.fade-out {
     margin-top: 0.3em;
     display: block;
 }
+
+/* Download button styles for press kit portraits */
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.download-button {
+    border: 1px solid #555555;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.download-button:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}

@@ -1251,3 +1251,17 @@ body.fade-out {
 .download-button:hover {
     background-color: rgba(255, 255, 255, 0.12);
 }
+
+.copy-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--spacing-small);
+}
+
+.press-subtitle {
+    display: block;
+}
+
+details.press-item[open] + .press-subtitle {
+    display: none;
+}

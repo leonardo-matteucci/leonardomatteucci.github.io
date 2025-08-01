@@ -545,15 +545,6 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-.photo-credit {
-    width: 40%;
-    max-width: 700px;
-    margin: 0.5em auto 0;
-    text-align: right;
-    font-size: 0.8em;
-    color: #bbbbbb;
-}
-
 .image-overlay {
     position: relative;
     display: inline-block;
@@ -561,17 +552,6 @@ img {
 
 .image-overlay img {
     display: block;
-}
-
-.image-overlay .photo-credit {
-    position: absolute;
-    bottom: 0.3em;
-    right: 0.3em;
-    width: auto;
-    max-width: none;
-    margin: 0;
-    padding: 0.2em 0.4em;
-    background: rgba(0, 0, 0, 0.6);
 }
 
 /* Position year of photo at top-left corner with the same style */

@@ -573,6 +573,18 @@ img {
     padding: 0.2em 0.4em;
     background: rgba(0, 0, 0, 0.6);
 }
+
+/* Position year of photo at top-left corner with the same style */
+.image-overlay .photo-year {
+    position: absolute;
+    top: 0.3em;
+    left: 0.3em;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0.2em 0.4em;
+    background: rgba(0, 0, 0, 0.6);
+}
 .logo img,
 .footer-icons img {
     margin-top: 0;

@@ -1206,20 +1206,37 @@ body.fade-out {
 .portrait-grid figure {
     margin: 0;
     text-align: center;
+    position: relative;
 }
 
 .portrait-grid figcaption,
 .portrait-grid a {
     font-size: 0.9em;
-    margin-top: 0.3em;
-    display: block;
+}
+
+.portrait-grid a.download-button {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.portrait-grid figcaption {
+    position: absolute;
+    left: 0.5em;
+    bottom: 0.5em;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 0.2em 0.4em;
+    margin-top: 0;
 }
 
 /* Download button styles for press kit portraits */
 .download-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 0.5em;
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
 }
 
 .download-button {

@@ -34,9 +34,22 @@
     <main>
         <section>
             <h1>Contact</h1>
-            <p>Email: <a href="mailto:leonardo.matteucci@icloud.com">leonardo.matteucci@icloud.com</a></p>
-            <p>Student Email: <a href="mailto:leonardo.matteucci@student.kug.ac.at">leonardo.matteucci@student.kug.ac.at</a></p>
-            <p>Phone: <span id="phone" data-encoded="KzM5IDAwMCAwMDAgMDAwMA==">Click to reveal</span></p>
+            <p>Feel free to reach out to request scores, performance materials, or further details about my compositions and projects.</p>
+            <ul class="works-list">
+                <li>
+                    <span class="list-title">Email</span>
+                    <span class="works-details"><a href="mailto:leonardo.matteucci@icloud.com" class="link">leonardo.matteucci@icloud.com</a></span>
+                </li>
+                <li>
+                    <span class="list-title">University Email</span>
+                    <span class="works-details"><a href="mailto:leonardo.matteucci@student.kug.ac.at" class="link">leonardo.matteucci@student.kug.ac.at</a></span>
+                </li>
+                <li>
+                    <span class="list-title">Phone</span>
+                    <span class="works-details">39 393 228 2032 <span class="italic">(messages only)</span></span>
+                </li>
+            </ul>
+            <p>Thanks for your interest,<br>Leo</p>
         </section>
     </main>
     <footer>
@@ -64,12 +77,6 @@
     <script src="../transition.js"></script>
     <script src="../ruler.js"></script>
     <script src="../menu.js"></script>
-    <script>
-    const phoneEl = document.getElementById('phone');
-    phoneEl.addEventListener('click', () => {
-        phoneEl.textContent = atob(phoneEl.dataset.encoded);
-    }, { once: true });
-    </script>
 </body>
 </html>
 

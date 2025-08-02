@@ -441,7 +441,7 @@ a[href^="mailto:"] {
 a:hover, .link:hover {
     text-decoration: underline;
 }
-header nav a:hover {
+header nav a.link:hover {
     text-decoration: none;
 }
 header nav {

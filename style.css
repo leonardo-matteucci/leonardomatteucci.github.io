@@ -435,6 +435,9 @@ a, .link {
     text-decoration: none;
     cursor: pointer;
 }
+a[href^="mailto:"] {
+    font-weight: 300;
+}
 a:hover, .link:hover {
     text-decoration: underline;
 }

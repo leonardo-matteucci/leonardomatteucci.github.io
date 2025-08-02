@@ -1038,7 +1038,8 @@ hr[class*="separator"] + h3 {
     margin-top: 0;
     margin-bottom: 0;
     opacity: 0;
-    transform: translateY(20px);
+    /* Disable vertical slide while keeping fade in */
+    transform: none;
     animation: heroImage 0.6s ease forwards;
 }
 
@@ -1087,7 +1088,8 @@ body.fade-out {
 }
 
 @keyframes heroImage {
-    to { opacity: 1; transform: translateY(0); }
+    /* Maintain fade in without vertical movement */
+    to { opacity: 1; }
 }
 
 @keyframes heroTitle {

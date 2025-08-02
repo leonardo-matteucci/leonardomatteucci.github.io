@@ -451,8 +451,8 @@ header nav {
     pointer-events: none;
     position: absolute;
     top: calc(var(--header-height) + 1px);
-    left: 0em;
-    right: 2.5em;
+    left: 0;
+    right: 0;
     margin-left: 0;
     flex-direction: row;
     justify-content: space-evenly;
@@ -466,7 +466,7 @@ header nav::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 49.4%;
+    left: 50%;
     transform: translateX(-50%);
     width: 100%;
     height: 52px;

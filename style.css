@@ -735,6 +735,16 @@ body.about .about-lines {
     margin-bottom: 0;
 }
 
+/* Disable hover animation on the contact page */
+.contact .works-list li {
+    transition: none;
+}
+
+.contact .works-list li:hover:has(a) {
+    transform: none;
+    background-color: transparent;
+}
+
 /* Press kit list styled like works list */
 .press-list {
     list-style-type: none;

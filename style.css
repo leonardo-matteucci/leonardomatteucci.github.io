@@ -745,6 +745,11 @@ body.about .about-lines {
     background-color: transparent;
 }
 
+/* Ensure contact page links appear light */
+.contact .works-details .link {
+    font-weight: 300;
+}
+
 /* Press kit list styled like works list */
 .press-list {
     list-style-type: none;

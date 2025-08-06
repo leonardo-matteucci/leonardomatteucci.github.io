@@ -772,7 +772,7 @@ body.about .about-lines {
 .press-item > summary {
     list-style: none;
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
     align-items: center;

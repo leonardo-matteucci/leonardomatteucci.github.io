@@ -735,12 +735,14 @@ body.about .about-lines {
     margin-bottom: 0;
 }
 
-/* Disable hover animation on the contact page */
-.contact .works-list li {
+/* Disable hover animation on the contact and press kit pages */
+.contact .works-list li,
+.press-kit .works-list li {
     transition: none;
 }
 
-.contact .works-list li:hover:has(a) {
+.contact .works-list li:hover:has(a),
+.press-kit .works-list li:hover:has(a) {
     transform: none;
     background-color: transparent;
 }

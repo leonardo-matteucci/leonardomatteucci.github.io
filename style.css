@@ -1278,6 +1278,16 @@ body.fade-out {
     font-size: 0.9em;
 }
 
+@media (max-width: 600px) {
+    .portrait-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portrait-grid figure.landscape {
+        grid-column: span 1;
+    }
+}
+
 /* Download button styles for press kit portraits */
 .download-buttons {
     display: flex;

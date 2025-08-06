@@ -1221,6 +1221,10 @@ body.fade-out {
     position: relative;
 }
 
+.portrait-grid figure.landscape {
+    grid-column: span 2;
+}
+
 .portrait-grid figcaption,
 .portrait-grid a {
     font-size: 0.9em;

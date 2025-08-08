@@ -761,37 +761,10 @@ body.about .about-lines {
 .press-item > summary {
     list-style: none;
     cursor: pointer;
-    font-weight: 400;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .press-item > summary::-webkit-details-marker {
     display: none;
-}
-
-.press-item > summary::after {
-    content: '▼';
-    font-size: 0.8em;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 1.6em;
-    height: 1.6em;
-    margin-left: 0.5em;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.12);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.press-item > summary:hover::after {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-details.press-item[open] > summary::after {
-    transform: rotate(-180deg);
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Titles for entries in the Works and Projects index pages */

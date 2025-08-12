@@ -841,6 +841,7 @@ main > section:first-of-type > .works-title:first-child {
 }
 .works-details.italic {
     font-style: italic;
+    font-weight: 300;
 }
 .works-details a {
     color: #bbbbbb;

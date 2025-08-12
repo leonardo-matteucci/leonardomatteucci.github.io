@@ -79,7 +79,22 @@ header .container {
     height: 18px;
     position: relative;
     cursor: pointer;
+    margin-left: 0.5em;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 1.2em;
     margin-left: auto;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--text-color);
+    transform: rotate(20deg);
 }
 .menu-icon::before {
     content: "";
@@ -254,7 +269,7 @@ header .container {
     height: 18px;
     position: relative;
     cursor: pointer;
-    margin-left: auto;
+    margin-left: 0.5em;
 }
 .menu-icon::before {
     content: "";
@@ -1326,6 +1341,13 @@ details.press-item[open] + .press-subtitle {
     --border-color: #555555;
     --accent-color: #b3b3b3;
     --container-width: 800px;
+}
+
+:root[data-theme="light"] {
+    --background-color: #ffffff;
+    --text-color: #0a0a0a;
+    --border-color: #cccccc;
+    --accent-color: #333333;
 }
 
 html {

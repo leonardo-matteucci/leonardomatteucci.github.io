@@ -6,8 +6,13 @@
     --spacing-small: 0.5em;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +21,7 @@ body {
     font-weight: 300;
     background-color: #000000;
     color: #ffffff;
-    line-height: 1.6;
+    line-height: 1.7;
     border-top: 1px solid #555555;
 }
 
@@ -26,14 +31,23 @@ body {
     margin-right: auto;
     padding: 0 2vw;
 }
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+}
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     border-bottom: none;
     z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 header::after {
@@ -435,6 +449,11 @@ a, .link {
     text-decoration: none;
     cursor: pointer;
 }
+
+a:focus-visible, .link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
 a[href^="mailto:"] {
     font-weight: 300;
 }
@@ -501,13 +520,15 @@ header nav a::after {
 }
 
 header nav a:hover,
-header nav a.active {
+header nav a.active,
+header nav a:focus-visible {
     opacity: 1;
     transform: translateY(-4px);
 }
 
 header nav a:hover::after,
-header nav a.active::after {
+header nav a.active::after,
+header nav a:focus-visible::after {
     transform: scaleX(1);
 }
 
@@ -551,10 +572,19 @@ img {
 .image-overlay {
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .image-overlay img {
     display: block;
+}
+
+.hero .image-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
 }
 
 .logo img,
@@ -1070,7 +1100,9 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.8);
     border-top: 1px solid #555555;
 }
 

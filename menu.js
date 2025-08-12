@@ -9,3 +9,4 @@ window.addEventListener('DOMContentLoaded', () => {
       menuToggle.checked = false;
     }
   });
+});

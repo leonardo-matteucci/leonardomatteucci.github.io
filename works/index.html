@@ -33,37 +33,50 @@
         </div>
     </header>
     <main>
-        <section>
+        <section class="section-dark reveal">
             <h1>Works</h1>
-            <ul class="works-list">
-                <li>
-                    <span class="list-title">Dehiscence (2026)</span>
-                    <span class="works-details italic">for ensemble and electronics <span class="separator">&bull;</span> <span class="no-italic">Upcoming</span></span>
-                </li>
-            </ul>
-            <hr class="works-separator">
-            <ul class="works-list">
-                <li>
-                    <span class="list-title"><a href="/works/occlusion/" class="link">Occlusion</a> (2025)</span>
-                    <span class="works-details italic">for violin and electronics</span>
-                </li>
-                <li>
-                    <span class="list-title"><a href="/works/assume/" class="link">Assume</a> (2025)</span>
-                    <span class="works-details italic">for piano, flute, cello and electronics</span>
-                </li>
-                <li>
-                    <span class="list-title"><a href="/works/bodylines/" class="link">Bodylines</a> (2023)</span>
-                    <span class="works-details italic">for violin, piccolo and electronics</span>
-                </li>
-                <li>
-                    <span class="list-title"><a href="/works/internal/" class="link">Internal</a> (2023)</span>
-                    <span class="works-details italic">for ensemble</span>
-                </li>
-                <li>
-                    <span class="list-title"><a href="/works/a-uno-spirituale-in-firenze/" class="link">A uno spirituale in Firenze</a> (2021)</span>
-                    <span class="works-details italic">for string quartet and electronics</span>
-                </li>
-            </ul>
+            <div class="filters">
+                <select id="year-filter">
+                    <option value="all">All years</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2023">2023</option>
+                    <option value="2021">2021</option>
+                </select>
+                <select id="inst-filter">
+                    <option value="all">All instrumentation</option>
+                    <option value="violin">violin</option>
+                    <option value="ensemble">ensemble</option>
+                    <option value="string quartet">string quartet</option>
+                    <option value="piano">piano</option>
+                </select>
+            </div>
+            <div class="works-grid" id="works-grid">
+                <div class="work-card" data-year="2026" data-inst="ensemble electronics">
+                    <h3>Dehiscence</h3>
+                    <p>2026 &bull; ensemble and electronics (upcoming)</p>
+                </div>
+                <div class="work-card" data-year="2025" data-inst="violin electronics">
+                    <h3><a href="/works/occlusion/" class="link">Occlusion</a></h3>
+                    <p>2025 &bull; violin and electronics</p>
+                </div>
+                <div class="work-card" data-year="2025" data-inst="piano flute cello electronics">
+                    <h3><a href="/works/assume/" class="link">Assume</a></h3>
+                    <p>2025 &bull; piano, flute, cello and electronics</p>
+                </div>
+                <div class="work-card" data-year="2023" data-inst="violin piccolo electronics">
+                    <h3><a href="/works/bodylines/" class="link">Bodylines</a></h3>
+                    <p>2023 &bull; violin, piccolo and electronics</p>
+                </div>
+                <div class="work-card" data-year="2023" data-inst="ensemble">
+                    <h3><a href="/works/internal/" class="link">Internal</a></h3>
+                    <p>2023 &bull; ensemble</p>
+                </div>
+                <div class="work-card" data-year="2021" data-inst="string quartet electronics">
+                    <h3><a href="/works/a-uno-spirituale-in-firenze/" class="link">A uno spirituale in Firenze</a></h3>
+                    <p>2021 &bull; string quartet and electronics</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -91,5 +104,7 @@
     <script src="../transition.js"></script>
     <script src="../ruler.js"></script>
     <script src="../menu.js"></script>
+    <script src="../works.js"></script>
+    <script src="../scroll.js"></script>
 </body>
 </html>

@@ -1313,6 +1313,7 @@ body.fade-out {
 
 .press-subtitle {
     display: block;
+    font-style: italic;
 }
 
 details.press-item[open] + .press-subtitle {

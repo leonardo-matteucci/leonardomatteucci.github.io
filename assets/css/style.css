@@ -131,3 +131,25 @@ footer {
     .hero h1 { font-size: 2.2rem; }
     .nav-list { flex-direction: column; gap: 12px; }
 }
+
+/* Legacy work/project styles restored from previous design */
+.italic { font-style: italic; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.works-title { font-size: 1.5rem; font-weight: 600; text-align: center; margin-bottom: 0.5em; }
+.works-details { color: var(--accent); }
+.duration { margin-bottom: 1em; }
+.instrumentation-list { list-style: none; padding: 0; text-align: center; }
+.instrumentation-list li { margin: 0.25em 0; }
+.gear-list, .gear-list-tight { list-style: none; padding: 0; }
+.gear-list li, .gear-list-tight li { margin: 0.25em 0; }
+.works-premiere { margin-top: 1em; }
+.works-separator, .works-separator-half, .works-separator-small { border: none; border-top: 1px solid var(--border); width: 50%; margin: 2em auto; }
+.works-separator-half { margin: 1.5em auto; }
+.works-separator-small { margin: 1em auto; }
+.translation-ita, .translation-eng { margin-left: 0; }
+.gray { color: var(--accent); }
+.link { text-decoration: underline; }
+.link:hover { color: var(--accent); }
+.no-italic { font-style: normal; }
+.regular { font-style: normal; }

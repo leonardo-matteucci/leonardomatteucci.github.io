@@ -3,84 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0a0a">
     <meta name="description" content="Get in touch with Leonardo Matteucci via email or phone.">
     <title>Contact - Leonardo Matteucci</title>
-    <link rel="icon" href="../logos/lm-logo-favicon.svg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="contact">
-    <header>
-        <div class="container">
-        <div class="logo">
-            <a href="/" title="Home">
-                <img src="../logos/lm-logo-favicon.svg" alt="home">
-            </a>
-        </div>
-        <a href="/" title="Home" class="tagline">LEONARDO MATTEUCCI</a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon" title="Menu"><span></span><span></span><span></span></label>
-        <nav>
-            <a href="/" class="link">Home</a>
-            <a href="/about/" class="link">About</a>
-            <a href="/projects/" class="link">Projects</a>
-            <a href="/works/" class="link">Works</a>
-            <a href="/press-kit/" class="link">Press Kit</a>
-            <a href="/events/" class="link">Events</a>
-            <a href="/contact/" class="link active">Contact</a>
-        </nav>
-        </div>
-    </header>
-    <main>
-        <section class="section-dark reveal">
-            <h1>Contact</h1>
-            <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send</button>
-            </form>
-            <div class="social-icons">
-                <a href="mailto:leonardo.matteucci@icloud.com" aria-label="Email"><img src="../logos/email-logo_white.svg" alt="Email"></a>
-                <a href="https://wa.me/393932282032" aria-label="WhatsApp"><img src="../logos/whatsapp-logo_white.svg" alt="WhatsApp"></a>
-                <a href="https://t.me/leonardo_matteucci" aria-label="Telegram"><img src="../logos/telegram-logo_white.svg" alt="Telegram"></a>
-                <a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube"><img src="../logos/youtube-logo_white.svg" alt="YouTube"></a>
-                <a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud"><img src="../logos/soundcloud-logo_white.svg" alt="SoundCloud"></a>
-                <a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram"><img src="../logos/instagram-logo_white.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com/leonardo.matteucci.fb" aria-label="Facebook"><img src="../logos/facebook-logo_white.svg" alt="Facebook"></a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Leonardo Matteucci</p>
-            <div class="footer-icons">
-                <a href="https://www.youtube.com/@leonardo_matteucci" title="YouTube" target="_blank">
-                    <img src="../logos/youtube-logo_white.svg" alt="YouTube">
-                </a>
-                <a href="https://soundcloud.com/leonardo_matteucci" title="SoundCloud" target="_blank">
-                    <img src="../logos/soundcloud-logo_white.svg" alt="SoundCloud">
-                </a>
-                <a href="https://www.instagram.com/leonardo_matteucci_ig" title="Instagram" target="_blank">
-                    <img src="../logos/instagram-logo_white.svg" alt="Instagram">
-                </a>
-                <a href="https://www.facebook.com/leonardo.matteucci.fb" title="Facebook" target="_blank">
-                    <img src="../logos/facebook-logo_white.svg" alt="Facebook">
-                </a>
-                <a href="mailto:leonardo.matteucci@icloud.com" title="Personal Email" target="_blank">
-                    <img src="../logos/email-logo_white.svg" alt="Email">
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="../transition.js"></script>
-    <script src="../ruler.js"></script>
-    <script src="../menu.js"></script>
-    <script src="../scroll.js"></script>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/works/">Works</a></li>
+      <li><a href="/press-kit/">Press Kit</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/contact/" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <section class="latest-works">
+    <h1>Contact</h1>
+    <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Leonardo Matteucci</p>
+  <ul class="social-links">
+    <li><a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud">SC</a></li>
+    <li><a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube">YT</a></li>
+    <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram">IG</a></li>
+  </ul>
+</footer>
+<script src="/scroll.js"></script>
 </body>
 </html>
-

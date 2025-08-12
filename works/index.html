@@ -3,108 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0a0a">
     <meta name="description" content="Catalogue of works by Leonardo Matteucci with instrumentation and year of creation.">
     <title>Works - Leonardo Matteucci</title>
-    <link rel="icon" href="../logos/lm-logo-favicon.svg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-        <div class="logo">
-            <a href="/" title="Home">
-                <img src="../logos/lm-logo-favicon.svg" alt="home">
-            </a>
-        </div>
-        <a href="/" title="Home" class="tagline">LEONARDO MATTEUCCI</a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon" title="Menu"><span></span><span></span><span></span></label>
-        <nav>
-            <a href="/" class="link">Home</a>
-            <a href="/about/" class="link">About</a>
-            <a href="/projects/" class="link">Projects</a>
-            <a href="/works/" class="link active">Works</a>
-            <a href="/press-kit/" class="link">Press Kit</a>
-            <a href="/events/" class="link">Events</a>
-            <a href="/contact/" class="link">Contact</a>
-        </nav>
-        </div>
-    </header>
-    <main>
-        <section class="section-dark reveal">
-            <h1>Works</h1>
-            <div class="filters">
-                <select id="year-filter">
-                    <option value="all">All years</option>
-                    <option value="2026">2026</option>
-                    <option value="2025">2025</option>
-                    <option value="2023">2023</option>
-                    <option value="2021">2021</option>
-                </select>
-                <select id="inst-filter">
-                    <option value="all">All instrumentation</option>
-                    <option value="violin">violin</option>
-                    <option value="ensemble">ensemble</option>
-                    <option value="string quartet">string quartet</option>
-                    <option value="piano">piano</option>
-                </select>
-            </div>
-            <div class="works-grid" id="works-grid">
-                <div class="work-card" data-year="2026" data-inst="ensemble electronics">
-                    <h3>Dehiscence</h3>
-                    <p>2026 &bull; ensemble and electronics (upcoming)</p>
-                </div>
-                <div class="work-card" data-year="2025" data-inst="violin electronics">
-                    <h3><a href="/works/occlusion/" class="link">Occlusion</a></h3>
-                    <p>2025 &bull; violin and electronics</p>
-                </div>
-                <div class="work-card" data-year="2025" data-inst="piano flute cello electronics">
-                    <h3><a href="/works/assume/" class="link">Assume</a></h3>
-                    <p>2025 &bull; piano, flute, cello and electronics</p>
-                </div>
-                <div class="work-card" data-year="2023" data-inst="violin piccolo electronics">
-                    <h3><a href="/works/bodylines/" class="link">Bodylines</a></h3>
-                    <p>2023 &bull; violin, piccolo and electronics</p>
-                </div>
-                <div class="work-card" data-year="2023" data-inst="ensemble">
-                    <h3><a href="/works/internal/" class="link">Internal</a></h3>
-                    <p>2023 &bull; ensemble</p>
-                </div>
-                <div class="work-card" data-year="2021" data-inst="string quartet electronics">
-                    <h3><a href="/works/a-uno-spirituale-in-firenze/" class="link">A uno spirituale in Firenze</a></h3>
-                    <p>2021 &bull; string quartet and electronics</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Leonardo Matteucci</p>
-            <div class="footer-icons">
-                <a href="https://www.youtube.com/@leonardo_matteucci" title="YouTube" target="_blank">
-                    <img src="../logos/youtube-logo_white.svg" alt="YouTube">
-                </a>
-                <a href="https://soundcloud.com/leonardo_matteucci" title="SoundCloud" target="_blank">
-                    <img src="../logos/soundcloud-logo_white.svg" alt="SoundCloud">
-                </a>
-                <a href="https://www.instagram.com/leonardo_matteucci_ig" title="Instagram" target="_blank">
-                    <img src="../logos/instagram-logo_white.svg" alt="Instagram">
-                </a>
-                <a href="https://www.facebook.com/leonardo.matteucci.fb" title="Facebook" target="_blank">
-                    <img src="../logos/facebook-logo_white.svg" alt="Facebook">
-                </a>
-                <a href="mailto:leonardo.matteucci@icloud.com" title="Personal Email" target="_blank">
-                    <img src="../logos/email-logo_white.svg" alt="Email">
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="../transition.js"></script>
-    <script src="../ruler.js"></script>
-    <script src="../menu.js"></script>
-    <script src="../works.js"></script>
-    <script src="../scroll.js"></script>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/works/" class="active">Works</a></li>
+      <li><a href="/press-kit/">Press Kit</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <section class="latest-works">
+    <h1>Works</h1>
+    <div class="works-grid">
+      <article class="work-card">
+        <h3><a href="/works/occlusion/">Occlusion</a></h3>
+        <p>2025 • violin and electronics</p>
+      </article>
+      <article class="work-card">
+        <h3><a href="/works/assume/">Assume</a></h3>
+        <p>2025 • piano, flute, cello and electronics</p>
+      </article>
+      <article class="work-card">
+        <h3><a href="/works/bodylines/">Bodylines</a></h3>
+        <p>2023 • violin, piccolo and electronics</p>
+      </article>
+      <article class="work-card">
+        <h3><a href="/works/internal/">Internal</a></h3>
+        <p>2023 • ensemble</p>
+      </article>
+      <article class="work-card">
+        <h3><a href="/works/a-uno-spirituale-in-firenze/">A uno spirituale in Firenze</a></h3>
+        <p>2021 • string quartet and electronics</p>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Leonardo Matteucci</p>
+  <ul class="social-links">
+    <li><a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud">SC</a></li>
+    <li><a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube">YT</a></li>
+    <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram">IG</a></li>
+  </ul>
+</footer>
+<script src="/works.js"></script>
 </body>
 </html>

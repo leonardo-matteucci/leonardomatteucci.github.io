@@ -3,149 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0a0a">
     <title>Home - Leonardo Matteucci</title>
-    <meta name="description" content="Born in Perugia, Italy, in 2000, Leonardo Matteucci is a composition student exploring inner corporeality, the mechanics of bodily articulations, and the tactility of acoustic-electronic hybridisation. He studied in Turin with Giorgio Colombo Taccani from 2019 to 2021, and in Fermo with Marco Momi from 2021 to 2023. He is now pursuing his Master’s in Composition under Franck Bedrossian at the Kunstuniversität Graz.">
-    <link rel="icon" href="logos/lm-logo-favicon.svg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Leonardo Matteucci">
-    <meta property="og:description" content="Born in Perugia, Italy, in 2000, Leonardo Matteucci is a composition student exploring inner corporeality, the mechanics of bodily articulations, and the tactility of acoustic-electronic hybridisation. He studied in Turin with Giorgio Colombo Taccani from 2019 to 2021, and in Fermo with Marco Momi from 2021 to 2023. He is now pursuing his Master’s in Composition under Franck Bedrossian at the Kunstuniversität Graz.">
-    <meta property="og:image" content="https://www.leonardomatteucci.com/logos/lm-logo-favicon.svg">
-    <meta property="og:url" content="https://www.leonardomatteucci.com">
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Leonardo Matteucci",
-      "url": "https://www.leonardomatteucci.com",
-      "sameAs": [
-        "https://soundcloud.com/leonardo_matteucci",
-        "https://www.youtube.com/@leonardo_matteucci",
-        "https://www.instagram.com/leonardo_matteucci_ig",
-        "https://www.facebook.com/leonardo.matteucci.fb",
-        "mailto:leonardo.matteucci@icloud.com"
-      ],
-      "jobTitle": "Composer",
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Kunstuniversität Graz"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Turin Conservatory"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Fermo Conservatory"
-        }
-      ],
-      "birthPlace": "Perugia, Italy",
-      "birthDate": "2000"
-    }
-    </script>
-    <link rel="stylesheet" href="/style.css">
+    <meta name="description" content="Composer exploring corporeality and acoustic-electronic hybridisation.">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="home">
-    <header>
-        <div class="container">
-        <div class="logo">
-            <a href="/" title="Home">
-                <img src="logos/lm-logo-favicon.svg" alt="home">
-            </a>
-        </div>
-        <a href="/" title="Home" class="tagline">LEONARDO MATTEUCCI</a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon" title="Menu"><span></span><span></span><span></span></label>
-        <nav>
-            <a href="/" class="link active">Home</a>
-            <a href="/about/" class="link">About</a>
-            <a href="/projects/" class="link">Projects</a>
-            <a href="/works/" class="link">Works</a>
-            <a href="/press-kit/" class="link">Press Kit</a>
-            <a href="/events/" class="link">Events</a>
-            <a href="/contact/" class="link">Contact</a>
-        </nav>
-        </div>
-    </header>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/works/">Works</a></li>
+      <li><a href="/press-kit/">Press Kit</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <h1>Leonardo Matteucci</h1>
+    <p>Composer exploring corporeality and acoustic-electronic hybridisation</p>
+    <a class="btn" href="/works/">Explore Works</a>
+  </section>
 
-    <main>
-        <section class="hero section-dark reveal">
-            <div class="image-overlay">
-                <img src="/graphics/hero-abstract.svg" alt="Abstract monochrome pattern">
-            </div>
-            <div class="hero-content">
-                <h1>Composer exploring corporeality and acoustic-electronic hybridisation</h1>
-                <p>Discover works blending tactile performance with electronics.</p>
-                <a href="/works/" class="btn">Explore Works</a>
-            </div>
-            <div class="scroll-cue">&#8595;</div>
-        </section>
+  <section class="latest-works">
+    <h2>Latest Works</h2>
+    <div class="works-grid">
+      <article class="work-card">
+        <h3>Occlusion (2025)</h3>
+        <p>Violin and electronics</p>
+        <a href="/works/occlusion/">More details</a>
+      </article>
+      <article class="work-card">
+        <h3>Assume (2025)</h3>
+        <p>Piano, flute, cello and electronics</p>
+        <a href="/works/assume/">More details</a>
+      </article>
+      <article class="work-card">
+        <h3>Bodylines (2023)</h3>
+        <p>Violin, piccolo and electronics</p>
+        <a href="/works/bodylines/">More details</a>
+      </article>
+    </div>
+    <a class="btn secondary" href="/works/">View all works</a>
+  </section>
 
-        <section class="about-preview section-light reveal two-column">
-            <img src="/graphics/photo-LC-7-bw.jpg" alt="Leonardo Matteucci portrait">
-            <div class="text">
-                <p>Leonardo Matteucci is a composer exploring inner corporeality and the tactility of acoustic-electronic hybridisation.</p>
-                <a href="/about/" class="btn btn-outline">Read more</a>
-            </div>
-        </section>
-
-        <section class="works-preview section-dark reveal">
-            <h2>Latest Works</h2>
-            <div class="works-grid">
-                <div class="work-card">
-                    <h3>Occlusion (2025)</h3>
-                    <p>for violin and electronics</p>
-                </div>
-                <div class="work-card">
-                    <h3>Assume (2025)</h3>
-                    <p>for piano, flute, cello and electronics</p>
-                </div>
-                <div class="work-card">
-                    <h3>Bodylines (2023)</h3>
-                    <p>for violin, piccolo and electronics</p>
-                </div>
-            </div>
-            <a href="/works/" class="btn">View all works</a>
-        </section>
-
-        <section class="events-preview section-light reveal">
-            <h2>Upcoming Event</h2>
-            <ul>
-                <li>
-                    <span class="event-title">Reach.Touch.</span><br>
-                    <span class="event-date">28 November 2025 – KULTUM, Graz</span>
-                </li>
-            </ul>
-            <a href="/events/" class="btn btn-outline">View all events</a>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Leonardo Matteucci</p>
-            <div class="footer-icons">
-                <a href="https://www.youtube.com/@leonardo_matteucci" title="YouTube" target="_blank">
-                    <img src="logos/youtube-logo_white.svg" alt="YouTube">
-                </a>
-                <a href="https://soundcloud.com/leonardo_matteucci" title="SoundCloud" target="_blank">
-                    <img src="logos/soundcloud-logo_white.svg" alt="SoundCloud">
-                </a>
-                <a href="https://www.instagram.com/leonardo_matteucci_ig" title="Instagram" target="_blank">
-                    <img src="logos/instagram-logo_white.svg" alt="Instagram">
-                </a>
-                <a href="https://www.facebook.com/leonardo.matteucci.fb" title="Facebook" target="_blank">
-                    <img src="logos/facebook-logo_white.svg" alt="Facebook">
-                </a>
-                <a href="mailto:leonardo.matteucci@icloud.com" title="Personal Email" target="_blank">
-                    <img src="logos/email-logo_white.svg" alt="Email">
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="transition.js"></script>
-    <script src="ruler.js"></script>
-    <script src="menu.js"></script>
-    <script src="scroll.js"></script>
+  <section class="upcoming-event">
+    <h2>Upcoming Event</h2>
+    <div class="event-card">
+      <h3>Reach.Touch.</h3>
+      <p>28 November 2025 – KULTUM, Graz</p>
+      <a href="/events/">View all events</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Leonardo Matteucci</p>
+  <ul class="social-links">
+    <li><a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud">SC</a></li>
+    <li><a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube">YT</a></li>
+    <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram">IG</a></li>
+  </ul>
+</footer>
 </body>
 </html>

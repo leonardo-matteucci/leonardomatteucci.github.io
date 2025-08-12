@@ -1291,7 +1291,7 @@ details.press-item[open] + .press-subtitle {
     --background-color: #0a0a0a;
     --text-color: #ffffff;
     --border-color: #555555;
-    --accent-color: #ff4d67;
+    --accent-color: #b3b3b3;
     --container-width: 800px;
 }
 
@@ -1334,22 +1334,27 @@ header nav::after {
 }
 
 nav a {
-    color: var(--text-color);
+    color: var(--accent-color);
     transition: color 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-    color: var(--accent-color);
+    color: var(--text-color);
 }
 
 header nav a::after {
-    background: var(--accent-color);
+    background: var(--text-color);
 }
 
 a {
     color: var(--accent-color);
     transition: color 0.3s ease;
+}
+
+a:hover,
+.link:hover {
+    color: var(--text-color);
 }
 
 .footer-icons a:hover img {

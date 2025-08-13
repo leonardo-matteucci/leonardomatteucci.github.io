@@ -24,6 +24,31 @@ header {
     border-bottom: 1px solid var(--border);
     z-index: 1000;
 }
+
+#menu-toggle { display: none; }
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    cursor: pointer;
+}
+.menu-icon span {
+    width: 24px;
+    height: 2px;
+    background: var(--fg);
+    transition: transform .3s, opacity .3s;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .nav-list {
     list-style: none;
     margin: 0;
@@ -62,12 +87,13 @@ header {
 }
 
 .hero {
-    background: url('/assets/img/hero.jpg') center/cover no-repeat;
     text-align: center;
     padding: 120px 16px;
     color: var(--fg);
 }
 .hero h1 { font-size: 3rem; margin-bottom: 16px; }
+.hero img { width: 200px; border-radius: 50%; margin: 24px auto; display: block; }
+.tagline { text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 24px; }
 .hero p { font-size: 1.2rem; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
 .btn {
     display: inline-block;
@@ -79,6 +105,12 @@ header {
 }
 .btn:hover { background: #777; }
 
+.separator {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 64px auto;
+    width: 60%;
+}
 .latest-works, .upcoming-event { padding: 80px 16px; }
 .latest-works h2, .upcoming-event h2 { text-align: center; margin-bottom: 32px; }
 .works-grid {
@@ -129,7 +161,13 @@ footer {
 @media (max-width: 768px) {
     .hero { padding: 80px 12px; }
     .hero h1 { font-size: 2.2rem; }
-    .nav-list { flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 600px) {
+    .menu-icon { display: flex; }
+    nav { display: none; }
+    #menu-toggle:checked + .menu-icon + nav { display: block; }
+    .nav-list { flex-direction: column; gap: 12px; padding: 16px; }
 }
 
 /* Legacy work/project styles restored from previous design */

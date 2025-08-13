@@ -8,15 +8,24 @@
 
 /* Colour and typography variables */
 :root {
-  /* Dark, grayscale palette: a world without hope */
-  --bg: #0A0A0A;              /* page background: near black */
-  --fg: #E6E6E6;              /* primary text: light grey for readability */
-  --accent: #555555;          /* subtle accent used sparingly */
-  --accent-hover: #888888;     /* hover state for accents */
-  --border: #333333;          /* dark borders and separators */
-  /* Card surface gradient colours on dark theme */
-  --card-bg-start: #1A1A1A;
-  --card-bg-end: #111111;
+  /* Dark, greyscale palette – sombre and restrained */
+  /* Background of the pages.  A near‑black hue with a hint of warmth
+     softens the contrast while preserving depth. */
+  --bg: #080808;
+  /* Foreground colour for primary text.  Slightly off‑white for easier
+     reading on the dark background. */
+  --fg: #E2E2E2;
+  /* Accent colour for links and interactive elements.  A mid‑tone grey
+     provides subtle variation without introducing colour. */
+  --accent: #666666;
+  /* Hover state for accents – lighten slightly on hover. */
+  --accent-hover: #888888;
+  /* Border colour used to delineate cards and separators. */
+  --border: #222222;
+  /* Card surface gradient colours on dark theme.  Using two
+     neighbouring shades creates a barely perceptible depth effect. */
+  --card-bg-start: #121212;
+  --card-bg-end: #0A0A0A;
   /* Primary sans‑serif font */
   --font-sans: 'Poppins', sans-serif;
 }
@@ -157,6 +166,32 @@ nav {
   position: relative;
   margin-top: 0;
   overflow: hidden;
+  /* Ensure hero content floats above the portrait and decorative graphics */
+  z-index: 0;
+}
+
+/*
+ * The hero section includes a large portrait blended into the background.
+ * Use a pseudo‑element so the photo scales responsively and remains
+ * decorative rather than dominating the layout.  The low opacity and
+ * blend mode allow the underlying dark background to show through.
+ */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/graphics/photo-LC-1-bw.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  /* Use overlay blend mode to allow the portrait to merge with the dark
+     background.  Multiply is avoided because it darkens too much. */
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: -2;
 }
 
 /* Decorative graphics covering the hero background */
@@ -167,7 +202,10 @@ nav {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0;
+  /* Position the abstract line art behind the hero content but above the
+     portrait background.  A negative z‑index works because the hero
+     container has relative positioning. */
+  z-index: -1;
 }
 .hero-graphics img {
   position: absolute;
@@ -202,12 +240,13 @@ nav {
   pointer-events: none;
 }
 .tagline {
-  font-size: 1rem;
-  font-style: italic;
-  letter-spacing: 0.05em;
-  margin-top: 8px;
-  margin-bottom: 24px;
-  opacity: 0.8;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  opacity: 0.9;
 }
 .hero p {
   font-size: 1.1rem;
@@ -282,23 +321,23 @@ nav {
 }
 
 /* Cards */
-/* Card components on a light background */
+/* Card components on a dark background */
 .work-card,
 .event-card,
 figure.work-card {
   background: linear-gradient(180deg, var(--card-bg-start) 0%, var(--card-bg-end) 100%);
   border: 1px solid var(--border);
-  border-top: 4px solid var(--accent);
+  /* Remove the accent stripe along the top edge for a cleaner look */
   border-radius: 12px;
   padding: 28px;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .work-card:hover,
 .event-card:hover,
 figure.work-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .work-card h3 {
   margin-top: 0;
@@ -494,29 +533,22 @@ section {
 
 /* Uniform heading spacing for sections */
 section > h1,
+section > h1,
 section > h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 600;
-  position: relative;
 }
 
-/* Decorative underline for top‑level headings inside sections */
-section > h1::after,
-section > h2::after {
-  content: "";
-  display: block;
-  width: 48px;
-  height: 2px;
-  background: var(--accent);
-  margin: 12px auto 0;
-  border-radius: 1px;
-}
 .instrumentation-list {
   list-style: none;
   padding: 0;
-  margin: 1em 0;
+  /* Centre the instrumentation list and constrain its width for better readability */
+  /* Provide generous margins around instrumentation lists and narrow the
+     column width slightly so the content is more centred on wide screens. */
+  margin: 2em auto;
+  max-width: 580px;
   text-align: left;
 }
 /* Each top-level instrument becomes a row with the instrument name on the left and
@@ -559,6 +591,42 @@ section > h2::after {
 .gear-list li,
 .gear-list-tight li {
   margin: 0.25em 0;
+}
+
+/* Program list styling for concert projects (e.g., Reach.Touch.) */
+.program-list {
+  list-style: none;
+  padding: 0;
+  /* Centre the program list within the page with generous margins and
+     constrain its width to mirror the instrumentation lists. */
+  margin: 2em auto;
+  max-width: 580px;
+}
+.program-list > li {
+  margin-bottom: 1.2em;
+}
+.program-list > li > strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+.program-list > li > ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 1.2em;
+}
+.program-list > li > ul > li {
+  position: relative;
+  margin: 0.25em 0;
+  font-style: italic;
+  opacity: 0.9;
+  padding-left: 1em;
+}
+.program-list > li > ul > li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
 }
 .works-premiere {
   margin-top: 1em;

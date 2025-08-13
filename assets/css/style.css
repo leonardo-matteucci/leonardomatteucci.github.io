@@ -9,19 +9,19 @@
 /* Colour and typography variables */
 :root {
   /* Background colour has been brightened slightly for a cleaner look */
-  /* Light theme palette restored for a cleaner, brighter look */
-  --bg: #F9F9F9;
-  /* Dark text for readability on light background */
-  --fg: #1A1A1A;
-  /* Primary accent colour for links and buttons (muted violet) */
-  --accent: #433A85;
+  /* Grayscale palette for a neutral, professional look */
+  --bg: #F6F6F6;
+  /* Primary text colour */
+  --fg: #222222;
+  /* Accent colour used sparingly for emphasis */
+  --accent: #555555;
   /* Hover state for the accent colour */
-  --accent-hover: #2F295D;
+  --accent-hover: #333333;
   /* Neutral border colour for cards and separators */
-  --border: #E0E0E0;
+  --border: #DDDDDD;
   /* Card surface gradient colours */
   --card-bg-start: #FFFFFF;
-  --card-bg-end: #F8F8F8;
+  --card-bg-end: #F2F2F2;
   /* Primary sans‑serif font */
   --font-sans: 'Poppins', sans-serif;
 }
@@ -161,7 +161,30 @@ nav {
   color: var(--fg);
   position: relative;
   margin-top: 0;
+  overflow: hidden;
 }
+
+/* Decorative graphics covering the hero background */
+.hero-graphics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-graphics img {
+  position: absolute;
+  opacity: 0.07;
+  max-width: none;
+}
+/* Position individual decorative graphics for variation */
+.hero-graphics .g1 { top: -40px; left: 5%; width: 280px; }
+.hero-graphics .g2 { top: -20px; right: -40px; width: 220px; }
+.hero-graphics .g3 { bottom: -60px; left: -30px; width: 260px; }
+.hero-graphics .g4 { bottom: 20px; right: 10%; width: 300px; }
+.hero-graphics .g5 { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 320px; }
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 8px;
@@ -357,6 +380,19 @@ figure.work-card figcaption {
   color: var(--accent);
 }
 
+/* Social icon images: set consistent sizing and hover effects */
+.social-links img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.social-links a:hover img {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 /* Logo styling */
 .logo img {
   /* Constrain logo height so it fits neatly within the header */
@@ -463,6 +499,19 @@ section > h2 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 600;
+  position: relative;
+}
+
+/* Decorative underline for top‑level headings inside sections */
+section > h1::after,
+section > h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  margin: 12px auto 0;
+  border-radius: 1px;
 }
 .instrumentation-list {
   list-style: none;
@@ -470,20 +519,31 @@ section > h2 {
   margin: 1em 0;
   text-align: left;
 }
+/* Each top-level instrument becomes a row with the instrument name on the left and
+   optional additional equipment on the right. A subtle divider separates rows. */
 .instrumentation-list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   font-weight: 600;
-  margin: 0.4em 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--border);
 }
-.instrumentation-list li ul {
-  list-style-type: circle;
-  margin-left: 1.25rem;
-  margin-top: 0.2em;
+.instrumentation-list > li:last-child {
+  border-bottom: none;
 }
-.instrumentation-list li ul li {
+.instrumentation-list > li > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+  max-width: 50%;
+}
+.instrumentation-list > li > ul li {
   font-weight: 400;
   opacity: 0.8;
   font-style: italic;
-  margin: 0.3em 0;
+  margin: 0 0 0.3em 0;
 }
 /* Reduce the size of flat/sharp SVG icons used within instrumentation lists */
 .music-icon {

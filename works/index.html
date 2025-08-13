@@ -8,10 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Site favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logos/lm-logo-favicon.svg">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
   <nav>
     <ul class="nav-list">
       <li><a href="/">Home</a></li>
@@ -23,37 +31,41 @@
       <li><a href="/contact/">Contact</a></li>
     </ul>
   </nav>
+  <!-- Company logo -->
+  <a href="/" class="logo"><img src="/logos/lm-logo_black-transparent_bg.png" alt="LM logo"></a>
 </header>
 <main id="main">
-  <section class="latest-works">
-    <h1>Works</h1>
-    <div class="works-grid">
-      <article class="work-card">
-        <h3>Dehiscence</h3>
-        <p>2026 • ensemble and electronics (upcoming)</p>
-      </article>
-      <article class="work-card">
-        <h3><a href="/works/occlusion/">Occlusion</a></h3>
-        <p>2025 • violin and electronics</p>
-      </article>
-      <article class="work-card">
-        <h3><a href="/works/assume/">Assume</a></h3>
-        <p>2025 • piano, flute, cello and electronics</p>
-      </article>
-      <article class="work-card">
-        <h3><a href="/works/bodylines/">Bodylines</a></h3>
-        <p>2023 • violin, piccolo and electronics</p>
-      </article>
-      <article class="work-card">
-        <h3><a href="/works/internal/">Internal</a></h3>
-        <p>2023 • ensemble</p>
-      </article>
-      <article class="work-card">
-        <h3><a href="/works/a-uno-spirituale-in-firenze/">A uno spirituale in Firenze</a></h3>
-        <p>2021 • string quartet and electronics</p>
-      </article>
-    </div>
-  </section>
+  <div class="container">
+    <section class="latest-works">
+      <h1>Works</h1>
+      <div class="works-grid">
+        <article class="work-card">
+          <h3>Dehiscence</h3>
+          <p>2026 • ensemble and electronics (upcoming)</p>
+        </article>
+        <article class="work-card">
+          <h3><a href="/works/occlusion/">Occlusion</a></h3>
+          <p>2025 • violin and electronics</p>
+        </article>
+        <article class="work-card">
+          <h3><a href="/works/assume/">Assume</a></h3>
+          <p>2025 • piano, flute, cello and electronics</p>
+        </article>
+        <article class="work-card">
+          <h3><a href="/works/bodylines/">Bodylines</a></h3>
+          <p>2023 • violin, piccolo and electronics</p>
+        </article>
+        <article class="work-card">
+          <h3><a href="/works/internal/">Internal</a></h3>
+          <p>2023 • ensemble</p>
+        </article>
+        <article class="work-card">
+          <h3><a href="/works/a-uno-spirituale-in-firenze/">A uno spirituale in Firenze</a></h3>
+          <p>2021 • string quartet and electronics</p>
+        </article>
+      </div>
+    </section>
+  </div>
 </main>
 <footer>
   <p>© 2025 Leonardo Matteucci</p>
@@ -63,6 +75,5 @@
     <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram">IG</a></li>
   </ul>
 </footer>
-<script src="/works.js"></script>
 </body>
 </html>

@@ -9,15 +9,16 @@
 /* Colour and typography variables */
 :root {
   /* Background colour has been brightened slightly for a cleaner look */
-  --bg: #F9F9FB;
-  /* Foreground colour darkened for better contrast */
-  --fg: #222222;
+  /* Dark theme palette */
+  --bg: #0A0A0A;
+  /* Foreground colour lightened for readability on dark background */
+  --fg: #F1F1F1;
   /* Primary accent colour for links and buttons */
-  --accent: #5050A5;
+  --accent: #7566C7;
   /* Hover state for the accent colour */
-  --accent-hover: #3E3A80;
+  --accent-hover: #5B4DA0;
   /* Neutral border colour for cards and separators */
-  --border: #E5E5E5;
+  --border: #333333;
   /* Primary sans‑serif font */
   --font-sans: 'Poppins', sans-serif;
 }
@@ -33,6 +34,10 @@ body {
   line-height: 1.6;
   /* Smooth scrolling for anchor links */
   scroll-behavior: smooth;
+  /* Allow footer to stick to the bottom when content is short */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -59,21 +64,56 @@ a:hover {
 }
 
 /* Header and navigation */
+/*
+ * Header and navigation styling
+ *
+ * The header is centre‑aligned so that the menu items always remain centred
+ * regardless of the presence of a logo or burger menu. The logo and menu
+ * toggle are absolutely positioned to the left and right of the header so
+ * they do not affect the centring of the navigation list. On smaller
+ * screens, the burger icon controls the visibility of the menu via the
+ * checkbox hack defined below.
+ */
 header {
+  /* Keep the header visible at the top of the viewport when scrolling */
   position: sticky;
   top: 0;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
-}
-nav {
+  /* Use flexbox to centre the navigation */
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0 16px;
 }
+
+/* Logo anchored to the left of the header */
+.logo {
+  position: absolute;
+  left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Burger menu toggle anchored to the right of the header */
+#menu-toggle,
+.menu-icon {
+  position: absolute;
+  right: 16px;
+}
+
+nav {
+  /* Do not force the nav to occupy all available space; let it size to its contents */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .nav-list {
   list-style: none;
   margin: 0;
-  padding: 16px 32px;
+  padding: 16px 0;
   display: flex;
   gap: 24px;
   justify-content: center;
@@ -205,12 +245,12 @@ nav {
 .work-card,
 .event-card,
 figure.work-card {
-  background: #fff;
+  background: #151515;
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 24px;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 .work-card:hover,
 .event-card:hover,
@@ -283,6 +323,27 @@ figure.work-card figcaption {
 }
 .social-links li a:hover {
   color: var(--accent);
+}
+
+/* Logo styling */
+.logo img {
+  /* Constrain logo height so it fits neatly within the header */
+  height: 48px;
+  width: auto;
+}
+
+.logo {
+  margin-right: 1.5rem;
+}
+
+/* Footer styling restored from the original design */
+footer {
+  padding: 40px 16px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.9rem;
+  /* Allow footer to push to the bottom of the viewport when content is short */
+  margin-top: auto;
 }
 
 /* Responsive adjustments */
@@ -364,6 +425,40 @@ figure.work-card figcaption {
 .instrumentation-list li {
   margin: 0.25em 0;
 }
+
+/* Instrumentation hierarchy styling
+   Draws a dot before each top-level instrument and a vertical line for nested
+   gear lists to clearly associate auxiliary instruments with their parent. */
+.instrumentation-list > li {
+  position: relative;
+  padding-left: 1rem;
+}
+.instrumentation-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.4em;
+  height: 0.4em;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.instrumentation-list li ul {
+  margin-left: 1.5rem;
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+}
+.instrumentation-list li ul li {
+  margin-bottom: 0.25em;
+}
+
+/* Reduce the size of flat/sharp SVG icons used within instrumentation lists */
+.music-icon {
+  /* Small glyph size so musical accidentals sit nicely with text */
+  height: 0.7em;
+  width: auto;
+  vertical-align: middle;
+}
 .gear-list,
 .gear-list-tight {
   list-style: none;
@@ -388,4 +483,37 @@ figure.work-card figcaption {
 .no-italic,
 .regular {
   font-style: normal;
+}
+
+/* Ensure the main content stretches to fill available space for a sticky footer */
+main {
+  flex: 1;
+}
+
+/* About page layout: splits the bio and portrait into columns on larger screens
+   and stacks them on small screens. */
+.about-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+.about-bio {
+  flex: 2 1 60%;
+}
+.about-bio h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+.about-photo {
+  flex: 1 1 30%;
+  max-width: 300px;
+}
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }

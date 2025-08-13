@@ -9,16 +9,16 @@
 /* Colour and typography variables */
 :root {
   /* Background colour has been brightened slightly for a cleaner look */
-  /* Dark theme palette */
-  --bg: #0A0A0A;
-  /* Foreground colour lightened for readability on dark background */
-  --fg: #F1F1F1;
-  /* Primary accent colour for links and buttons */
-  --accent: #7566C7;
+  /* Light theme palette restored for a cleaner, brighter look */
+  --bg: #F9F9F9;
+  /* Dark text for readability on light background */
+  --fg: #1A1A1A;
+  /* Primary accent colour for links and buttons (muted violet) */
+  --accent: #433A85;
   /* Hover state for the accent colour */
-  --accent-hover: #5B4DA0;
+  --accent-hover: #2F295D;
   /* Neutral border colour for cards and separators */
-  --border: #333333;
+  --border: #E0E0E0;
   /* Primary sans‑serif font */
   --font-sans: 'Poppins', sans-serif;
 }
@@ -153,24 +153,37 @@ nav {
   text-align: center;
   padding: 120px 16px;
   color: var(--fg);
+  position: relative;
 }
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 .hero img {
-  width: 200px;
+  width: 180px;
   border-radius: 50%;
-  margin: 24px auto;
+  margin: 16px auto;
   display: block;
 }
+.hero-art {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  width: 240px;
+  opacity: 0.15;
+  pointer-events: none;
+}
 .tagline {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
   margin-bottom: 24px;
+  opacity: 0.8;
 }
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 24px;
   max-width: 600px;
   margin-left: auto;
@@ -242,21 +255,22 @@ nav {
 }
 
 /* Cards */
+/* Card components on a light background */
 .work-card,
 .event-card,
 figure.work-card {
-  background: #151515;
+  background: #FFFFFF;
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 24px;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 .work-card:hover,
 .event-card:hover,
 figure.work-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 .work-card h3 {
   margin-top: 0;
@@ -417,44 +431,38 @@ footer {
 .duration {
   margin-bottom: 1em;
 }
+
+/* Uniform heading spacing for sections */
+section > h1,
+section > h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
 .instrumentation-list {
   list-style: none;
   padding: 0;
-  text-align: center;
+  margin: 1em 0;
+  text-align: left;
 }
-.instrumentation-list li {
-  margin: 0.25em 0;
-}
-
-/* Instrumentation hierarchy styling
-   Draws a dot before each top-level instrument and a vertical line for nested
-   gear lists to clearly associate auxiliary instruments with their parent. */
 .instrumentation-list > li {
-  position: relative;
-  padding-left: 1rem;
-}
-.instrumentation-list > li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 0.4em;
-  height: 0.4em;
-  background: var(--accent);
-  border-radius: 50%;
+  font-weight: 600;
+  margin: 0.4em 0;
 }
 .instrumentation-list li ul {
-  margin-left: 1.5rem;
-  border-left: 2px solid var(--accent);
-  padding-left: 1rem;
+  list-style-type: circle;
+  margin-left: 1.25rem;
+  margin-top: 0.2em;
 }
 .instrumentation-list li ul li {
-  margin-bottom: 0.25em;
+  font-weight: 400;
+  opacity: 0.8;
+  font-style: italic;
+  margin: 0.3em 0;
 }
-
 /* Reduce the size of flat/sharp SVG icons used within instrumentation lists */
 .music-icon {
-  /* Small glyph size so musical accidentals sit nicely with text */
   height: 0.7em;
   width: auto;
   vertical-align: middle;
@@ -494,12 +502,13 @@ main {
    and stacks them on small screens. */
 .about-page {
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: left;
 }
 .about-bio {
-  flex: 2 1 60%;
+  width: 100%;
 }
 .about-bio h1 {
   margin-top: 0;
@@ -508,12 +517,11 @@ main {
   text-align: left;
 }
 .about-photo {
-  flex: 1 1 30%;
-  max-width: 300px;
+  max-width: 400px;
 }
 .about-photo img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }

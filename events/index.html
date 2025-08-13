@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Schedule of upcoming and past performances of Leonardo Matteucci's works with venues and performers.">
+    <meta name="description" content="Upcoming and past events featuring works by Leonardo Matteucci.">
     <title>Events - Leonardo Matteucci</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Site favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logos/lm-logo-favicon.svg">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
   <nav>
     <ul class="nav-list">
       <li><a href="/">Home</a></li>
@@ -23,36 +31,21 @@
       <li><a href="/contact/">Contact</a></li>
     </ul>
   </nav>
+  <!-- Company logo -->
+  <a href="/" class="logo"><img src="/logos/lm-logo_black-transparent_bg.png" alt="LM logo"></a>
 </header>
 <main id="main">
-  <section>
-    <h1>Upcoming Events</h1>
-    <ul>
-      <li>
-        <strong><a href="/projects/reach-touch/">Reach.Touch.</a></strong>
-        <ul>
-          <li><a href="/works/assume/">Assume</a> (W.P.) – flute: Miho Sakuma, piano: Maria Iaiza, cello: Irati Goñi Leoz</li>
-          <li><a href="/works/occlusion/">Occlusion</a> – violin: Aleksandra Kornowicz</li>
-        </ul>
-        28 November 2025, 19:30 – KULTUM, [imCubus], Graz (AT)
-      </li>
-    </ul>
-    <h1>Past Events</h1>
-    <ul>
-      <li>
-        <a href="/works/occlusion/">Occlusion</a> (W.P.) – violin: Aleksandra Kornowicz<br>
-        23 June 2025, 19:00 – Hermann-Markus-Preßl-Saal, Kunstuniversität Graz, Graz (AT)
-      </li>
-      <li>
-        <a href="/works/internal/">Internal</a> (W.P.) – ensemble: <a href="https://www.opificiosonoro.com/" target="_blank">Opificio Sonoro</a><br>
-        11 May 2023, 20:30 – <em>Festival Orizzonti</em>, Auditorium Santa Cecilia, Perugia (IT)
-      </li>
-      <li>
-        <a href="/works/a-uno-spirituale-in-firenze/">A uno spirituale in Firenze</a> (W.P.) – string quartet: <a href="https://www.quartettomaurice.com/en" target="_blank">Quartetto Maurice</a><br>
-        29 October 2021, 20:30 – <em>Serate Musicali</em>, Turin Conservatory, Turin (IT)
-      </li>
-    </ul>
-  </section>
+  <div class="container">
+    <section class="latest-works">
+      <h1>Events</h1>
+      <div class="works-grid">
+        <article class="event-card">
+          <h3>Reach.Touch.</h3>
+          <p>28&nbsp;November&nbsp;2025 – KULTUM, Graz</p>
+        </article>
+      </div>
+    </section>
+  </div>
 </main>
 <footer>
   <p>© 2025 Leonardo Matteucci</p>

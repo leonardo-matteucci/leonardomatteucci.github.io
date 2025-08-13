@@ -19,6 +19,9 @@
   --accent-hover: #2F295D;
   /* Neutral border colour for cards and separators */
   --border: #E0E0E0;
+  /* Card surface gradient colours */
+  --card-bg-start: #FFFFFF;
+  --card-bg-end: #F8F8F8;
   /* Primary sans‑serif font */
   --font-sans: 'Poppins', sans-serif;
 }
@@ -32,6 +35,7 @@ body {
   color: var(--fg);
   font-family: var(--font-sans);
   line-height: 1.6;
+  font-size: 1rem;
   /* Smooth scrolling for anchor links */
   scroll-behavior: smooth;
   /* Allow footer to stick to the bottom when content is short */
@@ -86,6 +90,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0 16px;
+  letter-spacing: 0.02em;
 }
 
 /* Logo anchored to the left of the header */
@@ -122,6 +127,7 @@ nav {
   padding: 8px 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
+  font-weight: 500;
 }
 .nav-list li a:hover,
 .nav-list li a.active {
@@ -154,6 +160,7 @@ nav {
   padding: 120px 16px;
   color: var(--fg);
   position: relative;
+  margin-top: 0;
 }
 .hero h1 {
   font-size: 3rem;
@@ -259,21 +266,32 @@ nav {
 .work-card,
 .event-card,
 figure.work-card {
-  background: #FFFFFF;
+  background: linear-gradient(180deg, var(--card-bg-start) 0%, var(--card-bg-end) 100%);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
   border-radius: 12px;
-  padding: 24px;
+  padding: 28px;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 .work-card:hover,
 .event-card:hover,
 figure.work-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .work-card h3 {
   margin-top: 0;
+}
+
+/* Additional styling for event cards and nested lists */
+.event-card ul {
+  margin: 0.5rem 0 0.75rem 1rem;
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+.event-card p {
+  margin: 0.25rem 0;
 }
 
 /* Figures within press kit */
@@ -430,6 +448,12 @@ footer {
 }
 .duration {
   margin-bottom: 1em;
+}
+
+/* Global spacing for sections: add breathing room above and below each section */
+section {
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 /* Uniform heading spacing for sections */

@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with Leonardo Matteucci via email or phone.">
+    <meta name="description" content="Get in touch with composer Leonardo Matteucci.">
     <title>Contact - Leonardo Matteucci</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Site favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logos/lm-logo-favicon.svg">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
   <nav>
     <ul class="nav-list">
       <li><a href="/">Home</a></li>
@@ -23,20 +31,24 @@
       <li><a href="/contact/" class="active">Contact</a></li>
     </ul>
   </nav>
+  <!-- Company logo -->
+  <a href="/" class="logo"><img src="/logos/lm-logo_black-transparent_bg.png" alt="LM logo"></a>
 </header>
 <main id="main">
-  <section class="latest-works">
-    <h1>Contact</h1>
-    <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="_replyto" required>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </section>
+  <div class="container">
+    <section>
+      <h1>Contact</h1>
+      <form class="contact-form" name="contact" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </div>
 </main>
 <footer>
   <p>© 2025 Leonardo Matteucci</p>
@@ -46,6 +58,5 @@
     <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram">IG</a></li>
   </ul>
 </footer>
-<script src="/scroll.js"></script>
 </body>
 </html>

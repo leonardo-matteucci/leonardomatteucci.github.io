@@ -12,46 +12,71 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header>
-  <nav>
-    <ul class="nav-list">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/" class="active">About</a></li>
-      <li><a href="/projects/">Projects</a></li>
-      <li><a href="/works/">Works</a></li>
-      <li><a href="/press-kit/">Press Kit</a></li>
-      <li><a href="/events/">Events</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <a href="/" class="logo">LM</a>
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-icon" for="menu-toggle"><span></span></label>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/" class="active">About</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/works/">Works</a></li>
+        <li><a href="/press-kit/">Press Kit</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 <main id="main">
     <section>
         <h1>Biography</h1>
-        <p><a href="/">Leonardo Matteucci</a> is a composer exploring inner corporeality, the mechanics of bodily articulation, and the tactility of acoustic-electronic hybridisation.</p>
-        <p>He studied composition with <a href="http://www.colombotaccani.it" target="_blank">Giorgio Colombo Taccani</a> in Turin (2019-2021) and <a href="http://www.marcomomi.com" target="_blank">Marco Momi</a> in Fermo (2021-2023), and is currently pursuing a Master's degree under <a href="https://fr.wikipedia.org/wiki/Franck_Bedrossian" target="_blank">Franck Bedrossian</a> at <a href="https://www.kug.ac.at/en" target="_blank">Kunstuniversität Graz</a>.</p>
+        <div class="about-text">
+            <p><a href="/">Leonardo Matteucci</a> is a composer exploring inner corporeality, the mechanics of bodily articulation, and the tactility of acoustic-electronic hybridisation.</p>
+            <p>He studied composition with <a href="http://www.colombotaccani.it" target="_blank">Giorgio Colombo Taccani</a> in Turin (2019-2021) and <a href="http://www.marcomomi.com" target="_blank">Marco Momi</a> in Fermo (2021-2023), and is currently pursuing a Master's degree under <a href="https://fr.wikipedia.org/wiki/Franck_Bedrossian" target="_blank">Franck Bedrossian</a> at <a href="https://www.kug.ac.at/en" target="_blank">Kunstuniversität Graz</a>.</p>
+        </div>
     </section>
 
     <section>
         <h2>Studies</h2>
-        <ul>
-            <li>2023– – Master’s in Composition with <a href="https://fr.wikipedia.org/wiki/Franck_Bedrossian" target="_blank">Franck Bedrossian</a>, <a href="https://www.kug.ac.at/en" target="_blank">Kunstuniversität Graz</a></li>
-            <li>2021–2023 – Composition studies with <a href="http://www.marcomomi.com" target="_blank">Marco Momi</a>, Fermo Conservatory</li>
-            <li>2019–2021 – Composition studies with <a href="http://www.colombotaccani.it" target="_blank">Giorgio Colombo Taccani</a>, Turin Conservatory</li>
-        </ul>
+        <div class="about-text">
+            <ul class="list-with-border">
+                <li>2023– – Master’s in Composition with <a href="https://fr.wikipedia.org/wiki/Franck_Bedrossian" target="_blank">Franck Bedrossian</a>, <a href="https://www.kug.ac.at/en" target="_blank">Kunstuniversität Graz</a></li>
+                <li>2021–2023 – Composition studies with <a href="http://www.marcomomi.com" target="_blank">Marco Momi</a>, Fermo Conservatory</li>
+                <li>2019–2021 – Composition studies with <a href="http://www.colombotaccani.it" target="_blank">Giorgio Colombo Taccani</a>, Turin Conservatory</li>
+            </ul>
+        </div>
     </section>
 
     <section>
         <h2>Influences</h2>
-        <p>Drawing from corporeal practices and electronic experimentation, his work seeks a tactile, physical engagement with sound.</p>
+        <div class="about-text">
+            <p>Drawing from corporeal practices and electronic experimentation, his work seeks a tactile, physical engagement with sound.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Awards</h2>
+        <div class="about-text">
+            <ul class="list-with-border">
+                <li>2024 – Recipient of the Example Composition Prize</li>
+                <li>2022 – Young Composers Award, Example Festival</li>
+            </ul>
+        </div>
     </section>
 </main>
 <footer>
-  <p>© 2025 Leonardo Matteucci</p>
-  <ul class="social-links">
-    <li><a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud">SC</a></li>
-    <li><a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube">YT</a></li>
-    <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram">IG</a></li>
-  </ul>
+  <div class="container">
+    <span>© 2025 Leonardo Matteucci</span>
+    <div class="social-icons">
+      <a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud"><img src="/logos/soundcloud-logo_white.svg" alt="SoundCloud"></a>
+      <a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube"><img src="/logos/youtube-logo_white.svg" alt="YouTube"></a>
+      <a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram"><img src="/logos/instagram-logo_white.svg" alt="Instagram"></a>
+    </div>
+  </div>
 </footer>
+<script src="/menu.js"></script>
+<script src="/transition.js"></script>
 </body>
 </html>

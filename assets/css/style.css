@@ -502,14 +502,11 @@ figure.work-card figcaption {
   height: 21px;
   display: block;
   opacity: 0.8;
-  /* invert icons for dark theme */
-  filter: invert(1) grayscale(100%);
-  transition: opacity 0.2s, transform 0.2s, filter 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 .social-links a:hover img {
   opacity: 1;
   transform: translateY(-2px);
-  filter: invert(1) grayscale(0%);
 }
 
 /* Logo styling */

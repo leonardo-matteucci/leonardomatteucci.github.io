@@ -9,59 +9,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Site favicon -->
-    <link rel="icon" type="image/svg+xml" href="/logos/lm-logo-favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/lm-logo-favicon.svg">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header>
-  <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+  <!-- Removed mobile menu toggle; menu is always visible -->
   <nav>
     <ul class="nav-list">
       <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/projects/">Projects</a></li>
       <li><a href="/works/" class="active">Works</a></li>
-      <li><a href="/press-kit/">Press Kit</a></li>
+      <li><a href="/photos/">Photos</a></li>
       <li><a href="/events/">Events</a></li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
   </nav>
   <!-- Company logo -->
-  <a href="/" class="logo"><img src="/logos/lm-logo_black-transparent_bg.png" alt="LM logo"></a>
+  <a href="/" class="logo"><img src="/assets/icons/lm-logo-favicon.svg" alt="LM logo"></a>
 </header>
 <main id="main">
   <div class="container">
     <section class="latest-works">
-      <h1>Works</h1>
+      <h1 class="works-title">Works</h1>
       <div class="works-grid">
-        <article class="work-card">
-          <h3>Dehiscence</h3>
-          <p>2026 • ensemble and electronics (upcoming)</p>
+        <!-- Upcoming work displayed in a muted style.  Use the class "upcoming" to
+             disable interactions and lighten the appearance. -->
+        <article class="work-card upcoming">
+          <h3>Dehiscence<span class="works-details">2026</span></h3>
+          <p>ensemble and electronics (upcoming)</p>
         </article>
         <article class="work-card">
-          <h3><a href="/works/occlusion/">Occlusion</a></h3>
-          <p>2025 • violin and electronics</p>
+          <h3><a href="/works/occlusion/">Occlusion</a><span class="works-details">2025</span></h3>
+          <p>violin and electronics</p>
         </article>
         <article class="work-card">
-          <h3><a href="/works/assume/">Assume</a></h3>
-          <p>2025 • piano, flute, cello and electronics</p>
+          <h3><a href="/works/assume/">Assume</a><span class="works-details">2025</span></h3>
+          <p>piano, flute, cello and electronics</p>
         </article>
         <article class="work-card">
-          <h3><a href="/works/bodylines/">Bodylines</a></h3>
-          <p>2023 • violin, piccolo and electronics</p>
+          <h3><a href="/works/bodylines/">Bodylines</a><span class="works-details">2023</span></h3>
+          <p>violin, piccolo and electronics</p>
         </article>
         <article class="work-card">
-          <h3><a href="/works/internal/">Internal</a></h3>
-          <p>2023 • ensemble</p>
+          <h3><a href="/works/internal/">Internal</a><span class="works-details">2023</span></h3>
+          <p>ensemble</p>
         </article>
         <article class="work-card">
-          <h3><a href="/works/a-uno-spirituale-in-firenze/">A uno spirituale in Firenze</a></h3>
-          <p>2021 • string quartet and electronics</p>
+          <h3><a href="/works/a-uno-spirituale-in-firenze/">A uno spirituale in Firenze</a><span class="works-details">2021</span></h3>
+          <p>string quartet and electronics</p>
         </article>
       </div>
     </section>

@@ -649,10 +649,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Reduce the top padding so the first menu item appears
-       closer to the top on mobile. The previous value left a
-       large blank space above the navigation links. */
-    padding: 56px 24px 24px;
+    /* Further reduce the top padding so the first menu item sits
+       just below the close icon, eliminating the remaining blank
+       space at the top of the mobile menu. */
+    padding: 32px 24px 24px;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;

@@ -825,7 +825,7 @@ section > h2 {
 .about-page {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 8px;
   align-items: center;
   justify-content: center;
   margin-top: 16px;
@@ -897,7 +897,7 @@ main {
 .about-page {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
   align-items: center;
   text-align: left;
 }
@@ -909,6 +909,9 @@ main {
   font-size: 2rem;
   margin-bottom: 0.5em;
   text-align: left;
+}
+.about-bio p:last-child {
+  margin-bottom: 0;
 }
 .about-photo {
   max-width: 400px;

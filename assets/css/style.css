@@ -541,10 +541,59 @@ footer {
   .hero h1 {
     font-size: 2.2rem;
   }
+  /* Header layout on mobile: stack elements and widen the nav list */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 16px;
+  }
   .nav-list {
     flex-direction: column;
-    gap: 16px;
-    padding: 16px 0;
+    gap: 0;
+    width: 100%;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-list li {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .nav-list li a {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+  }
+  .nav-list li:last-child {
+    border-bottom: none;
+  }
+  /* Reposition logo on small screens */
+  .logo {
+    position: static;
+    margin-bottom: 8px;
+  }
+  /* Stack work/event cards in a single column on mobile */
+  .works-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Additional mobile adjustments for instrumentation lists */
+@media (max-width: 600px) {
+  .instrumentation-list {
+    max-width: 100%;
+    margin: 2em auto;
+  }
+  .instrumentation-list > li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .instrumentation-list > li > ul {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: left;
   }
 }
 

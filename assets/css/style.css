@@ -203,6 +203,11 @@ nav {
   z-index: 0;
 }
 
+/* Hide the portrait overlay on the hero section for a cleaner introduction */
+.hero::before {
+  display: none;
+}
+
 /*
  * The hero section includes a large portrait blended into the background.
  * Use a pseudo‑element so the photo scales responsively and remains
@@ -239,6 +244,11 @@ nav {
      portrait background.  A negative z‑index works because the hero
      container has relative positioning. */
   z-index: -1;
+}
+
+/* Remove decorative graphics from the hero section entirely */
+.hero-graphics {
+  display: none;
 }
 .hero-graphics img {
   position: absolute;
@@ -488,8 +498,8 @@ figure.work-card figcaption {
 
 /* Social icon images: set consistent sizing and hover effects */
 .social-links img {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   display: block;
   opacity: 0.8;
   /* invert icons for dark theme */
@@ -606,7 +616,10 @@ section > h2 {
   padding: 0;
   list-style: none;
   margin-left: auto;
-  max-width: 50%;
+  /* Allow more space for auxiliary equipment */
+  max-width: 55%;
+  /* Align additional instrumentation to the right */
+  text-align: right;
 }
 .instrumentation-list > li > ul li {
   font-weight: 400;
@@ -619,6 +632,18 @@ section > h2 {
   height: 0.7em;
   width: auto;
   vertical-align: middle;
+}
+
+/* Tag styling for instrumentation on overview pages (works & home) */
+.tag {
+  display: inline-block;
+  background: var(--border);
+  color: var(--fg);
+  padding: 2px 6px;
+  margin: 0 6px 6px 0;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  line-height: 1.2;
 }
 .gear-list,
 .gear-list-tight {

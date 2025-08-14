@@ -33,17 +33,9 @@
   <div class="container">
   <section class="hero">
     <!-- Multiple decorative graphics to fill the hero background -->
-    <div class="hero-graphics">
-      <img src="/assets/graphics/abstract-lines-gray.png" alt="" class="graphic g1">
-      <img src="/assets/graphics/abstract-lines-gray.png" alt="" class="graphic g2">
-      <img src="/assets/graphics/abstract-lines-gray.png" alt="" class="graphic g3">
-      <img src="/assets/graphics/abstract-lines-gray.png" alt="" class="graphic g4">
-      <img src="/assets/graphics/abstract-lines-gray.png" alt="" class="graphic g5">
-    </div>
+    <!-- Decorative graphics have been removed for a more minimal hero -->
     <h1>Leonardo Matteucci</h1>
-    <!-- The portrait is now rendered via CSS as part of the hero background.  The tagline is simplified to “Composer” for a more direct statement. -->
     <p class="tagline">Composer</p>
-    <a class="btn" href="/works/">Explore Works</a>
   </section>
   </div>
 
@@ -55,17 +47,17 @@
     <div class="works-grid">
       <article class="work-card">
         <h3>Occlusion<span class="works-details">2025</span></h3>
-        <p>violin and electronics</p>
+        <p><span class="tag">violin</span><span class="tag">electronics</span></p>
         <a href="/works/occlusion/">More details</a>
       </article>
       <article class="work-card">
         <h3>Assume<span class="works-details">2025</span></h3>
-        <p>piano, flute, cello and electronics</p>
+        <p><span class="tag">piano</span><span class="tag">flute</span><span class="tag">cello</span><span class="tag">electronics</span></p>
         <a href="/works/assume/">More details</a>
       </article>
       <article class="work-card">
         <h3>Bodylines<span class="works-details">2023</span></h3>
-        <p>violin, piccolo and electronics</p>
+        <p><span class="tag">violin</span><span class="tag">piccolo</span><span class="tag">electronics</span></p>
         <a href="/works/bodylines/">More details</a>
       </article>
     </div>
@@ -81,17 +73,19 @@
     <div class="event-card">
       <h3>Reach.Touch.</h3>
       <p>28 November 2025 – KULTUM, Graz</p>
-      <a href="/events/">View all events</a>
+      <a href="/events/">View details</a>
     </div>
+    <!-- Add a button to view all events, similar to the works section -->
+    <a class="btn secondary" href="/events/">View all events</a>
   </section>
   </div>
 </main>
 <footer>
   <p>© 2025 Leonardo Matteucci</p>
   <ul class="social-links">
-    <li><a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud"><img src="/assets/icons/soundcloud.svg" alt="SoundCloud logo"></a></li>
-    <li><a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube"><img src="/assets/icons/youtube.svg" alt="YouTube logo"></a></li>
-    <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram"><img src="/assets/icons/instagram.svg" alt="Instagram logo"></a></li>
+    <li><a href="https://soundcloud.com/leonardo_matteucci" aria-label="SoundCloud" target="_blank"><img src="/assets/icons/soundcloud.svg" alt="SoundCloud logo"></a></li>
+    <li><a href="https://www.youtube.com/@leonardo_matteucci" aria-label="YouTube" target="_blank"><img src="/assets/icons/youtube.svg" alt="YouTube logo"></a></li>
+    <li><a href="https://www.instagram.com/leonardo_matteucci_ig" aria-label="Instagram" target="_blank"><img src="/assets/icons/instagram.svg" alt="Instagram logo"></a></li>
   </ul>
 </footer>
 </body>

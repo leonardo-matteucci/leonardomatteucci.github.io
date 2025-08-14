@@ -14,7 +14,15 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header>
-  <!-- Removed mobile menu toggle -->
+  <!-- Logo appears first so it stays left aligned on large screens and centres above the nav on mobile -->
+  <a href="/" class="logo"><img src="/assets/icons/lm-logo-favicon.svg" alt="LM logo"></a>
+  <!-- Mobile navigation toggle (three bars). Hidden on large screens via CSS -->
+  <input type="checkbox" id="menu-toggle">
+  <label class="menu-icon" for="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
   <nav>
     <ul class="nav-list">
       <li><a href="/">Home</a></li>
@@ -26,13 +34,11 @@
       <li><a href="/contact/">Contact</a></li>
     </ul>
   </nav>
-  <!-- Company logo -->
-  <a href="/" class="logo"><img src="/assets/icons/lm-logo-favicon.svg" alt="LM logo"></a>
 </header>
 <main id="main">
   <div class="container">
     <section>
-      <h1 class="works-title">Assume (2025)</h1>
+      <h1 class="works-title">Assume<span class="works-details">2025</span></h1>
       <p class="works-details align-center duration">15′</p>
       <ul class="instrumentation-list">
         <li>Piano</li>

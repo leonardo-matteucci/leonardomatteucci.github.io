@@ -1,4 +1,4 @@
-:root {
+:root{
   --bg: #000000;      /* pure black background */
   --fg: #DDDDDD;      /* light grey for primary text */
   --accent: #888888;  /* medium grey for accents and links */
@@ -9,7 +9,7 @@
   --font-sans: 'Poppins', sans-serif;
 }
 
-.work-card.upcoming {
+.work-card.upcoming{
   opacity: 0.5;
   pointer-events: none;
   box-shadow: none;
@@ -17,8 +17,7 @@
 }
 
 /* Base styles */
-html,
-body {
+html, body{
   margin: 0;
   padding: 0;
   background-color: var(--bg);
@@ -32,24 +31,22 @@ body {
   min-height: 100vh;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3{
   font-weight: 300;
   letter-spacing: 0.02em;
 }
 
-a {
+a{
   color: var(--fg);
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
-a:hover {
+a:hover{
   color: var(--accent);
 }
 
 /* Layout container to constrain content width */
-.container {
+.container{
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 16px;
@@ -66,7 +63,7 @@ a:hover {
  * screens, the burger icon controls the visibility of the menu via the
  * checkbox hack defined below.
  */
-header {
+header{
   /* Keep the header visible at the top of the viewport when scrolling */
   position: sticky;
   top: 0;
@@ -82,7 +79,7 @@ header {
 }
 
 /* Logo anchored to the left of the header */
-.logo {
+.logo{
   position: absolute;
   left: 16px;
   display: flex;
@@ -90,20 +87,19 @@ header {
 }
 
 /* Burger menu toggle anchored to the right of the header */
-#menu-toggle,
-.menu-icon {
+#menu-toggle, .menu-icon{
   position: absolute;
   right: 16px;
 }
 
-nav {
+nav{
   /* Do not force the nav to occupy all available space; let it size to its contents */
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
 
-.nav-list {
+.nav-list{
   list-style: none;
   margin: 0;
   padding: 16px 0;
@@ -111,20 +107,19 @@ nav {
   gap: 24px;
   justify-content: center;
 }
-.nav-list li a {
+.nav-list li a{
   padding: 8px 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
   font-weight: 300;
 }
-.nav-list li a:hover,
-.nav-list li a.active {
+.nav-list li a:hover, .nav-list li a.active{
   color: var(--accent);
   border-color: var(--accent);
 }
 
 /* Skip link for accessibility */
-.skip-link {
+.skip-link{
   position: absolute;
   left: -999px;
   top: auto;
@@ -132,7 +127,7 @@ nav {
   height: 1px;
   overflow: hidden;
 }
-.skip-link:focus {
+.skip-link:focus{
   position: static;
   width: auto;
   height: auto;
@@ -143,7 +138,7 @@ nav {
 }
 
 /* Hero section on the home page */
-.hero {
+.hero{
   text-align: center;
   padding: 180px 16px;
   color: var(--fg);
@@ -154,7 +149,7 @@ nav {
   z-index: 0;
 }
 
-.hero-logo {
+.hero-logo{
   display: block;
   margin: 1.5em auto 0;
   margin-bottom: -5em;
@@ -164,12 +159,12 @@ nav {
   transition: opacity 0.3s;
 }
 
-.hero-logo:hover {
+.hero-logo:hover{
   opacity: 1;
 }
 
 /* Hide the portrait overlay on the hero section for a cleaner introduction */
-.hero::before {
+.hero::before{
   display: none;
 }
 
@@ -179,7 +174,7 @@ nav {
  * decorative rather than dominating the layout.  The low opacity and
  * blend mode allow the underlying dark background to show through.
  */
-.hero::before {
+.hero::before{
   content: "";
   position: absolute;
   top: 0;
@@ -197,7 +192,7 @@ nav {
   z-index: -2;
 }
 
-.hero h1 {
+.hero h1{
   font-size: 2rem;
   font-style: normal;
   font-weight: 300;
@@ -207,7 +202,7 @@ nav {
   margin-bottom: 0px;
 }
 
-.tagline {
+.tagline{
   font-size: 1.1rem;
   font-style: normal;
   font-weight: 300;
@@ -222,7 +217,7 @@ nav {
 }
 
 /* Buttons */
-.btn {
+.btn{
   display: inline-block;
   padding: 12px 24px;
   background: var(--accent);
@@ -231,51 +226,43 @@ nav {
   transition: background-color 0.2s; text-color 0.2s;
 }
 
-.btn.secondary {
+.btn.secondary{
   background: transparent;
   color: var(--accent);
   border: 2px solid var(--accent);
 }
-.btn.secondary:hover {
+.btn.secondary:hover{
   background: var(--accent);
   color: #fff;
 }
 
 /* Separators */
-.separator,
-.works-separator,
-.works-separator-half,
-.works-separator-small {
+.separator, .works-separator, .works-separator-small{
   border: none;
   border-top: 1px solid var(--border);
   margin: 0em auto;
 }
-.separator {
+.separator{
   width: 60%;
 }
-.works-separator {
+.works-separator{
   width: 50%;
 }
-.works-separator-half {
-  width: 50%;
-  margin: 1.5em auto;
-}
-.works-separator-small {
+
+.works-separator-small{
   width: 50%;
   margin: 1em auto;
 }
 
 /* Grid layouts */
-.latest-works,
-.upcoming-event {
+.latest-works, .upcoming-event{
   padding: 0px 16px;
 }
-.latest-works h2,
-.upcoming-event h2 {
+.latest-works h2, .upcoming-event h2{
   text-align: center;
   margin-bottom: 32px;
 }
-.works-grid {
+.works-grid{
   display: grid;
   gap: 32px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -284,9 +271,7 @@ nav {
 
 /* Cards */
 /* Card components on a dark background */
-.work-card,
-.event-card,
-figure.work-card {
+.work-card, .event-card, figure.work-card{
   /* Cards are solid black with a subtle border and shadow */
   background: var(--card-bg-start);
   border: 1px solid var(--border);
@@ -295,18 +280,16 @@ figure.work-card {
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
-.work-card:hover,
-.event-card:hover,
-figure.work-card:hover {
+.work-card:hover, .event-card:hover, figure.work-card:hover{
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-.work-card h3 {
+.work-card h3{
   margin-top: 0;
 }
 
 /* Ensure year labels in work titles are separated from the title text */
-.work-card h3 .works-details {
+.work-card h3 .works-details{
   margin-left: 0.4em;
   font-weight: 300;
   color: var(--accent);
@@ -314,45 +297,44 @@ figure.work-card:hover {
 }
 
 /* Upcoming works are displayed in a muted style and are not interactive */
-.work-card.upcoming {
+.work-card.upcoming{
   opacity: 0.5;
   pointer-events: none;
 }
-.work-card.upcoming h3,
-.work-card.upcoming p {
+.work-card.upcoming h3, .work-card.upcoming p{
   color: var(--accent);
 }
-.work-card.upcoming:hover {
+.work-card.upcoming:hover{
   transform: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Additional styling for event cards and nested lists */
-.event-card ul {
+.event-card ul{
   margin: 0.5rem 0 0.75rem 1rem;
   padding-left: 1rem;
   list-style-type: disc;
 }
-.event-card p {
+.event-card p{
   margin: 0.25rem 0;
 }
 
 /* Adjust spacing between upcoming and past events to tighten layout */
-.upcoming-event {
+.upcoming-event{
   margin-bottom: 24px;
 }
-.past-events {
+.past-events{
   margin-top: 0;
 }
 
 /* Figures within photos page */
-figure.work-card {
+figure.work-card{
   padding: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-figure.work-card img {
+figure.work-card img{
   display: block;
   width: 100%;
   /* Fix a consistent height for all photos.  Use object-fit: cover so both
@@ -362,7 +344,7 @@ figure.work-card img {
   object-position: center;
   border-radius: 12px 12px 0 0;
 }
-figure.work-card figcaption {
+figure.work-card figcaption{
   padding: 8px;
   text-align: center;
   font-size: 0.8rem;
@@ -370,18 +352,17 @@ figure.work-card figcaption {
 }
 
 /* Contact form */
-.contact-form {
+.contact-form{
   display: flex;
   flex-direction: column;
   gap: 16px;
   max-width: 500px;
   margin: 0 auto;
 }
-.contact-form label {
+.contact-form label{
   font-weight: 300;
 }
-.contact-form input,
-  .contact-form textarea {
+.contact-form input, .contact-form textarea{
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -393,12 +374,12 @@ figure.work-card figcaption {
     /* Prevent resizing of the message box to maintain layout integrity */
     resize: none;
 }
-.contact-form .btn {
+.contact-form .btn{
   align-self: flex-start;
 }
 
 /* Social links */
-.social-links {
+.social-links{
   list-style: none;
   display: flex;
   gap: 16px;
@@ -406,41 +387,41 @@ figure.work-card figcaption {
   margin-top: 16px;
   padding: 0;
 }
-.social-links li a {
+.social-links li a{
   color: var(--fg);
   font-weight: 300;
   transition: color 0.2s;
 }
-.social-links li a:hover {
+.social-links li a:hover{
   color: var(--accent);
 }
 
 /* Social icon images: set consistent sizing and hover effects */
-.social-links img {
+.social-links img{
   width: 21px;
   height: 21px;
   display: block;
   opacity: 0.8;
   transition: opacity 0.2s, transform 0.2s;
 }
-.social-links a:hover img {
+.social-links a:hover img{
   opacity: 1;
   transform: translateY(-2px);
 }
 
 /* Logo styling */
-.logo img {
+.logo img{
   /* Constrain logo height so it fits neatly within the header */
   height: 48px;
   width: auto;
 }
 
-.logo {
+.logo{
   margin-right: 1.5rem;
 }
 
 /* Footer styling restored from the original design */
-footer {
+footer{
   padding: 40px 16px;
   border-top: 1px solid var(--border);
   text-align: center;
@@ -451,19 +432,19 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .hero {
+  .hero{
     padding: 80px 12px;
   }
-  .hero h1 {
+  .hero h1{
     font-size: 2.2rem;
   }
   /* Header layout on mobile: stack elements and widen the nav list */
-  header {
+  header{
     flex-direction: column;
     align-items: center;
     padding: 8px 16px;
   }
-  .nav-list {
+  .nav-list{
     flex-direction: column;
     gap: 0;
     width: 100%;
@@ -471,26 +452,26 @@ footer {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
-  .nav-list li {
+  .nav-list li{
     width: 100%;
     border-bottom: 1px solid var(--border);
     text-align: center;
   }
-  .nav-list li a {
+  .nav-list li a{
     display: block;
     padding: 12px 0;
     width: 100%;
   }
-  .nav-list li:last-child {
+  .nav-list li:last-child{
     border-bottom: none;
   }
   /* Reposition logo on small screens */
-  .logo {
+  .logo{
     position: static;
     margin-bottom: 8px;
   }
   /* Stack work/event cards in a single column on mobile */
-  .works-grid {
+  .works-grid{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
   }
@@ -498,15 +479,15 @@ footer {
 
 /* Additional mobile adjustments for instrumentation lists */
 @media (max-width: 600px) {
-  .instrumentation-list {
+  .instrumentation-list{
     max-width: 100%;
     margin: 2em auto;
   }
-  .instrumentation-list > li {
+  .instrumentation-list > li{
     flex-direction: column;
     align-items: flex-start;
   }
-  .instrumentation-list > li > ul {
+  .instrumentation-list > li > ul{
     margin-left: 0;
     max-width: 100%;
     text-align: left;
@@ -527,15 +508,15 @@ footer {
  */
 
 /* Base styles for the menu toggle and icon */
-#menu-toggle {
+#menu-toggle{
   display: none;
 }
-.menu-icon {
+.menu-icon{
   display: none;
   cursor: pointer;
   z-index: 1001;
 }
-.menu-icon span {
+.menu-icon span{
   display: block;
   width: 24px;
   height: 2px;
@@ -546,18 +527,18 @@ footer {
 
 @media (max-width: 768px) {
   /* Reset header layout on small screens */
-  header {
+  header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
   }
   /* Show the hamburger icon */
-  .menu-icon {
+  .menu-icon{
     display: block;
   }
   /* Full-screen nav overlay hidden off-canvas */
-  header nav {
+  header nav{
     position: fixed;
     top: 0;
     left: 0;
@@ -577,97 +558,95 @@ footer {
     pointer-events: none;
   }
   /* Slide the nav into view when toggled */
-  #menu-toggle:checked + label.menu-icon + nav {
+  #menu-toggle:checked + label.menu-icon + nav{
     transform: translateY(0);
     pointer-events: auto;
   }
   /* Mobile nav list */
-  header nav ul.nav-list {
+  header nav ul.nav-list{
     flex-direction: column;
     gap: 24px;
     padding: 0;
     margin: 0;
     width: 100%;
   }
-  header nav ul.nav-list li {
+  header nav ul.nav-list li{
     width: 100%;
   }
-  header nav ul.nav-list li a {
+  header nav ul.nav-list li a{
     display: block;
     width: 100%;
     padding: 12px 0;
     text-align: left;
   }
   /* Animate hamburger into an X when open */
-  #menu-toggle:checked + label.menu-icon span:nth-child(1) {
+  #menu-toggle:checked + label.menu-icon span:nth-child(1){
     transform: translateY(6px) rotate(45deg);
   }
-  #menu-toggle:checked + label.menu-icon span:nth-child(2) {
+  #menu-toggle:checked + label.menu-icon span:nth-child(2){
     opacity: 0;
   }
-  #menu-toggle:checked + label.menu-icon span:nth-child(3) {
+  #menu-toggle:checked + label.menu-icon span:nth-child(3){
     transform: translateY(-6px) rotate(-45deg);
   }
   /* Position the logo relatively so it participates in the normal flow */
-  .logo {
+  .logo{
     position: static;
     margin: 0;
   }
   /* Hero content left aligned on mobile */
-  .hero {
+  .hero{
     text-align: left;
   }
 }
 
 /* Utility classes restored from the original design */
-.italic {
+.italic{
   font-style: italic;
 }
-.align-center {
+.align-center{
   text-align: center;
 }
-.align-right {
+.align-right{
   text-align: right;
 }
 /* Uniform title styling across all pages.  Ensure titles sit at the same height
    by resetting the top margin and providing a consistent bottom margin. */
-.works-title {
+.works-title{
   font-size: 1.5rem;
   font-weight: 300;
   text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.works-details {
+.works-details{
   color: var(--accent);
   margin-left: 0.4em;
   font-weight: 300;
   color: var(--accent);
   font-size: 0.9em;
 }
-.duration {
+.duration{
   margin-bottom: 1em;
   font-size: 1.15em;
 }
 
 /* Global spacing for sections: add breathing room above and below each section */
-section {
+section{
   /* Reduce vertical spacing between sections for a tighter, more cohesive layout */
   margin-top: 48px;
   margin-bottom: 48px;
 }
 
 /* Uniform heading spacing for sections */
-section > h1,
-section > h1,
-section > h2 {
+section > h1, section > h1, section > h2{
   text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 300;
 }
 
-.instrumentation-list {
+.instrumentation-list{
   list-style: none;
   padding: 0;
   /* Centre the instrumentation list and constrain its width for better readability */
@@ -679,7 +658,7 @@ section > h2 {
 }
 /* Each top-level instrument becomes a row with the instrument name on the left and
    optional additional equipment on the right. A subtle divider separates rows. */
-.instrumentation-list > li {
+.instrumentation-list > li{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -687,10 +666,10 @@ section > h2 {
   padding: 0.5em 0;
   border-bottom: 1px solid var(--border);
 }
-.instrumentation-list > li:last-child {
+.instrumentation-list > li:last-child{
   border-bottom: none;
 }
-.instrumentation-list > li > ul {
+.instrumentation-list > li > ul{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -700,21 +679,17 @@ section > h2 {
   /* Align additional instrumentation to the right */
   text-align: right;
 }
-.instrumentation-list > li > ul li {
+.instrumentation-list > li > ul li{
   font-weight: 300;
   opacity: 0.8;
   font-style: italic;
   margin: 0 0 0.3em 0;
 }
 /* Reduce the size of flat/sharp SVG icons used within instrumentation lists */
-.music-icon {
-  height: 0.7em;
-  width: auto;
-  vertical-align: middle;
-}
+
 
 /* Tag styling for instrumentation on overview pages (works & home) */
-.tag {
+.tag{
   display: inline-block;
   background: var(--border);
   color: var(--fg);
@@ -724,18 +699,16 @@ section > h2 {
   border-radius: 4px;
   line-height: 1.2;
 }
-.gear-list,
-.gear-list-tight {
+.gear-list, .gear-list-tight{
   list-style: none;
   padding: 0;
 }
-.gear-list li,
-.gear-list-tight li {
+.gear-list li, .gear-list-tight li{
   margin: 0.25em 0;
 }
 
 /* Program list styling for concert projects (e.g., Reach.Touch.) */
-.program-list {
+.program-list{
   list-style: none;
   padding: 0;
   /* Centre the program list within the page with generous margins and
@@ -745,7 +718,7 @@ section > h2 {
 }
 
 /* About page layout: two-column on larger screens, stacked on smaller screens */
-.about-page {
+.about-page{
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -753,93 +726,92 @@ section > h2 {
   justify-content: center;
   margin-top: 16px;
 }
-.about-bio {
+.about-bio{
   flex: 1 1 300px;
 }
-.about-photo {
+.about-photo{
   flex: 0 0 300px;
   text-align: center;
 }
-.about-photo img {
+.about-photo img{
   width: 100%;
   max-width: 320px;
   border-radius: 4px;
   display: block;
   object-fit: cover;
 }
-.program-list > li {
+.program-list > li{
   margin-bottom: 1.2em;
 }
-.program-list > li > strong {
+.program-list > li > strong{
   display: block;
   font-weight: 300;
   margin-bottom: 0.4em;
 }
-.program-list > li > ul {
+.program-list > li > ul{
   list-style: none;
   margin: 0;
   padding-left: 1.2em;
 }
-.program-list > li > ul > li {
+.program-list > li > ul > li{
   position: relative;
   margin: 0.25em 0;
   font-style: italic;
   opacity: 0.9;
   padding-left: 1em;
 }
-.program-list > li > ul > li::before {
+.program-list > li > ul > li::before{
   content: "–";
   position: absolute;
   left: 0;
   color: var(--accent);
 }
-.works-premiere {
+.works-premiere{
   margin-top: 1em;
 }
-.gray {
+.gray{
   color: var(--accent);
 }
-.link {
+.link{
   text-decoration: underline;
 }
-.link:hover {
+.link:hover{
   color: var(--accent);
 }
-.no-italic,
-.regular {
+.regular{
   font-style: normal;
 }
 
 /* Ensure the main content stretches to fill available space for a sticky footer */
-main {
+main{
   flex: 1;
 }
 
 /* About page layout: splits the bio and portrait into columns on larger screens
    and stacks them on small screens. */
-.about-page {
+.about-page{
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: center;
   text-align: left;
 }
-.about-bio {
+.about-bio{
   width: 100%;
 }
-.about-bio h1 {
+.about-bio h1{
   margin-top: 0;
   font-size: 2rem;
   margin-bottom: 0.5em;
   text-align: left;
 }
-.about-bio p:last-child {
+.about-bio p:last-child{
   margin-bottom: 0;
 }
-.about-photo {
+.about-photo{
   max-width: 400px;
 }
-.about-photo img {
+.about-photo img{
   width: 100%;
   height: auto;
   border-radius: 8px;

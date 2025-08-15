@@ -1,61 +1,14 @@
-/*
- * Refined stylesheet for Leonardo Matteucci's personal site.
- *
- * This version modernises the colour palette, enhances card and button
- * components, and introduces a responsive layout container.  Text content
- * remains untouched elsewhere in the site; only presentation is updated.
- */
-
-/* Colour and typography variables */
-:root {
-  /* Dark greyscale palette.  Black dominates with light greys for text
-     and medium greys for accents.  This palette complements the
-     monochrome imagery and serious mood of the site. */
-  --bg: #050505;            /* almost pure black for page backgrounds */
-  --fg: #D8D8D8;            /* light grey for primary text */
-  --accent: #7A7A7A;        /* medium grey for accents and links */
-  --accent-hover: #9A9A9A;  /* slightly lighter grey on hover */
-  --border: #1B1B1B;        /* very dark border colour */
-  --card-bg-start: #000000; /* cards are completely black */
-  --card-bg-end: #000000;
-  /* Primary sans‑serif font */
-  --font-sans: 'Poppins', sans-serif;
-}
-
-/*
- * Override the root colour palette. Declaring these variables again
- * further down in the stylesheet takes precedence over earlier
- * declarations due to the cascade.  This allows a complete
- * replacement of the palette without editing the original lines,
- * which contained non‑standard hyphen characters that are fragile to
- * patch.  The values here define a deeper black background and a
- * refined range of greys for text, accents and borders.  Cards
- * deliberately share the same start and end colour to remove any
- * residual gradient.
- */
 :root {
   --bg: #000000;      /* pure black background */
   --fg: #DDDDDD;      /* light grey for primary text */
   --accent: #888888;  /* medium grey for accents and links */
   --accent-hover: #AAAAAA; /* slightly lighter grey on hover */
   --border: #1A1A1A;  /* dark border colour for subtle delineation */
-  /* Cards share a uniform black background (no gradient) */
   --card-bg-start: #000000;
   --card-bg-end: #000000;
+  --font-sans: 'Poppins', sans-serif;
 }
 
-/* Hide the burger menu toggle and icon completely.  The navigation
- * remains visible at all screen widths so there is no need for a
- * collapsible menu. */
-.menu-icon,
-#menu-toggle,
-.menu-toggle {
-  display: none;
-}
-
-/* Style for upcoming works: reduce opacity, disable pointer events and
- * remove hover translation.  Upcoming works remain visible on the
- * page but clearly appear inactive. */
 .work-card.upcoming {
   opacity: 0.5;
   pointer-events: none;
@@ -73,9 +26,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   font-size: 1rem;
-  /* Smooth scrolling for anchor links */
   scroll-behavior: smooth;
-  /* Allow footer to stick to the bottom when content is short */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -84,7 +35,7 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.02em;
 }
 
@@ -164,7 +115,7 @@ nav {
   padding: 8px 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
-  font-weight: 500;
+  font-weight: 300;
 }
 .nav-list li a:hover,
 .nav-list li a.active {
@@ -194,13 +145,22 @@ nav {
 /* Hero section on the home page */
 .hero {
   text-align: center;
-  padding: 120px 16px;
+  padding: 180px 16px;
   color: var(--fg);
   position: relative;
   margin-top: 0;
   overflow: hidden;
   /* Ensure hero content floats above the portrait and decorative graphics */
   z-index: 0;
+}
+
+.hero-logo {
+  display: block;
+  margin: 1.5em auto 0;
+  margin-bottom: -5em;
+  max-width: 100%;
+  width: clamp(160px, 28vw, 80px);
+  opacity: 0.5;
 }
 
 /* Hide the portrait overlay on the hero section for a cleaner introduction */
@@ -232,69 +192,25 @@ nav {
   z-index: -2;
 }
 
-/* Decorative graphics covering the hero background */
-.hero-graphics {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  /* Position the abstract line art behind the hero content but above the
-     portrait background.  A negative z‑index works because the hero
-     container has relative positioning. */
-  z-index: -1;
+.hero h1 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-/* Remove decorative graphics from the hero section entirely */
-.hero-graphics {
-  display: none;
-}
-.hero-graphics img {
-  position: absolute;
-  /* invert line art on dark background */
-  filter: invert(1) grayscale(100%);
-  opacity: 0.08;
-  max-width: none;
-}
-/* Position individual decorative graphics for variation */
-.hero-graphics .g1 { top: -40px; left: 5%; width: 280px; }
-.hero-graphics .g2 { top: -20px; right: -40px; width: 220px; }
-.hero-graphics .g3 { bottom: -60px; left: -30px; width: 260px; }
-.hero-graphics .g4 { bottom: 20px; right: 10%; width: 300px; }
-.hero-graphics .g5 { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 320px; }
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-.hero img {
-  width: 180px;
-  border-radius: 50%;
-  margin: 16px auto;
-  display: block;
-}
-.hero-art {
-  position: absolute;
-  top: -40px;
-  right: 10px;
-  width: 240px;
-  opacity: 0.15;
-  pointer-events: none;
-}
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 300;
   letter-spacing: 0.1em;
   text-align: center;
-  margin-top: 16px;
-  margin-bottom: 32px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   opacity: 0.9;
-}
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 24px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -307,12 +223,9 @@ nav {
   background: var(--accent);
   color: #fff;
   border-radius: 4px;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s; text-color 0.2s;
 }
-.btn:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-}
+
 .btn.secondary {
   background: transparent;
   color: var(--accent);
@@ -330,7 +243,7 @@ nav {
 .works-separator-small {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 2em auto;
+  margin: 0em auto;
 }
 .separator {
   width: 60%;
@@ -350,7 +263,7 @@ nav {
 /* Grid layouts */
 .latest-works,
 .upcoming-event {
-  padding: 80px 16px;
+  padding: 0px 16px;
 }
 .latest-works h2,
 .upcoming-event h2 {
@@ -390,7 +303,7 @@ figure.work-card:hover {
 /* Ensure year labels in work titles are separated from the title text */
 .work-card h3 .works-details {
   margin-left: 0.4em;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--accent);
   font-size: 0.9em;
 }
@@ -460,7 +373,7 @@ figure.work-card figcaption {
   margin: 0 auto;
 }
 .contact-form label {
-  font-weight: 500;
+  font-weight: 300;
 }
 .contact-form input,
   .contact-form textarea {
@@ -490,7 +403,7 @@ figure.work-card figcaption {
 }
 .social-links li a {
   color: var(--fg);
-  font-weight: 600;
+  font-weight: 300;
   transition: color 0.2s;
 }
 .social-links li a:hover {
@@ -715,16 +628,21 @@ footer {
    by resetting the top margin and providing a consistent bottom margin. */
 .works-title {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 300;
   text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 .works-details {
   color: var(--accent);
+  margin-left: 0.4em;
+  font-weight: 300;
+  color: var(--accent);
+  font-size: 0.9em;
 }
 .duration {
   margin-bottom: 1em;
+  font-size: 1.15em;
 }
 
 /* Global spacing for sections: add breathing room above and below each section */
@@ -741,7 +659,7 @@ section > h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .instrumentation-list {
@@ -760,7 +678,7 @@ section > h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-weight: 600;
+  font-weight: 300;
   padding: 0.5em 0;
   border-bottom: 1px solid var(--border);
 }
@@ -778,7 +696,7 @@ section > h2 {
   text-align: right;
 }
 .instrumentation-list > li > ul li {
-  font-weight: 400;
+  font-weight: 300;
   opacity: 0.8;
   font-style: italic;
   margin: 0 0 0.3em 0;
@@ -849,7 +767,7 @@ section > h2 {
 }
 .program-list > li > strong {
   display: block;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 0.4em;
 }
 .program-list > li > ul {

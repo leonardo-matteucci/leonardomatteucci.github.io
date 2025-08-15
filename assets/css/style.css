@@ -161,6 +161,11 @@ nav {
   max-width: 100%;
   width: clamp(160px, 28vw, 80px);
   opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.hero-logo:hover {
+  opacity: 1;
 }
 
 /* Hide the portrait overlay on the hero section for a cleaner introduction */

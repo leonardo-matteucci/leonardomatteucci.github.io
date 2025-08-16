@@ -815,8 +815,12 @@ html, body{ overflow-x: hidden; } /* opzionale */
 }
 
 .image-modal img{
-  max-width: 90%;
-  max-height: 90%;
+  /* Limit enlarged photos to the site width and the viewport */
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(90vw, 1000px);
+  max-height: 90vh;
   box-shadow: 0 0 16px rgba(0,0,0,0.5);
 }
 

@@ -801,3 +801,35 @@ main{
 }
 
 html, body{ overflow-x: hidden; } /* opzionale */
+
+/* Image preview modal */
+.image-modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+.image-modal img{
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 16px rgba(0,0,0,0.5);
+}
+
+.image-modal-close{
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 2rem;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+@keyframes fadeIn{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}

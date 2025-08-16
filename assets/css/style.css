@@ -25,6 +25,7 @@ html, body{
   font-family: var(--font-sans);
   line-height: 1.6;
   font-size: 1rem;
+  font-weight: 300;
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
@@ -165,31 +166,7 @@ nav{
 
 /* Hide the portrait overlay on the hero section for a cleaner introduction */
 .hero::before{
-  display: none;
-}
-
-/*
- * The hero section includes a large portrait blended into the background.
- * Use a pseudo‑element so the photo scales responsively and remains
- * decorative rather than dominating the layout.  The low opacity and
- * blend mode allow the underlying dark background to show through.
- */
-.hero::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/assets/graphics/photo-LC-1-bw.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.12;
-  /* Use overlay blend mode to allow the portrait to merge with the dark
-     background.  Multiply is avoided because it darkens too much. */
-  mix-blend-mode: screen;
-  pointer-events: none;
-  z-index: -2;
+  content: none; /* keep overlay disabled without shadowing later rules */
 }
 
 .hero h1{
@@ -198,7 +175,7 @@ nav{
   font-weight: 300;
   letter-spacing: 0.05em;
   text-align: center;
-  margin-top: 0px;
+  margin-top: -43px;
   margin-bottom: 0px;
 }
 
@@ -217,23 +194,18 @@ nav{
 }
 
 /* Buttons */
-.btn{
+.btn.secondary{
   display: inline-block;
   padding: 12px 24px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 4px;
-  transition: background-color 0.2s; text-color 0.2s;
-}
-
-.btn.secondary{
   background: transparent;
   color: var(--accent);
-  border: 2px solid var(--accent);
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+  transition: background-color 0.2s, color 0.2s; /* fixed */
 }
 .btn.secondary:hover{
   background: var(--accent);
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Separators */
@@ -243,10 +215,7 @@ nav{
   margin: 0em auto;
 }
 .separator{
-  width: 60%;
-}
-.works-separator{
-  width: 50%;
+  width: 1000px;
 }
 
 .works-separator-small{
@@ -256,7 +225,7 @@ nav{
 
 /* Grid layouts */
 .latest-works, .upcoming-event{
-  padding: 0px 16px;
+  padding: 16px 16px;
 }
 .latest-works h2, .upcoming-event h2{
   text-align: center;
@@ -277,12 +246,10 @@ nav{
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 24px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s
 }
 .work-card:hover, .event-card:hover, figure.work-card:hover{
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .work-card h3{
   margin-top: 0;
@@ -300,6 +267,8 @@ nav{
 .work-card.upcoming{
   opacity: 0.5;
   pointer-events: none;
+  box-shadow: none;
+  transition: none;
 }
 .work-card.upcoming h3, .work-card.upcoming p{
   color: var(--accent);
@@ -309,20 +278,23 @@ nav{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Additional styling for event cards and nested lists */
-.event-card ul{
-  margin: 0.5rem 0 0.75rem 1rem;
-  padding-left: 1rem;
-  list-style-type: disc;
-}
 .event-card p{
   margin: 0.25rem 0;
 }
 
+.event-card h3{
+  margin-top: 0;
+}
+
 /* Adjust spacing between upcoming and past events to tighten layout */
 .upcoming-event{
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
+/* Add consistent spacing below the single event card */
+.upcoming-event .work-card{
+  margin-bottom: 32px; /* matches .works-grid gap/margin */
+}
+
 .past-events{
   margin-top: 0;
 }
@@ -480,7 +452,6 @@ footer{
 /* Additional mobile adjustments for instrumentation lists */
 @media (max-width: 600px) {
   .instrumentation-list{
-    max-width: 100%;
     margin: 2em auto;
   }
   .instrumentation-list > li{
@@ -489,7 +460,6 @@ footer{
   }
   .instrumentation-list > li > ul{
     margin-left: 0;
-    max-width: 100%;
     text-align: left;
   }
 }
@@ -600,7 +570,7 @@ footer{
   }
 }
 
-/* Utility classes restored from the original design */
+/* Utility classes */
 .italic{
   font-style: italic;
 }
@@ -623,7 +593,6 @@ footer{
   color: var(--accent);
   margin-left: 0.4em;
   font-weight: 300;
-  color: var(--accent);
   font-size: 0.9em;
 }
 .duration{
@@ -685,8 +654,6 @@ section > h1, section > h1, section > h2{
   font-style: italic;
   margin: 0 0 0.3em 0;
 }
-/* Reduce the size of flat/sharp SVG icons used within instrumentation lists */
-
 
 /* Tag styling for instrumentation on overview pages (works & home) */
 .tag{
@@ -702,6 +669,7 @@ section > h1, section > h1, section > h2{
 .gear-list, .gear-list-tight{
   list-style: none;
   padding: 0;
+  font-size: 0.85rem;
 }
 .gear-list li, .gear-list-tight li{
   margin: 0.25em 0;
@@ -715,30 +683,6 @@ section > h1, section > h1, section > h2{
      constrain its width to mirror the instrumentation lists. */
   margin: 2em auto;
   max-width: 580px;
-}
-
-/* About page layout: two-column on larger screens, stacked on smaller screens */
-.about-page{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 16px;
-}
-.about-bio{
-  flex: 1 1 300px;
-}
-.about-photo{
-  flex: 0 0 300px;
-  text-align: center;
-}
-.about-photo img{
-  width: 100%;
-  max-width: 320px;
-  border-radius: 4px;
-  display: block;
-  object-fit: cover;
 }
 .program-list > li{
   margin-bottom: 1.2em;
@@ -772,9 +716,6 @@ section > h1, section > h1, section > h2{
 .gray{
   color: var(--accent);
 }
-.link{
-  text-decoration: underline;
-}
 .link:hover{
   color: var(--accent);
 }
@@ -787,8 +728,7 @@ main{
   flex: 1;
 }
 
-/* About page layout: splits the bio and portrait into columns on larger screens
-   and stacks them on small screens. */
+/* About page layout: keep the final single-column version only */
 .about-page{
   display: flex;
   flex-direction: column;
@@ -817,3 +757,39 @@ main{
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+/* 1) Gear sempre sotto (se lo vuoi anche su desktop) */
+.instrumentation-list > li{
+  flex-direction: column;
+  align-items: flex-start;
+}
+.instrumentation-list > li > ul{
+  max-width: 100%;
+  text-align: left;
+  margin-top: .3em;
+}
+
+/* la riga copre esattamente la larghezza interna del container */
+.separator{
+  border: none;
+  border-top: 1px solid var(--border);
+  width: min(1000px, calc(100vw - 32px)); /* 1000px su desktop, su mobile = viewport - padding container */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* se usi anche queste varianti, uniformale */
+.works-separator,
+.works-separator-small{
+  border: none;
+  border-top: 1px solid var(--border);
+  width: min(1000px, calc(100vw - 32px));
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.works-details {
+  margin-right: 0.5rem; /* or whatever spacing you want */
+}
+
+html, body{ overflow-x: hidden; } /* opzionale */

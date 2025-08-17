@@ -420,43 +420,6 @@ footer{
   .hero h1{
     font-size: 2.2rem;
   }
-  /* Header layout on mobile: stack elements and widen the nav list */
-  header{
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 16px;
-  }
-  .nav-list{
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-    background: var(--bg);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-list li{
-    width: 100%;
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-  }
-  .nav-list li a{
-    display: block;
-    padding: 12px 0;
-    width: 100%;
-  }
-  .nav-list li:last-child{
-    border-bottom: none;
-  }
-  /* Reposition logo on small screens */
-  .logo{
-    position: static;
-    margin-bottom: 8px;
-  }
-  /* Stack work/event cards in a single column on mobile */
-  .works-grid{
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-  }
 }
 
 /* Additional mobile adjustments for instrumentation lists */
@@ -487,14 +450,14 @@ footer{
  * styles to override them where necessary.
  */
 
-/* Base styles for the menu toggle and icon */
-#menu-toggle{
-  display: none;
-}
+/* Base toggle */
+#menu-toggle{ display: none; }
+
+/* Base icon (desktop hidden) */
 .menu-icon{
   display: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1101;               /* sopra il nav overlay */
 }
 .menu-icon span{
   display: block;
@@ -502,47 +465,69 @@ footer{
   height: 2px;
   margin: 4px 0;
   background: var(--fg);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform-origin: center;    /* rotazione centrata = meno sporgenze */
 }
 
 @media (max-width: 768px) {
-  /* Reset header layout on small screens */
+  /* Header: fila singola, spazio a dx per la X */
   header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
+    padding-right: 20px;       /* gutter destro per la X */
+    overflow: visible;         /* evita clipping */
   }
-  /* Show the hamburger icon */
+
+  /* Hamburger visibile e nel flusso, con aria a destra */
   .menu-icon{
-    display: block;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    position: relative;        /* NON assoluta su mobile */
+    right: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    -webkit-tap-highlight-color: transparent;
+    padding-right: 4px;        /* ulteriore margine contro il taglio */
+    overflow: visible;
+    color: var(--fg);          /* usa currentColor per le barre */
   }
-  /* Full-screen nav overlay hidden off-canvas */
+  .menu-icon span{
+    width: 24px;               /* se serve più margine: porta a 22px */
+    height: 2px;
+
+    transform-origin: center;
+    span{ width: 22px; }
+  }
+
+  /* Overlay nav fuori schermo di default */
   header nav{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
     background: var(--bg);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Further reduce the top padding so the first menu item sits
-       just below the close icon, eliminating the remaining blank
-       space at the top of the mobile menu. */
     padding: 32px 24px 24px;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 1000;
+    z-index: 1000;             /* sotto la .menu-icon */
     pointer-events: none;
   }
-  /* Slide the nav into view when toggled */
+
+  /* Mostra overlay quando spuntato */
   #menu-toggle:checked + label.menu-icon + nav{
     transform: translateY(0);
     pointer-events: auto;
   }
-  /* Mobile nav list */
+
+  /* Lista nav mobile */
   header nav ul.nav-list{
     flex-direction: column;
     gap: 24px;
@@ -550,34 +535,33 @@ footer{
     margin: 0;
     width: 100%;
   }
-  header nav ul.nav-list li{
-    width: 100%;
-  }
+  header nav ul.nav-list li{ width: 100%; }
   header nav ul.nav-list li a{
     display: block;
     width: 100%;
     padding: 12px 0;
     text-align: left;
   }
-  /* Animate hamburger into an X when open */
+
+  /* Animazione hamburger -> X */
   #menu-toggle:checked + label.menu-icon span:nth-child(1){
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
   #menu-toggle:checked + label.menu-icon span:nth-child(2){
     opacity: 0;
   }
   #menu-toggle:checked + label.menu-icon span:nth-child(3){
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
-  /* Position the logo relatively so it participates in the normal flow */
+
+  /* Logo nel flusso normale su mobile */
   .logo{
     position: static;
     margin: 0;
   }
-  /* Hero content left aligned on mobile */
-  .hero{
-    text-align: left;
-  }
+
+  /* Hero a sinistra su mobile */
+  .hero{ text-align: left; }
 }
 
 /* Utility classes */
@@ -736,8 +720,8 @@ section > h1, section > h1, section > h2{
 /* Ensure the main content stretches to fill available space for a sticky footer */
 main{
   flex: 1;
-  /* Offset the page content so it isn't hidden beneath the fixed header */
-  padding-top: 64px;
+/* Offset the page content so it isn't hidden beneath the fixed header */
+  padding-top: 57px;
 }
 
 /* About page layout: keep the final single-column version only */

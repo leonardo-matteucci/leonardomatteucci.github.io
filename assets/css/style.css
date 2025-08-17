@@ -199,6 +199,7 @@ nav{
   color: #fff;
   border-radius: 4px;
   transition: background-color 0.2s, color 0.2s; /* fixed */
+  font: inherit; /* ensure buttons match link typography */
 }
 
 .btn.secondary{

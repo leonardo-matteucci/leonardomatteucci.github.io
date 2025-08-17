@@ -554,7 +554,8 @@ footer{
   }
   header nav ul.nav-list li a{
     display: inline-block;
-    padding: 6px 6px;
+    padding: 9px 48px;
+    border-width: 1px;
     width: fit-content;
     text-align: center;
   }

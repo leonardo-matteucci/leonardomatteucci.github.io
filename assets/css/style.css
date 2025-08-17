@@ -65,9 +65,11 @@ a:hover{
  * checkbox hack defined below.
  */
 header{
-  /* Keep the header visible at the top of the viewport when scrolling */
-  position: sticky;
+  /* Keep the header fixed at the top of the viewport on scroll */
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
@@ -734,6 +736,8 @@ section > h1, section > h1, section > h2{
 /* Ensure the main content stretches to fill available space for a sticky footer */
 main{
   flex: 1;
+  /* Offset the page content so it isn't hidden beneath the fixed header */
+  padding-top: 64px;
 }
 
 /* About page layout: keep the final single-column version only */

@@ -89,11 +89,8 @@ header{
   align-items: center;
 }
 
-/* Burger menu toggle anchored to the right of the header */
-#menu-toggle, .menu-icon{
-  position: absolute;
-  right: 16px;
-}
+/* Toggle base */
+#menu-toggle{ display:none; }
 
 nav{
   /* Do not force the nav to occupy all available space; let it size to its contents */
@@ -218,22 +215,7 @@ nav{
   color: #ffffff;
 }
 
-/* Separators */
-.separator, .works-separator, .works-separator-small{
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 0em auto;
-}
-.separator{
-  width: 1000px;
-}
 
-.works-separator-small{
-  width: 50%;
-  margin: 1em auto;
-}
-
-/* Grid layouts */
 .latest-works, .upcoming-event{
   padding: 16px 16px;
 }
@@ -323,7 +305,7 @@ figure.work-card img{
      portrait and landscape orientations crop elegantly within the card. */
   height: 220px;
   object-fit: cover;
-  object-position: center;
+  object-position: 50% 33%; /* center horizontally, show a bit more of the lower part */
   border-radius: 12px 12px 0 0;
 }
 figure.work-card figcaption{
@@ -450,8 +432,7 @@ footer{
  * styles to override them where necessary.
  */
 
-/* Base toggle */
-#menu-toggle{ display: none; }
+
 
 /* Base icon (desktop hidden) */
 .menu-icon{
@@ -470,42 +451,79 @@ footer{
   transform-origin: center;    /* rotazione centrata = meno sporgenze */
 }
 
-@media (max-width: 768px) {
-  /* Header: fila singola, spazio a dx per la X */
+@media (max-width: 768px){
+  /* Header mobile */
   header{
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 12px 16px;
-    padding-right: 20px;       /* gutter destro per la X */
-    overflow: visible;         /* evita clipping */
+    padding-right: calc(16px + env(safe-area-inset-right, 0px));
+    overflow: visible;
   }
 
-  /* Hamburger visibile e nel flusso, con aria a destra */
-  .menu-icon{
+  /* Icona hamburger nel flusso, box 44×44 */
+  label.menu-icon{
+    position: relative;          /* box di riferimento per le barre */
+    right: auto;
+    margin-left: auto;           /* spinge a destra nel flex */
+    margin-right: 20px;
     width: 44px;
     height: 44px;
-    display: inline-flex;
-    position: relative;        /* NON assoluta su mobile */
-    right: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0;
+    display: inline-block;
+    color: var(--fg);
     -webkit-tap-highlight-color: transparent;
-    padding-right: 4px;        /* ulteriore margine contro il taglio */
-    overflow: visible;
-    color: var(--fg);          /* usa currentColor per le barre */
-  }
-  .menu-icon span{
-    width: 24px;               /* se serve più margine: porta a 22px */
-    height: 2px;
+    overflow: visible;           /* no clipping */
+    padding: 0;                  /* niente padding che sposta il centro */
 
-    transform-origin: center;
-    span{ width: 22px; }
+    z-index: 1101;
+    line-height: 0;}
+  /* Accessible focus ring */
+  label.menu-icon:focus-visible{
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 10px;
   }
 
-  /* Overlay nav fuori schermo di default */
+  /* Barre assolute, centrate nel box */
+  label.menu-icon span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 22px;                     /* refined length for balance */
+    height: 2px;                     /* thin, crisp */
+    background: currentColor;
+    border-radius: 999px;
+    transform-origin: 50% 50%;
+    transition:
+      transform 260ms cubic-bezier(.2,.7,.2,1),
+      opacity 180ms linear;
+    will-change: transform, opacity;
+  }
+
+/* Hamburger layout (3 lines around the center) */
+  label.menu-icon span:nth-child(1){ transform: translate(-50%, -50%) translateY(-6px); }
+  label.menu-icon span:nth-child(2){ transform: translate(-50%, -50%); }
+  label.menu-icon span:nth-child(3){ transform: translate(-50%, -50%) translateY( 6px); }
+
+  /* Open state → elegant X exactly centered (no horizontal drift) */
+  #menu-toggle:checked + label.menu-icon span:nth-child(1){
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  #menu-toggle:checked + label.menu-icon span:nth-child(2){
+    opacity: 0;
+  }
+  #menu-toggle:checked + label.menu-icon span:nth-child(3){
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  /* Subtle polish on hover/active (doesn't change header height) */
+  label.menu-icon:hover span{ opacity: .9; }
+  @media (prefers-reduced-motion: reduce){
+    label.menu-icon span{ transition: none; }
+  }
+
+  /* Overlay nav */
   header nav{
     position: fixed;
     top: 0; left: 0;
@@ -517,11 +535,9 @@ footer{
     padding: 32px 24px 24px;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 1000;             /* sotto la .menu-icon */
+    z-index: 1000;                /* sotto l’icona (che sta sopra) */
     pointer-events: none;
   }
-
-  /* Mostra overlay quando spuntato */
   #menu-toggle:checked + label.menu-icon + nav{
     transform: translateY(0);
     pointer-events: auto;
@@ -543,24 +559,13 @@ footer{
     text-align: left;
   }
 
-  /* Animazione hamburger -> X */
-  #menu-toggle:checked + label.menu-icon span:nth-child(1){
-    transform: translateY(7px) rotate(45deg);
-  }
-  #menu-toggle:checked + label.menu-icon span:nth-child(2){
-    opacity: 0;
-  }
-  #menu-toggle:checked + label.menu-icon span:nth-child(3){
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  /* Logo nel flusso normale su mobile */
+  /* Logo nel flusso normale */
   .logo{
     position: static;
     margin: 0;
   }
 
-  /* Hero a sinistra su mobile */
+  /* Hero testo a sinistra */
   .hero{ text-align: left; }
 }
 
@@ -602,7 +607,7 @@ section{
 }
 
 /* Uniform heading spacing for sections */
-section > h1, section > h1, section > h2{
+section > h1, section > h2{
   text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;

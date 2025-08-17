@@ -607,6 +607,11 @@ section{
   margin-bottom: 48px;
 }
 
+/* Ensure the first section on a page aligns with the top content area */
+main > :first-child > section:first-of-type{
+  margin-top: 0;
+}
+
 /* Uniform heading spacing for sections */
 section > h1, section > h2{
   text-align: center;

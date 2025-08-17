@@ -554,7 +554,7 @@ footer{
   }
   header nav ul.nav-list li a{
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 6px;
     width: fit-content;
     text-align: center;
   }
@@ -562,14 +562,15 @@ footer{
   header nav ul.nav-list .nav-logo{
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-top: 0;
+    margin-bottom: 0px;
   }
   header nav ul.nav-list .nav-logo a{
     padding: 0;
     border: none;
   }
   header nav ul.nav-list .nav-logo img{
-    width: 44px;
+    width: 60px;
     height: auto;
   }
 

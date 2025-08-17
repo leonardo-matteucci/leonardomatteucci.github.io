@@ -420,21 +420,6 @@ footer{
   }
 }
 
-/* -------------------------------------------------------------------
- * Responsive navigation
- *
- * The following styles implement a classic hamburger menu on small
- * screens. A hidden checkbox (#menu-toggle) controls the visibility
- * of the navigation. When unchecked, the navigation is hidden and only
- * the three‑bar icon appears. When checked, a grey panel with rounded
- * corners drops down containing the nav links. The icon does not
- * transform into an X; it remains three horizontal bars to preserve
- * a minimal aesthetic. These rules appear after the original mobile
- * styles to override them where necessary.
- */
-
-
-
 /* Base icon (desktop hidden) */
 .menu-icon{
   display: none;
@@ -443,9 +428,6 @@ footer{
 }
 .menu-icon span{
   display: block;
-  width: 24px;
-  height: 2px;
-  margin: 4px 0;
   background: var(--fg);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.2s ease;
@@ -491,8 +473,8 @@ footer{
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 22px;                     /* refined length for balance */
-    height: 2px;                     /* thin, crisp */
+    width: 26px;                     /* refined length for balance */
+    height: 1.5px;                     /* thin, crisp */
     background: currentColor;
     border-radius: 999px;
     transform-origin: 50% 50%;
@@ -503,9 +485,9 @@ footer{
   }
 
 /* Hamburger layout (3 lines around the center) */
-  label.menu-icon span:nth-child(1){ transform: translate(-50%, -50%) translateY(-6px); }
+  label.menu-icon span:nth-child(1){ transform: translate(-50%, -50%) translateY(-9px); }
   label.menu-icon span:nth-child(2){ transform: translate(-50%, -50%); }
-  label.menu-icon span:nth-child(3){ transform: translate(-50%, -50%) translateY( 6px); }
+  label.menu-icon span:nth-child(3){ transform: translate(-50%, -50%) translateY( 9px); }
 
   /* Open state → elegant X exactly centered (no horizontal drift) */
   #menu-toggle:checked + label.menu-icon span:nth-child(1){

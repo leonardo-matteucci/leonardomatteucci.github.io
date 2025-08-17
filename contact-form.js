@@ -3,29 +3,37 @@ window.addEventListener('DOMContentLoaded', () => {
   const status = document.getElementById('form-status');
   if (!form) return;
 
+  function showMessage(msg, isSuccess = false) {
+    status.textContent = msg;
+    status.classList.toggle('ok', isSuccess);
+    status.classList.toggle('error', !isSuccess);
+    setTimeout(() => { status.textContent = ''; }, 4000); // clears after 2s
+  }
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    status.textContent = 'Sending...';
+    showMessage('Sending...');
     const data = new FormData(form);
 
     try {
       const response = await fetch(form.action, {
         method: form.method,
         body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
       });
 
       if (response.ok) {
-        status.textContent = 'Thanks for your message!';
         form.reset();
+        showMessage('Message sent.', true);
       } else {
         const result = await response.json();
-        status.textContent = result.errors ? result.errors.map(err => err.message).join(', ') : 'Oops! There was a problem submitting your form';
+        showMessage(result.errors
+          ? result.errors.map(err => err.message).join(', ')
+          : 'Send failed.');
       }
-    } catch (error) {
-      status.textContent = 'Oops! There was a problem submitting your form';
+    } catch {
+      showMessage('Network error.');
     }
   });
 });
+

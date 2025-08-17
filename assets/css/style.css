@@ -155,7 +155,7 @@ nav{
   margin-bottom: -5em;
   max-width: 100%;
   width: clamp(160px, 28vw, 80px);
-  opacity: 0.5;
+  opacity: 0.75;
   transition: opacity 0.3s;
 }
 
@@ -204,7 +204,7 @@ nav{
 
 .btn.secondary{
   display: inline-block;
-  padding: 12px 24px;
+  padding: 8px 20px;
   background: transparent;
   color: var(--accent);
   border-radius: 4px;
@@ -401,7 +401,21 @@ footer{
     padding: 80px 12px;
   }
   .hero h1{
-    font-size: 2.2rem;
+    font-size: 1.7rem;
+    margin-top: 1em;
+  }
+
+  /* Tagline smaller */
+  .tagline {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* Hero logo smaller under tagline */
+  .hero-logo {
+    width: 100px;      /* or tweak to taste */
+    margin-top: 1.5em;   /* optional extra spacing */
+    margin-bottom: -2em; /* keep balance if needed */
   }
 }
 
@@ -440,7 +454,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 16px;
+    padding: 12px 12px;
     padding-right: calc(16px + env(safe-area-inset-right, 0px));
     overflow: visible;
   }
@@ -450,7 +464,7 @@ footer{
     position: relative;          /* box di riferimento per le barre */
     right: auto;
     margin-left: auto;           /* spinge a destra nel flex */
-    margin-right: 20px;
+    margin-right: 12px;
     width: 44px;
     height: 44px;
     display: inline-block;
@@ -474,7 +488,7 @@ footer{
     left: 50%;
     top: 50%;
     width: 26px;                     /* refined length for balance */
-    height: 1.5px;                     /* thin, crisp */
+    height: 1.2px;                     /* thin, crisp */
     background: currentColor;
     border-radius: 999px;
     transform-origin: 50% 50%;
@@ -515,7 +529,6 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 32px 24px 24px;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;                /* sotto l’icona (che sta sopra) */
@@ -529,17 +542,20 @@ footer{
   /* Lista nav mobile */
   header nav ul.nav-list{
     flex-direction: column;
-    gap: 24px;
+    gap: auto;
     padding: 0;
     margin: 0;
     width: 100%;
+    font-size: 1.2em;
   }
-  header nav ul.nav-list li{ width: 100%; }
+  header nav ul.nav-list li{
+    text-align: center;
+  }
   header nav ul.nav-list li a{
-    display: block;
-    width: 100%;
-    padding: 12px 0;
-    text-align: left;
+    display: inline-block;
+    padding: 6px 12px;
+    width: fit-content;
+    text-align: center;
   }
 
   /* Logo nel flusso normale */
@@ -818,4 +834,26 @@ html, body{ overflow-x: hidden; } /* opzionale */
 @keyframes fadeIn{
   from{ opacity: 0; }
   to{ opacity: 1; }
+}
+
+.form-status {
+  margin: 0 auto;
+  padding: 0;  
+  width: 50%;
+  font-size: 1rem;
+  font-weight: 300;
+  min-height: 1.2em; /* prevents layout shift */
+  transition: color 0.5s ease;
+  list-style: none;
+  background: var(--card-bg-start);
+  max-width: 580px;
+  text-align: center; /* centers the text inside */
+}
+
+.form-status.ok {
+  color: #DDDDDD;
+}
+
+.form-status.error {
+  color: #888888;
 }

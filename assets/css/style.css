@@ -616,7 +616,10 @@ section > h1, section > h2{
 
 .instrumentation-list{
   list-style: none;
-  padding: 0;
+  padding: 24px;
+  background: var(--card-bg-start);
+  border: 1px solid var(--border);
+  border-radius: 12px;
   /* Centre the instrumentation list and constrain its width for better readability */
   /* Provide generous margins around instrumentation lists and narrow the
      column width slightly so the content is more centred on wide screens. */
@@ -677,7 +680,10 @@ section > h1, section > h2{
 /* Program list styling for concert projects (e.g., Reach.Touch.) */
 .program-list{
   list-style: none;
-  padding: 0;
+  padding: 24px;
+  background: var(--card-bg-start);
+  border: 1px solid var(--border);
+  border-radius: 12px;
   /* Centre the program list within the page with generous margins and
      constrain its width to mirror the instrumentation lists. */
   margin: 2em auto;

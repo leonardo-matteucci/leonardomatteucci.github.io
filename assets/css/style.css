@@ -117,6 +117,7 @@ nav{
   color: var(--accent);
   border-color: var(--accent);
 }
+.nav-list .nav-logo{ display:none; }
 
 /* Skip link for accessibility */
 .skip-link{
@@ -556,6 +557,20 @@ footer{
     padding: 6px 12px;
     width: fit-content;
     text-align: center;
+  }
+
+  header nav ul.nav-list .nav-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  header nav ul.nav-list .nav-logo a{
+    padding: 0;
+    border: none;
+  }
+  header nav ul.nav-list .nav-logo img{
+    width: 44px;
+    height: auto;
   }
 
   /* Logo nel flusso normale */

@@ -53,17 +53,6 @@ a:hover{
   padding: 0 16px;
 }
 
-/* Header and navigation */
-/*
- * Header and navigation styling
- *
- * The header is centre‑aligned so that the menu items always remain centred
- * regardless of the presence of a logo or burger menu. The logo and menu
- * toggle are absolutely positioned to the left and right of the header so
- * they do not affect the centring of the navigation list. On smaller
- * screens, the burger icon controls the visibility of the menu via the
- * checkbox hack defined below.
- */
 header{
   /* Keep the header fixed at the top of the viewport on scroll */
   position: fixed;

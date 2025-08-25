@@ -758,6 +758,13 @@ main{
   text-align: left;
 
 }
+.about-bio p{
+  margin: 0;
+}
+
+.about-bio p + p{
+  margin-top: 1em;
+}
 .about-photo{
   max-width: 350px;
 }

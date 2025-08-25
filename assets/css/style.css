@@ -750,7 +750,6 @@ main{
 
 }
 .about-bio{
-  width: 100%;
   padding: 24px;
   background: var(--card-bg-start);
   border: 1px solid var(--border);

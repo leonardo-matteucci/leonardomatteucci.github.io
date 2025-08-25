@@ -221,9 +221,8 @@ nav{
   margin-bottom: 32px;
 }
 
-.about-grid{
-  max-width: calc(3 * 250px + 2 * 32px);
-  margin: 0 auto;
+.about-grid .tag{
+  display: block;
 }
 
 /* Cards */

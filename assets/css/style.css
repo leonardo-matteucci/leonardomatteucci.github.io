@@ -246,6 +246,12 @@ nav{
   font-size: 0.9em;
 }
 
+.work-card hr{
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+}
+
 /* Upcoming works are displayed in a muted style and are not interactive */
 .work-card.upcoming{
   opacity: 0.5;
@@ -740,44 +746,6 @@ main{
   padding-top: 57px;
 }
 
-/* About page layout: keep the final single-column version only */
-.about-page{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-  text-align: left;
-
-}
-.about-bio{
-  width: 100%;
-  max-width: calc((1000px - 64px) / 3);
-  padding: 24px;
-  background: var(--card-bg-start);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  text-align: left;
-
-}
-.about-bio p{
-  margin: 0;
-}
-
-.about-bio p + p{
-  margin-top: 1em;
-}
-.about-photo{
-  max-width: 350px;
-}
-.about-photo img{
-  width: 100%;
-  margin-top: 1em;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-}
 
 /* 1) Gear sempre sotto (se lo vuoi anche su desktop) */
 .instrumentation-list > li{

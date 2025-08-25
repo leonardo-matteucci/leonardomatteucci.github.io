@@ -221,10 +221,6 @@ nav{
   margin-bottom: 32px;
 }
 
-.about-grid .tag{
-  display: block;
-}
-
 /* Cards */
 /* Card components on a dark background */
 .work-card, .event-card, figure.work-card{

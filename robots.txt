@@ -3,5 +3,6 @@ Disallow:
 
 # Specify path to favicon
 Allow: /assets/logos/lm-logo-favicon.svg
+Allow: /favicon.ico
 
 Sitemap: https://www.leonardomatteucci.com/sitemap.xml

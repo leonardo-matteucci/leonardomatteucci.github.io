@@ -1,0 +1,43 @@
+(function() {
+  const previewGrid = document.querySelector('.home-events .event-preview-grid');
+  if (!previewGrid) return;
+
+  function copyEventCard(card) {
+    const clone = card.cloneNode(true);
+    clone.classList.add('event-card');
+    return clone;
+  }
+
+  function renderEvents(cards) {
+    previewGrid.innerHTML = '';
+    if (!cards.length) {
+      const emptyMessage = document.createElement('p');
+      emptyMessage.textContent = 'More events will be announced soon.';
+      previewGrid.appendChild(emptyMessage);
+      return;
+    }
+    const fragment = document.createDocumentFragment();
+    cards.slice(0, 3).forEach(card => fragment.appendChild(copyEventCard(card)));
+    previewGrid.appendChild(fragment);
+  }
+
+  async function loadEvents() {
+    try {
+      const response = await fetch('/events/');
+      if (!response.ok) throw new Error('Failed to fetch events page');
+      const html = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const upcomingCards = doc.querySelectorAll('.upcoming-event .event-card, .upcoming-event .work-card');
+      const pastCards = doc.querySelectorAll('.past-events .event-card');
+      const cards = [...upcomingCards, ...pastCards];
+      renderEvents(cards);
+    } catch (error) {
+      console.error('Unable to load events preview:', error);
+    }
+  }
+
+  if ('fetch' in window && 'DOMParser' in window) {
+    loadEvents();
+  }
+})();

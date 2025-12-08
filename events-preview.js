@@ -28,9 +28,7 @@
       const html = await response.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
-      const upcomingCards = doc.querySelectorAll('.upcoming-event .event-card, .upcoming-event .work-card');
-      const pastCards = doc.querySelectorAll('.past-events .event-card');
-      const cards = [...upcomingCards, ...pastCards];
+      const cards = doc.querySelectorAll('.event-card');
       renderEvents(cards);
     } catch (error) {
       console.error('Unable to load events preview:', error);

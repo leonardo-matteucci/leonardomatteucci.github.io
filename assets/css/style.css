@@ -208,7 +208,9 @@ nav{
 
 
 .latest-works, .upcoming-event{
-  padding: 16px 16px;
+  padding: 32px 16px;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 .latest-works h2, .upcoming-event h2{
   text-align: center;
@@ -597,7 +599,7 @@ footer{
   font-weight: 300;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 32px;
 }
 .works-details{
   color: var(--accent);

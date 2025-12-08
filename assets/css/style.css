@@ -296,6 +296,7 @@ figure.work-card{
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin: 0; /* reset default figure margins so spacing matches other sections */
 }
 figure.work-card img{
   display: block;

@@ -2,6 +2,8 @@
   const previewGrid = document.querySelector('.home-events .event-preview-grid');
   if (!previewGrid) return;
 
+  const fallbackCards = Array.from(previewGrid.querySelectorAll('.event-card'));
+
   function copyEventCard(card) {
     const clone = card.cloneNode(true);
     clone.classList.add('event-card');
@@ -29,9 +31,10 @@
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
       const cards = Array.from(doc.querySelectorAll('.event-card'));
-      renderEvents(cards);
+      renderEvents(cards.length ? cards : fallbackCards);
     } catch (error) {
       console.error('Unable to load events preview:', error);
+      renderEvents(fallbackCards);
     }
   }
 

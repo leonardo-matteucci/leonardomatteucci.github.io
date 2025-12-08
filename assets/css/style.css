@@ -208,9 +208,7 @@ nav{
 
 
 .latest-works, .upcoming-event{
-  padding: 32px 16px;
-  margin-top: 64px;
-  margin-bottom: 64px;
+  padding: 16px 16px;
 }
 .latest-works h2, .upcoming-event h2{
   text-align: center;
@@ -296,7 +294,6 @@ figure.work-card{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 0; /* reset default figure margins so spacing matches other sections */
 }
 figure.work-card img{
   display: block;
@@ -600,7 +597,7 @@ footer{
   font-weight: 300;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 1rem;
 }
 .works-details{
   color: var(--accent);

@@ -284,10 +284,6 @@ nav{
   margin-bottom: 32px; /* matches .works-grid gap/margin */
 }
 
-.past-events{
-  margin-top: 0;
-}
-
 /* Figures within photos page */
 figure.work-card{
   padding: 0;

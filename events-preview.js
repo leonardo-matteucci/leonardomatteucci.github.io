@@ -28,7 +28,7 @@
       const html = await response.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
-      const cards = doc.querySelectorAll('.event-card');
+      const cards = Array.from(doc.querySelectorAll('.event-card'));
       renderEvents(cards);
     } catch (error) {
       console.error('Unable to load events preview:', error);

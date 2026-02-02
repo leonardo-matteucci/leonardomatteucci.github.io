@@ -1,12 +1,28 @@
 :root{
-  --bg: #000000;      /* pure black background */
-  --fg: #DDDDDD;      /* light grey for primary text */
-  --accent: #888888;  /* medium grey for accents and links */
-  --accent-hover: #AAAAAA; /* slightly lighter grey on hover */
-  --border: #1A1A1A;  /* dark border colour for subtle delineation */
-  --card-bg-start: #000000;
-  --card-bg-end: #000000;
-  --font-sans: 'Poppins', sans-serif;
+  color-scheme: dark;
+  --bg: #0b0a09;
+  --fg: #f2ede6;
+  --muted: #b7aea0;
+  --accent: #c9a46b;
+  --accent-hover: #e0c58f;
+  --border: #24201b;
+  --card-bg-start: #121110;
+  --card-bg-end: #0d0c0b;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --header-height: 70px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 .work-card.upcoming{
@@ -17,24 +33,35 @@
 }
 
 /* Base styles */
-html, body{
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body{
   margin: 0;
   padding: 0;
   background-color: var(--bg);
+  background-image:
+    radial-gradient(1200px 800px at 10% -10%, rgba(201, 164, 107, 0.14), transparent 60%),
+    radial-gradient(900px 700px at 90% 10%, rgba(120, 146, 150, 0.12), transparent 55%);
   color: var(--fg);
   font-family: var(--font-sans);
   line-height: 1.6;
   font-size: 1rem;
   font-weight: 300;
-  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 h1, h2, h3{
-  font-weight: 300;
+  font-family: var(--font-display);
+  font-weight: 500;
   letter-spacing: 0.02em;
+  text-wrap: balance;
 }
 
 a{
@@ -46,11 +73,24 @@ a:hover{
   color: var(--accent);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection{
+  background: rgba(201, 164, 107, 0.28);
+  color: var(--fg);
+}
+
 /* Layout container to constrain content width */
 .container{
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 24px;
 }
 
 header{
@@ -59,21 +99,22 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  min-height: var(--header-height);
+  background: rgba(11, 10, 9, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
   z-index: 1000;
   /* Use flexbox to centre the navigation */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
-  letter-spacing: 0.02em;
+  padding: 0 24px;
 }
 
 /* Logo anchored to the left of the header */
 .logo{
   position: absolute;
-  left: 16px;
+  left: 24px;
   display: flex;
   align-items: center;
 }
@@ -93,14 +134,17 @@ nav{
   margin: 0;
   padding: 16px 0;
   display: flex;
-  gap: 24px;
+  gap: 20px;
   justify-content: center;
 }
 .nav-list li a{
   padding: 8px 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 .nav-list li a:hover, .nav-list li a.active{
   color: var(--accent);
@@ -130,22 +174,20 @@ nav{
 /* Hero section on the home page */
 .hero{
   text-align: center;
-  padding: 180px 16px;
+  padding: clamp(140px, 18vw, 220px) 16px 140px;
   color: var(--fg);
   position: relative;
   margin-top: 0;
   overflow: hidden;
-  /* Ensure hero content floats above the portrait and decorative graphics */
-  z-index: 0;
+  isolation: isolate;
 }
 
 .hero-logo{
   display: block;
-  margin: 1.5em auto 0;
-  margin-bottom: -5em;
+  margin: 2rem auto 0;
   max-width: 100%;
-  width: clamp(160px, 28vw, 80px);
-  opacity: 0.75;
+  width: clamp(90px, 18vw, 180px);
+  opacity: 0.7;
   transition: opacity 0.3s;
 }
 
@@ -153,57 +195,100 @@ nav{
   opacity: 1;
 }
 
-/* Hide the portrait overlay on the hero section for a cleaner introduction */
 .hero::before{
-  content: none; /* keep overlay disabled without shadowing later rules */
+  content: "";
+  position: absolute;
+  inset: -30% -10%;
+  background: radial-gradient(50% 50% at 50% 35%, rgba(201, 164, 107, 0.16), transparent 70%);
+  z-index: -2;
+}
+
+.hero::after{
+  content: "";
+  position: absolute;
+  width: min(720px, 90vw);
+  height: min(720px, 90vw);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -46%);
+  border-radius: 50%;
+  border: 1px solid rgba(201, 164, 107, 0.18);
+  box-shadow: 0 0 60px rgba(201, 164, 107, 0.1);
+  z-index: -1;
 }
 
 .hero h1{
-  font-size: 2rem;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
   font-style: normal;
-  font-weight: 300;
-  letter-spacing: 0.05em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-align: center;
-  margin-top: -43px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0.2em;
 }
 
 .tagline{
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.4vw, 1.2rem);
   font-style: normal;
   font-weight: 300;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.28em;
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  opacity: 0.9;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--muted);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-transform: uppercase;
+}
+
+.hero-actions{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
 }
 
 /* Buttons */
 .btn{
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s; /* fixed */
-  font: inherit; /* ensure buttons match link typography */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, rgba(201, 164, 107, 0.95), rgba(224, 197, 143, 0.9));
+  color: #16120d;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 164, 107, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .btn.secondary{
-  display: inline-block;
-  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
   background: transparent;
   color: var(--accent);
-  border-radius: 4px;
-  border: 1px solid var(--accent);
-  transition: background-color 0.2s, color 0.2s; /* fixed */
+  border-radius: 999px;
+  border: 1px solid rgba(201, 164, 107, 0.7);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 .btn.secondary:hover{
   background: var(--accent);
-  color: #ffffff;
+  color: #16120d;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(201, 164, 107, 0.18);
 }
 
 
@@ -216,8 +301,8 @@ nav{
 }
 .works-grid{
   display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-bottom: 32px;
 }
 
@@ -225,14 +310,19 @@ nav{
 /* Card components on a dark background */
 .work-card, .event-card, figure.work-card{
   /* Cards are solid black with a subtle border and shadow */
-  background: var(--card-bg-start);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  position: relative;
+  background: linear-gradient(160deg, var(--card-bg-start), var(--card-bg-end));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
   padding: 24px;
-  transition: transform 0.2s
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 .work-card:hover, .event-card:hover, figure.work-card:hover{
   transform: translateY(-4px);
+  border-color: rgba(201, 164, 107, 0.25);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
 }
 .work-card h3{
   margin-top: 0;
@@ -242,13 +332,13 @@ nav{
 .work-card h3 .works-details{
   margin-left: 0.4em;
   font-weight: 300;
-  color: var(--accent);
+  color: var(--muted);
   font-size: 0.9em;
 }
 
 .work-card hr{
   border: 0;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   margin: 12px 0;
 }
 
@@ -260,7 +350,7 @@ nav{
   transition: none;
 }
 .work-card.upcoming h3, .work-card.upcoming p{
-  color: var(--accent);
+  color: var(--muted);
 }
 .work-card.upcoming:hover{
   transform: none;
@@ -331,9 +421,15 @@ figure.work-card figcaption{
   font-size: 1rem;
   color: var(--fg);
   background: var(--card-bg-start);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     /* Prevent resizing of the message box to maintain layout integrity */
     resize: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color: rgba(201, 164, 107, 0.45);
+  box-shadow: 0 0 0 1px rgba(201, 164, 107, 0.25);
 }
 .contact-form .btn{
   align-self: flex-start;
@@ -383,8 +479,9 @@ figure.work-card figcaption{
 
 /* Footer styling restored from the original design */
 footer{
-  padding: 40px 16px;
-  border-top: 1px solid var(--border);
+  padding: 48px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(11, 10, 9, 0.6), rgba(11, 10, 9, 0.95));
   text-align: center;
   font-size: 0.9rem;
   /* Allow footer to push to the bottom of the viewport when content is short */
@@ -393,25 +490,28 @@ footer{
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  :root{
+    --header-height: 64px;
+  }
   .hero{
-    padding: 80px 12px;
+    padding: 120px 12px 100px;
   }
   .hero h1{
-    font-size: 1.7rem;
-    margin-top: 1em;
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    margin-top: 0;
   }
 
   /* Tagline smaller */
   .tagline {
-    font-size: 1rem;
-    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
   }
 
   /* Hero logo smaller under tagline */
   .hero-logo {
-    width: 100px;      /* or tweak to taste */
-    margin-top: 1.5em;   /* optional extra spacing */
-    margin-bottom: -2em; /* keep balance if needed */
+    width: 120px;
+    margin-top: 1.25rem;
+    margin-bottom: 0;
   }
 }
 
@@ -521,7 +621,7 @@ footer{
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100vh;
-    background: var(--bg);
+    background: linear-gradient(180deg, rgba(11, 10, 9, 0.98), rgba(11, 10, 9, 0.94));
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -542,7 +642,8 @@ footer{
     padding: 0;
     margin: 0;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    letter-spacing: 0.12em;
   }
   header nav ul.nav-list li{
     text-align: center;
@@ -553,6 +654,7 @@ footer{
     border-width: 1px;
     width: fit-content;
     text-align: center;
+    letter-spacing: 0.14em;
   }
 
   header nav ul.nav-list .nav-logo{
@@ -576,8 +678,6 @@ footer{
     margin: 0;
   }
 
-  /* Hero testo a sinistra */
-  .hero{ text-align: left; }
 }
 
 /* Utility classes */
@@ -593,14 +693,15 @@ footer{
 /* Uniform title styling across all pages.  Ensure titles sit at the same height
    by resetting the top margin and providing a consistent bottom margin. */
 .works-title{
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 500;
   text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
+  letter-spacing: 0.08em;
 }
 .works-details{
-  color: var(--accent);
+  color: var(--muted);
   margin-left: 0.4em;
   font-weight: 300;
   font-size: 0.9em;
@@ -613,8 +714,9 @@ footer{
 /* Global spacing for sections: add breathing room above and below each section */
 section{
   /* Reduce vertical spacing between sections for a tighter, more cohesive layout */
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  animation: fadeUp 0.8s ease both;
 }
 
 /* Uniform heading spacing for sections */
@@ -628,9 +730,9 @@ section > h1, section > h2{
 .instrumentation-list{
   list-style: none;
   padding: 24px;
-  background: var(--card-bg-start);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  background: linear-gradient(160deg, var(--card-bg-start), var(--card-bg-end));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
   /* Centre the instrumentation list and constrain its width for better readability */
   /* Provide generous margins around instrumentation lists and narrow the
      column width slightly so the content is more centred on wide screens. */
@@ -646,7 +748,7 @@ section > h1, section > h2{
   align-items: flex-start;
   font-weight: 300;
   padding: 0.5em 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .instrumentation-list > li:last-child{
   border-bottom: none;
@@ -671,13 +773,16 @@ section > h1, section > h2{
 /* Tag styling for instrumentation on overview pages (works & home) */
 .tag{
   display: inline-block;
-  background: var(--border);
-  color: var(--fg);
-  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3px 10px;
   margin: 0 6px 6px 0;
   font-size: 0.8rem;
-  border-radius: 4px;
+  border-radius: 999px;
   line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .gear-list, .gear-list-tight{
   list-style: none;
@@ -692,9 +797,9 @@ section > h1, section > h2{
 .program-list{
   list-style: none;
   padding: 24px;
-  background: var(--card-bg-start);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  background: linear-gradient(160deg, var(--card-bg-start), var(--card-bg-end));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
   /* Centre the program list within the page with generous margins and
      constrain its width to mirror the instrumentation lists. */
   margin: 2em auto;
@@ -743,7 +848,7 @@ section > h1, section > h2{
 main{
   flex: 1;
 /* Offset the page content so it isn't hidden beneath the fixed header */
-  padding-top: 57px;
+  padding-top: calc(var(--header-height) + 24px);
 }
 
 
@@ -761,8 +866,9 @@ main{
 /* la riga copre esattamente la larghezza interna del container */
 .separator{
   border: none;
-  border-top: 1px solid var(--border);
-  width: min(1000px, calc(100vw - 32px)); /* 1000px su desktop, su mobile = viewport - padding container */
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 164, 107, 0.35), transparent);
+  width: min(1000px, calc(100vw - 48px)); /* 1000px su desktop, su mobile = viewport - padding container */
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -771,8 +877,9 @@ main{
 .works-separator,
 .works-separator-small{
   border: none;
-  border-top: 1px solid var(--border);
-  width: min(1000px, calc(100vw - 32px));
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 164, 107, 0.35), transparent);
+  width: min(1000px, calc(100vw - 48px));
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -817,6 +924,23 @@ html, body{ overflow-x: hidden; } /* opzionale */
 @keyframes fadeIn{
   from{ opacity: 0; }
   to{ opacity: 1; }
+}
+
+@keyframes fadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  section{
+    animation: none;
+  }
 }
 
 .form-status {

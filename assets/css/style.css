@@ -759,6 +759,9 @@ section > h1, section > h2{
   height: auto;
   border-radius: 14px;
 }
+.brochure-gallery + .separator{
+  margin-top: clamp(20px, 4vw, 36px);
+}
 
 /* Ensure the main content stretches to fill available space for a sticky footer */
 main{

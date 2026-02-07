@@ -738,6 +738,23 @@ section > h1, section > h2{
 .regular{
   font-style: normal;
 }
+.brochure-gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 4vw, 32px);
+  margin: 2.5rem auto 0;
+  max-width: min(1000px, 100%);
+}
+.brochure-gallery figure{
+  margin: 0;
+}
+.brochure-gallery img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
 
 /* Ensure the main content stretches to fill available space for a sticky footer */
 main{

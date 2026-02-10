@@ -736,13 +736,15 @@ section > h1, section > h2{
   display: block;
   font-style: normal;
   font-weight: 400;
+  line-height: 1.18;
 }
 .reach-touch-program .program-cycle .program-title{
   display: inline;
 }
 .reach-touch-program .program-instrumentation{
   display: block;
-  margin-top: 0.03em;
+  margin-top: 0;
+  line-height: 1.14;
   opacity: 0.82;
   font-weight: 300;
 }

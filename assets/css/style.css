@@ -689,42 +689,70 @@ section > h1, section > h2{
 }
 
 /* Program list styling for concert projects (e.g., Reach.Touch.) */
-.program-list{
+.reach-touch-program{
   list-style: none;
-  padding: 24px;
+  padding: 12px 14px;
   background: var(--card-bg-start);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  /* Centre the program list within the page with generous margins and
-     constrain its width to mirror the instrumentation lists. */
-  margin: 2em auto;
-  max-width: 580px;
+  border-radius: 10px;
+  margin: 0.9em auto;
+  max-width: 480px;
+  font-style: italic;
+  text-align: right;
 }
-.program-list > li{
-  margin-bottom: 1.2em;
+.reach-touch-program .program-entry{
+  margin: 0;
+  padding: 0 0 0.52em 0;
 }
-.program-list > li > strong{
+.reach-touch-program .program-entry + .program-entry{
+  border-top: 1px solid var(--border);
+  padding-top: 0.52em;
+}
+.reach-touch-program .program-composer{
   display: block;
-  font-weight: 300;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.16em;
+  font-style: normal;
+  font-weight: 600;
 }
-.program-list > li > ul{
+.reach-touch-program .program-cycle{
+  margin: -0.03em 0 0.16em 0;
+  opacity: 0.9;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.reach-touch-program .program-works{
   list-style: none;
   margin: 0;
-  padding-left: 1.2em;
+  padding: 0;
 }
-.program-list > li > ul > li{
-  position: relative;
-  margin: 0.25em 0;
-  font-style: italic;
-  opacity: 0.9;
-  padding-left: 1em;
+.reach-touch-program .program-work{
+  margin: 0.04em 0;
+  padding: 0.14em 0;
 }
-.program-list > li > ul > li::before{
-  content: "–";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+.reach-touch-program .program-work + .program-work{
+  border-top: 1px solid var(--border);
+}
+.reach-touch-program .program-title{
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+}
+.reach-touch-program .program-cycle .program-title{
+  display: inline;
+}
+.reach-touch-program .program-instrumentation{
+  display: block;
+  margin-top: 0.03em;
+  opacity: 0.82;
+  font-weight: 300;
+}
+.reach-touch-program .program-intermission{
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 0 0 0.52em 0;
+  padding: 0.34em 0;
+  font-weight: 300;
 }
 .works-premiere{
   margin-top: 1em;

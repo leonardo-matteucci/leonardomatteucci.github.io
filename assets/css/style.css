@@ -716,6 +716,7 @@ section > h1, section > h2{
   margin-bottom: 0.16em;
   font-style: normal;
   font-weight: 400;
+  opacity: 0.82;
 }
 .reach-touch-program .program-cycle{
   margin: -0.03em 0 0.16em 0;

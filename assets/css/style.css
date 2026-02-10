@@ -702,11 +702,11 @@ section > h1, section > h2{
 }
 .reach-touch-program .program-entry{
   margin: 0;
-  padding: 0 0 0.52em 0;
+  padding: 0 0 0.5em 0;
 }
 .reach-touch-program .program-entry + .program-entry{
   border-top: 1px solid var(--border);
-  padding-top: 0.52em;
+  padding-top: 0.5em;
 }
 .reach-touch-program .program-composer{
   display: block;
@@ -727,7 +727,7 @@ section > h1, section > h2{
 }
 .reach-touch-program .program-work{
   margin: 0.04em 0;
-  padding: 0.14em 0;
+  padding: 0.16em 0;
 }
 .reach-touch-program .program-work + .program-work{
   border-top: 1px solid var(--border);
@@ -743,7 +743,7 @@ section > h1, section > h2{
 }
 .reach-touch-program .program-instrumentation{
   display: block;
-  margin-top: 0;
+  margin-top: 0.03em;
   line-height: 1.14;
   opacity: 0.82;
   font-weight: 300;

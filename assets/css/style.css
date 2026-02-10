@@ -700,13 +700,16 @@ section > h1, section > h2{
   font-style: italic;
   text-align: right;
 }
+.reach-touch-program{
+  --reach-touch-separator-gap: 0.5em;
+}
 .reach-touch-program .program-entry{
   margin: 0;
-  padding: 0 0 0.5em 0;
+  padding: 0 0 var(--reach-touch-separator-gap) 0;
 }
 .reach-touch-program .program-entry + .program-entry{
   border-top: 1px solid var(--border);
-  padding-top: 0.5em;
+  padding-top: var(--reach-touch-separator-gap);
 }
 .reach-touch-program .program-composer{
   display: block;
@@ -726,11 +729,12 @@ section > h1, section > h2{
   padding: 0;
 }
 .reach-touch-program .program-work{
-  margin: 0.04em 0;
-  padding: 0.16em 0;
+  margin: 0;
+  padding: 0 0 var(--reach-touch-separator-gap) 0;
 }
 .reach-touch-program .program-work + .program-work{
   border-top: 1px solid var(--border);
+  padding-top: var(--reach-touch-separator-gap);
 }
 .reach-touch-program .program-title{
   display: block;
